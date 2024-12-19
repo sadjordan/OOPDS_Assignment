@@ -6,7 +6,78 @@
 
 using namespace std;
 
-void random_placement(int* game_settings, char** game_map) {
+class Game_Setup {
+public:
+    Game_Setup() {
+        ifstream file("/Users/jordan/Desktop/OOPDS_Assignment/game.txt");
+
+        int* game_settings = new int[9];
+        int counter = 0;
+        string line;
+
+        while (getline(file, line) && counter < 9) {
+            //cout << counter << endl;
+
+            istringstream iss(line);
+            string word;
+            int value;
+
+            while (iss >> word && counter < 9) {
+                istringstream wordStream(word);
+                if (wordStream >> value) {
+                    game_settings[counter] = value;
+                }
+            }
+            counter++;
+        }
+
+        int rows = game_settings[1], columns = game_settings[2];
+        char** game_map = new char*[rows];
+        for (int i = 0; i < rows; ++i) {
+            game_map[i] = new char[columns]();
+        }
+
+        // fixed the first line not appearing
+        file.clear();
+        file.seekg(0, ios::beg);
+        for (int i = 0; i < 9; ++i) {
+            getline(file, line);
+        }
+
+        while(getline(file, line)) {
+            cout << counter << endl;
+
+
+            istringstream iss(line);
+            int value;
+            int internal_counter = 0;
+            while (iss >> value) {
+                char temp = value + '0';
+                game_map[counter-9][internal_counter] = temp;
+
+                //cout << internal_counter << endl;
+                internal_counter++;
+            }
+            counter++;
+        }
+
+        //for (int i = 0; i < 9; i++) {
+        //    cout << game_settings[i] << endl;
+        //}
+
+        //cout << "setting 1: " << game_settings[1] << endl;
+        //cout << "setting 2: " << game_settings[2] << endl;
+
+        for (int i = 0; i < game_settings[1]; i++) {
+            for (int j = 0; j < game_settings[2]; j++) {
+                cout << game_map[i][j] << " ";
+            }
+            cout << endl;
+        }
+        random_placement(game_settings, game_map);
+    }
+
+    void random_placement(int* game_settings, char** game_map) {
     char symbols[] = {'*', '$', '#', '@', '&', '~'};
     int x, y;
 
@@ -41,81 +112,11 @@ void random_placement(int* game_settings, char** game_map) {
             //for (auto i : symbols_placed) {
             //   cout << i << endl;
             //}
-
-            
         }
     }
 }
+};
 
 int main() {
-    ifstream file("/Users/jordan/Desktop/OOPDS_Assignment/game.txt");
-
-    int* game_settings = new int[9];
-    int counter = 0;
-    string line;
-
-    while (getline(file, line) && counter < 9) {
-        cout << counter << endl;
-
-
-        istringstream iss(line);
-        string word;
-        int value;
-
-        while (iss >> word && counter < 9) {
-            istringstream wordStream(word);
-            if (wordStream >> value) {
-                game_settings[counter] = value;
-            }
-        }
-        counter++;
-    }
-
-    int rows = game_settings[1], columns = game_settings[2];
-    char** game_map = new char*[rows];
-    for (int i = 0; i < rows; ++i) {
-        game_map[i] = new char[columns]();
-    }
-
-    // fixed the first line not appearing
-    file.clear();
-    file.seekg(0, ios::beg);
-    for (int i = 0; i < 9; ++i) {
-        getline(file, line);
-    }
-
-    while(getline(file, line)) {
-        cout << counter << endl;
-
-
-        istringstream iss(line);
-        int value;
-        int internal_counter = 0;
-        while (iss >> value) {
-            char temp = value + '0';
-            game_map[counter-9][internal_counter] = temp;
-
-            //cout << internal_counter << endl;
-            internal_counter++;
-        }
-        counter++;
-    }
-
-    for (int i = 0; i < 9; i++) {
-        cout << game_settings[i] << endl;
-    }
-
-    cout << "setting 1: " << game_settings[1] << endl;
-    cout << "setting 2: " << game_settings[2] << endl;
-
-    for (int i = 0; i < game_settings[1]; i++) {
-        for (int j = 0; j < game_settings[2]; j++) {
-            cout << game_map[i][j] << " ";
-        }
-        cout << endl;
-    }
-
-    //main simulation loop
-
-    random_placement(game_settings, game_map);
+    Game_Setup setup;
 }
