@@ -44,6 +44,7 @@ public:
         // team A
         int* TeamA = new int[size_a + 1];
         char* TeamA_symbols = new char[size_a];
+        string* TeamA_classes = new string[size_a];
         TeamA[0] = size_a;
 
         file.clear();
@@ -57,6 +58,7 @@ public:
 
             istringstream iss(line);
             string word;
+            string name;
             int value;
 
             while (iss >> word && counter < 4 + size_a) {
@@ -69,6 +71,10 @@ public:
                 if (word.size() == 1 && !isdigit(word[0])) {
                     TeamA_symbols[counter - 4] = word[0];
                     cout << word[0] << endl;
+                }
+
+                if (word.size() > 1 && !isdigit(word[0])) {
+                    TeamA_classes[counter - 4] = word;
                 }
             }
 
@@ -89,9 +95,14 @@ public:
             cout << i << ": " << TeamA_symbols[i] << endl;
         }
 
+        for (int i = 0; i < TeamA[0]; i++) {
+            cout << i << ": " << TeamA_classes[i] << endl;
+        }
+
         //team b
         int* TeamB = new int[size_b + 1];
         char* TeamB_symbols = new char[size_b];
+        string* TeamB_classes = new string[size_a];
         TeamB[0] = size_b;
 
         file.clear();
@@ -119,6 +130,10 @@ public:
                     TeamB_symbols[counter - 5 - size_a] = word[0];
                     cout << word[0] << endl;
                 }
+
+                if (word.size() > 1 && !isdigit(word[0])) {
+                    TeamB_classes[counter - 5 - size_a] = word;
+                }
             }
             counter++;
         }
@@ -131,11 +146,15 @@ public:
             cout << i << ": " << TeamB_symbols[i] << endl;
         }
 
+        for (int i = 0; i < TeamB[0]; i++) {
+            cout << i << ": " << TeamB_classes[i] << endl;
+        }
+
         int rows = game_settings[1], columns = game_settings[2];
         char** game_map = new char*[rows];
         for (int i = 0; i < rows; ++i) {
             game_map[i] = new char[columns]();
-        }
+        } //2d dynamically allocated vector
 
         // fixed the first line not appearing
         // map processing
@@ -176,12 +195,31 @@ public:
             }
             cout << endl;
         }
-        random_placement(game_settings, game_map, TeamA, TeamB, TeamA_symbols, TeamB_symbols);
+        random_placement(game_settings, game_map, TeamA, TeamB, TeamA_symbols, TeamB_symbols, TeamA_classes, TeamB_classes);
     }
 
-    void random_placement(int* game_settings, char** game_map, int* TeamA, int* TeamB, char* TeamA_symbols, char* TeamB_symbols) {
+    struct Ship_Details {
+    int id;
+    char team;
+    string type;
+    char symbol;
+    int x;
+    int y;
+};
+
+    void random_placement(int* game_settings, char** game_map, int* TeamA, int* TeamB, char* TeamA_symbols, char* TeamB_symbols, string* TeamA_classes, string* TeamB_classes) {
     //char symbols[] = {'*', '$', '#', '@', '&', '~'};
-    int x, y;
+    int x, y, ship_counter = 0, no_ships = 0;
+
+    for (int i = 1; i < TeamA[0] + 1; i++) {
+        no_ships += TeamA[i];
+    }
+
+    for (int i = 1; i < TeamB[0] + 1; i++) {
+        no_ships += TeamB[i];
+    }
+
+    Ship_Details* Ships = new Ship_Details[no_ships];
 
     random_device rd;
     mt19937 gen(rd());
@@ -199,6 +237,14 @@ public:
                 x = x_dis(gen);
                 y = y_dis(gen);
             } while(game_map[x][y] != '0'); // prevents placement on islands/ occupied coords
+            
+            Ships[ship_counter].id = ship_counter + 1;
+            Ships[ship_counter].team = 'A';
+            Ships[ship_counter].type = TeamA_classes[i - 1];
+            Ships[ship_counter].symbol = TeamA_symbols[i - 1];
+            Ships[ship_counter].x = x;
+            Ships[ship_counter].y = y;
+            
             game_map[x][y] = TeamA_symbols[i - 1];
             
             //symbols_placed[i]++;
@@ -214,6 +260,7 @@ public:
             //for (auto i : symbols_placed) {
             //   cout << i << endl;
             //}
+            ship_counter++;
         }
     }
 
@@ -228,6 +275,13 @@ public:
                 y = y_dis(gen);
             } while(game_map[x][y] != '0'); // prevents placement on islands/ occupied coords
             game_map[x][y] = TeamB_symbols[i - 1];
+
+            Ships[ship_counter].id = ship_counter + 1;
+            Ships[ship_counter].team = 'B';
+            Ships[ship_counter].type = TeamB_classes[i - 1];
+            Ships[ship_counter].symbol = TeamB_symbols[i - 1];
+            Ships[ship_counter].x = x;
+            Ships[ship_counter].y = y;
             
             //symbols_placed[i]++;
             cout << "Placed " << TeamB_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
@@ -242,8 +296,15 @@ public:
             //for (auto i : symbols_placed) {
             //   cout << i << endl;
             //}
+            ship_counter++;
         }
     }
+
+    for (int i = 0; i < ship_counter; i++) {
+        cout << Ships[i].id  << " " << Ships[i].team  << " " << Ships[i].type << " "  << Ships[i].symbol << " " << Ships[i].x << " " << Ships[i].y << endl;
+    }
+    
+    //cout << ship_counter << endl;
 }
 };
 
