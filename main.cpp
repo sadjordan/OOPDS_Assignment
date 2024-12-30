@@ -286,12 +286,31 @@ public:
             //symbols_placed[i]++;
             cout << "Placed " << TeamB_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
 
-            for (int i = 0; i < game_settings[1]; ++i) {
-                for (int j = 0; j < game_settings[2]; ++j) {
-                    cout << game_map[i][j] << " ";
-                }
-                cout << endl;
+            cout << "   "; //col headers
+            for (int j = 1; j <= game_settings[2]; ++j) {
+                cout << " " << setw(3) << j;
             }
+            cout << endl;
+
+            for (int i = 0; i < game_settings[1]; ++i) {
+                cout << "    ";
+                for (int j = 0; j < game_settings[2]; ++j) {
+                    cout << "+---";
+                }
+                cout << "+" << endl;
+
+                cout << setw(3) << i + 1 << " ";
+                for (int j = 0; j < game_settings[2]; ++j) {
+                    cout << "| " << game_map[i][j] << " ";
+                }
+                cout << "|" << endl;
+            }
+
+            cout << "    "; // final row stuff
+            for (int j = 0; j < game_settings[2]; ++j) {
+                cout << "+---";
+            }
+            cout << "+" << endl;
 
             //for (auto i : symbols_placed) {
             //   cout << i << endl;
@@ -300,9 +319,9 @@ public:
         }
     }
 
-    for (int i = 0; i < ship_counter; i++) {
-        cout << Ships[i].id  << " " << Ships[i].team  << " " << Ships[i].type << " "  << Ships[i].symbol << " " << Ships[i].x << " " << Ships[i].y << endl;
-    }
+    //for (int i = 0; i < ship_counter; i++) {
+    //    cout << Ships[i].id  << " " << Ships[i].team  << " " << Ships[i].type << " "  << Ships[i].symbol << " " << Ships[i].x << " " << Ships[i].y << endl;
+    //}
     
     //cout << ship_counter << endl;
 }
