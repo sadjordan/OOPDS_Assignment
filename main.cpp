@@ -240,8 +240,6 @@ public:
 
 class Ship {
 private:
-
-public:
     struct Ship_Details {
         int id;
         char team;
@@ -251,6 +249,9 @@ public:
         int y;
     };
 
+    Ship_Details* Ships;
+
+public:
     Ship(int* game_settings, char** game_map, int* TeamA, int* TeamB, char* TeamA_symbols, char* TeamB_symbols, string* TeamA_classes, string* TeamB_classes) {
         //char symbols[] = {'*', '$', '#', '@', '&', '~'};
         int x, y, ship_counter = 0, no_ships = 0;
@@ -263,7 +264,7 @@ public:
             no_ships += TeamB[i];
         }
 
-        Ship_Details* Ships = new Ship_Details[no_ships];
+        Ships = new Ship_Details[no_ships];
 
         random_device rd;
         mt19937 gen(rd());
@@ -387,6 +388,34 @@ public:
         //}
         
         //cout << ship_counter << endl;
+    }
+
+    void move(char** game_map, Ship_Details* Ships, int ship_index) {
+        // Moving ship 1
+
+        random_device rd;
+        mt19937 gen(rd());
+
+        uniform_int_distribution<> movement_decider(1, 4);
+        int anumber = movement_decider(gen);
+
+        switch (anumber) {
+        case 1:
+            cout << "Case 1" << endl;
+            break;
+        case 2:
+            cout << "Case 2" << endl;
+            break;
+        case 3:
+            cout << "Case 3" << endl;
+            break;
+        case 4:
+            cout << "Case 4" << endl;
+            break;
+        default:
+            cout << "Default case" << endl;
+            break;
+    }
     }
 
 };
