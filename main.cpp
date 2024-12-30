@@ -11,25 +11,104 @@ public:
     Game_Setup() {
         ifstream file("/Users/jordan/Desktop/OOPDS_Assignment/game.txt");
 
-        int* game_settings = new int[9];
+        int* game_settings = new int[3];
+        int size_a, size_b;
         int counter = 0;
         string line;
 
-        while (getline(file, line) && counter < 9) {
+        // initial game settings
+        while (getline(file, line) && counter < 4) {
             //cout << counter << endl;
 
             istringstream iss(line);
             string word;
             int value;
 
-            while (iss >> word && counter < 9) {
+            while (iss >> word && counter < 3) {
                 istringstream wordStream(word);
                 if (wordStream >> value) {
                     game_settings[counter] = value;
                 }
             }
+
+            while (iss >> word && counter == 3) {
+                istringstream wordStream(word);
+                if (wordStream >> value) {
+                    size_a = value; // saves the number of ship types team a has
+                }
+            }
+
             counter++;
         }
+
+        // team A
+        int* TeamA = new int[size_a];
+
+        file.clear();
+        file.seekg(0, ios::beg);
+        for (int i = 0; i < counter; i++) {
+            getline(file, line);
+        } 
+
+        while (getline(file, line) && counter < 4 + size_a + 1) {
+            cout << counter << endl;
+
+            istringstream iss(line);
+            string word;
+            int value;
+
+            while (iss >> word && counter < 4 + size_a) {
+                istringstream wordStream(word);
+                if (wordStream >> value) {
+                    TeamA[counter - 4] = value;
+                    cout << "value: " << value << endl;
+                }
+            }
+
+            while (iss >> word && counter == 4 + size_a) {
+                istringstream wordStream(word);
+                if (wordStream >> value) {
+                    size_b = value;
+                }
+            }
+            counter++;
+        }
+
+        for (int i = 0; i < size_a; i++) {
+            cout << i << ": " << TeamA[i] << endl;
+        }
+
+        //team b
+        int* TeamB = new int[size_b];
+
+        file.clear();
+        file.seekg(0, ios::beg);
+        for (int i = 0; i < counter; i++) {
+            getline(file, line);
+        } 
+
+
+        while (getline(file, line) && counter < 4 + size_a + size_b + 1) {
+            cout << counter << endl;
+
+            istringstream iss(line);
+            string word;
+            int value;
+
+            while (iss >> word) {
+                istringstream wordStream(word);
+                if (wordStream >> value) {
+                    TeamB[counter - 5 - size_a] = value;
+                    cout << "value: " << value << endl;
+                }
+            }
+            counter++;
+        }
+
+        for (int i = 0; i < size_b; i++) {
+            cout << i << ": " << TeamB[i] << endl;
+        }
+
 
         int rows = game_settings[1], columns = game_settings[2];
         char** game_map = new char*[rows];
@@ -38,12 +117,14 @@ public:
         }
 
         // fixed the first line not appearing
+        // map processing
         file.clear();
         file.seekg(0, ios::beg);
-        for (int i = 0; i < 9; ++i) {
+        for (int i = 0; i < counter; i++) {
             getline(file, line);
         }
 
+        counter = 0;
         while(getline(file, line)) {
             cout << counter << endl;
 
@@ -53,7 +134,7 @@ public:
             int internal_counter = 0;
             while (iss >> value) {
                 char temp = value + '0';
-                game_map[counter-9][internal_counter] = temp;
+                game_map[counter][internal_counter] = temp;
 
                 //cout << internal_counter << endl;
                 internal_counter++;
