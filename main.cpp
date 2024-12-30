@@ -224,20 +224,34 @@ public:
             cout << "+---";
         }
         cout << "+" << endl;
-
-        random_placement(game_settings, game_map, TeamA, TeamB, TeamA_symbols, TeamB_symbols, TeamA_classes, TeamB_classes);
     }
 
+    int* get_game_settings() const { return game_settings; }
+    int* get_TeamA() const { return TeamA; }
+    int* get_TeamB() const { return TeamB; }
+    char* get_TeamA_symbols() const { return TeamA_symbols; }
+    char* get_TeamB_symbols() const { return TeamB_symbols; }
+    string* get_TeamA_classes() const { return TeamA_classes; }
+    string* get_TeamB_classes() const { return TeamB_classes; }
+    char** get_game_map() const { return game_map; }
+
+    
+};
+
+class Ship {
+private:
+
+public:
     struct Ship_Details {
-    int id;
-    char team;
-    string type;
-    char symbol;
-    int x;
-    int y;
+        int id;
+        char team;
+        string type;
+        char symbol;
+        int x;
+        int y;
     };
 
-    void random_placement(int* game_settings, char** game_map, int* TeamA, int* TeamB, char* TeamA_symbols, char* TeamB_symbols, string* TeamA_classes, string* TeamB_classes) {
+    Ship(int* game_settings, char** game_map, int* TeamA, int* TeamB, char* TeamA_symbols, char* TeamB_symbols, string* TeamA_classes, string* TeamB_classes) {
         //char symbols[] = {'*', '$', '#', '@', '&', '~'};
         int x, y, ship_counter = 0, no_ships = 0;
 
@@ -374,15 +388,20 @@ public:
         
         //cout << ship_counter << endl;
     }
-};
-
-class Ship {
-private:
-
-public:
 
 };
 
 int main() {
     Game_Setup setup;
+
+    int* game_settings = setup.get_game_settings();
+    int* TeamA = setup.get_TeamA();
+    int* TeamB = setup.get_TeamB();
+    char* TeamA_symbols = setup.get_TeamA_symbols();
+    char* TeamB_symbols = setup.get_TeamB_symbols();
+    string* TeamA_classes = setup.get_TeamA_classes();
+    string* TeamB_classes = setup.get_TeamB_classes();
+    char** game_map = setup.get_game_map();
+
+    Ship ship(game_settings, game_map, TeamA, TeamB, TeamA_symbols, TeamB_symbols, TeamA_classes, TeamB_classes);
 }
