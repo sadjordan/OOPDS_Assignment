@@ -6,6 +6,17 @@
 
 using namespace std;
 
+struct Ship_Details {
+        int id;
+        char team;
+        string type;
+        char symbol;
+        int x;
+        int y;
+        int lives;
+        int kills;
+    };
+
 class Game_Setup {
 private:
     int* game_settings;
@@ -19,7 +30,7 @@ private:
 
 public:
     Game_Setup() {
-        ifstream file("/Users/jordan/Desktop/OOPDS_Assignment/game.txt");
+        ifstream file("/Users/jordan/Desktop/Live_Projects/OOPDS_Assignment/game.txt");
 
         game_settings = new int[3];
         int size_a, size_b;
@@ -234,21 +245,10 @@ public:
     string* get_TeamA_classes() const { return TeamA_classes; }
     string* get_TeamB_classes() const { return TeamB_classes; }
     char** get_game_map() const { return game_map; }
-
-    
 };
 
 class Ship {
 private:
-    struct Ship_Details {
-        int id;
-        char team;
-        string type;
-        char symbol;
-        int x;
-        int y;
-    };
-
     Ship_Details* Ships;
 
 public:
@@ -289,6 +289,8 @@ public:
                 Ships[ship_counter].symbol = TeamA_symbols[i - 1];
                 Ships[ship_counter].x = x;
                 Ships[ship_counter].y = y;
+                Ships[ship_counter].lives = 0;
+                Ships[ship_counter].kills = 0;
                 
                 game_map[x][y] = TeamA_symbols[i - 1];
                 
@@ -389,10 +391,13 @@ public:
         
         //cout << ship_counter << endl;
     }
+};
 
+class Move : public Ship {
+private:
+
+public:
     void move(char** game_map, Ship_Details* Ships, int ship_index) {
-        // Moving ship 1
-
         random_device rd;
         mt19937 gen(rd());
 
@@ -417,6 +422,17 @@ public:
             break;
     }
     }
+};
+
+class Shoot : public Ship {
+
+};
+
+class Look : public Ship {
+
+};
+
+class Ram : public Ship {
 
 };
 
