@@ -527,7 +527,7 @@ class Look : public Ship {
 
 };
 
-class Ram : public Ship {
+class Destroy : public Ship {
 
 };
 
