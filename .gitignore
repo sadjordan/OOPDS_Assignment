@@ -2,5 +2,5 @@ output
 main
 tempCodeRunnerFile
 notes.txt
-battleship,h
+battleship.h
 ship.h
