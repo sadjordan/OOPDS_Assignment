@@ -8,11 +8,13 @@ using namespace std;
 
 struct Ship_Details {
         int id;
+        // Ship* ship_ptr;
         char team;
         string type;
         char symbol;
         int x;
         int y;
+        string status;
         int lives;
         int kills;
     };
@@ -237,6 +239,34 @@ public:
         cout << "+" << endl;
     }
 
+    void Print_Map() {
+        cout << "   "; //col headers
+                for (int j = 1; j <= game_settings[2]; j++) {
+                    cout << " " << setw(3) << j;
+                }
+                cout << endl;
+
+                for (int i = 0; i < game_settings[1]; i++) {
+                    cout << "    ";
+                    for (int j = 0; j < game_settings[2]; j++) {
+                        cout << "+---";
+                    }
+                    cout << "+" << endl;
+
+                    cout << setw(3) << i + 1 << " ";
+                    for (int j = 0; j < game_settings[2]; j++) {
+                        cout << "| " << game_map[i][j] << " ";
+                    }
+                    cout << "|" << endl;
+                }
+
+                cout << "    "; // final row stuff
+                for (int j = 0; j < game_settings[2]; j++) {
+                    cout << "+---";
+                }
+                cout << "+" << endl;
+    }
+
     int* get_game_settings() const { return game_settings; }
     int* get_TeamA() const { return TeamA; }
     int* get_TeamB() const { return TeamB; }
@@ -250,11 +280,14 @@ public:
 class Ship {
 private:
     Ship_Details* Ships;
+    int no_ships;
 
 public:
     Ship(int* game_settings, char** game_map, int* TeamA, int* TeamB, char* TeamA_symbols, char* TeamB_symbols, string* TeamA_classes, string* TeamB_classes) {
         //char symbols[] = {'*', '$', '#', '@', '&', '~'};
-        int x, y, ship_counter = 0, no_ships = 0;
+        int x, y, ship_counter = 0;
+
+        no_ships = 0;
 
         for (int i = 1; i < TeamA[0] + 1; i++) {
             no_ships += TeamA[i];
@@ -284,12 +317,16 @@ public:
                 } while(game_map[x][y] != '0'); // prevents placement on islands/ occupied coords
                 
                 Ships[ship_counter].id = ship_counter + 1;
+                // if (TeamA_classes = "Battleship")
+                //     Ships[ship_counter].ship_ptr = new Battleship;
+                
                 Ships[ship_counter].team = 'A';
                 Ships[ship_counter].type = TeamA_classes[i - 1];
                 Ships[ship_counter].symbol = TeamA_symbols[i - 1];
                 Ships[ship_counter].x = x;
                 Ships[ship_counter].y = y;
-                Ships[ship_counter].lives = 0;
+                Ships[ship_counter].status = "Placed";
+                Ships[ship_counter].lives = 3;
                 Ships[ship_counter].kills = 0;
                 
                 game_map[x][y] = TeamA_symbols[i - 1];
@@ -348,6 +385,9 @@ public:
                 Ships[ship_counter].symbol = TeamB_symbols[i - 1];
                 Ships[ship_counter].x = x;
                 Ships[ship_counter].y = y;
+                Ships[ship_counter].status = "Placed";
+                Ships[ship_counter].lives = 3;
+                Ships[ship_counter].kills = 0;
                 
                 //symbols_placed[i]++;
                 cout << "Placed " << TeamB_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
@@ -391,13 +431,19 @@ public:
         
         //cout << ship_counter << endl;
     }
+
+    void getShips() {
+        for (int i = 0; i < no_ships; i++) {
+            cout << i << ": " << "ID: " << Ships[i].id << ", Team: " << Ships[i].team << ", Type: " << Ships[i].type << ", Symbol: " << Ships[i].symbol << ", Position: (" << Ships[i].x << ", " << Ships[i].y << "), Status: " << Ships[i].status << ", Lives: " << Ships[i].lives << ", Kills: " << Ships[i].kills << endl;
+            }
+        }
 };
 
 class Move : public Ship {
 private:
 
 public:
-    void move(char** game_map, Ship_Details* Ships, int ship_index) {
+    void move(char** game_map, Ship_Details* Ships, int ship_id) {
         random_device rd;
         mt19937 gen(rd());
 
@@ -424,15 +470,68 @@ public:
     }
 };
 
-class Shoot : public Ship {
+// class Shoot : public Ship {
+// public:
+//     void shoot(char** game_map, Ship_Details* Ships, int ship_index) {
+//             int x = Ships[ship_index].x;
+//             int y = Ships[ship_index].y;
+//             char team = Ships[ship_index].team;
 
-};
+//             // all the possible directions for shooting which is 8 directions
+//             int dx[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+//             int dy[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+
+//             random_device rd;
+//             mt19937 gen(rd());
+//             uniform_int_distribution<> dir_dis(0, 7);
+
+//             int dir = dir_dis(gen); // this will randomly select a direction t shoot
+
+//             int target_x = x + dx[dir];
+//             int target_y = y + dy[dir];
+
+//             // Check if the target is within the battlefield boundaries
+//             if (target_x >= 0 && target_x < game_settings[1] && target_y >= 0 && target_y < game_settings[2]) {
+//                 char target = game_map[target_x][target_y];
+
+//                 // Check if the target is an enemy ship
+//                 if (target != '0' && target != '1') { // '0' is empty, '1' is island
+//                     for (int i = 0; i < no_ships; i++) {
+//                         if (Ships[i].x == target_x && Ships[i].y == target_y) {
+//                             if (Ships[i].team != team) { // Ensure it's an enemy ship
+//                                 cout << "Ship " << Ships[ship_index].symbol << " (" << Ships[ship_index].type << ") shoots at (" 
+//                                     << target_x + 1 << ", " << target_y + 1 << ") and hits enemy ship " 
+//                                     << Ships[i].symbol << " (" << Ships[i].type << ")!" << endl;
+
+//                                 // Destroy the enemy ship by setting its position to '0'
+//                                 game_map[target_x][target_y] = '0';
+//                                 Ships[i].x = -1; // Mark the ship as destroyed
+//                                 Ships[i].y = -1;
+//                                 break;
+//                             }
+//                         }
+//                     }
+//                 } else {
+//                     cout << "Ship " << Ships[ship_index].symbol << " (" << Ships[ship_index].type << ") shoots at (" 
+//                         << target_x + 1 << ", " << target_y + 1 << ") but misses!" << endl;
+//                 }
+//             } else {
+//                 cout << "Ship " << Ships[ship_index].symbol << " (" << Ships[ship_index].type << ") shoots out of bounds!" << endl;
+//             }
+//         }
+
+//
+// };
 
 class Look : public Ship {
 
 };
 
 class Ram : public Ship {
+
+};
+
+class Battleship : public Move {
 
 };
 
@@ -449,4 +548,6 @@ int main() {
     char** game_map = setup.get_game_map();
 
     Ship ship(game_settings, game_map, TeamA, TeamB, TeamA_symbols, TeamB_symbols, TeamA_classes, TeamB_classes);
+
+    //ship.getShips();
 }
