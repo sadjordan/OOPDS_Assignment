@@ -3,21 +3,11 @@
 #include <string>
 #include <sstream>
 #include <random>
+#include <iomanip>
+
+#include "ship_details.h"
 
 using namespace std;
-
-struct Ship_Details {
-        int id;
-        // Ship* ship_ptr;
-        char team;
-        string type;
-        char symbol;
-        int x;
-        int y;
-        string status;
-        int lives;
-        int kills;
-    };
 
 class Game_Setup {
 private:
@@ -434,7 +424,7 @@ public:
 
     void getShips() {
         for (int i = 0; i < no_ships; i++) {
-            cout << i << ": " << "ID: " << Ships[i].id << ", Team: " << Ships[i].team << ", Type: " << Ships[i].type << ", Symbol: " << Ships[i].symbol << ", Position: (" << Ships[i].x << ", " << Ships[i].y << "), Status: " << Ships[i].status << ", Lives: " << Ships[i].lives << ", Kills: " << Ships[i].kills << endl;
+            cout << i << ": " << "ID: " << Ships[i].id << ", Pointer: " << Ships[i].ship_ptr << ", Team: " << Ships[i].team << ", Type: " << Ships[i].type << ", Symbol: " << Ships[i].symbol << ", Position: (" << Ships[i].x << ", " << Ships[i].y << "), Status: " << Ships[i].status << ", Lives: " << Ships[i].lives << ", Kills: " << Ships[i].kills << endl;
             }
         }
 };
@@ -535,6 +525,8 @@ class Battleship : public Move {
 
 };
 
+
+
 int main() {
     Game_Setup setup;
 
@@ -549,5 +541,5 @@ int main() {
 
     Ship ship(game_settings, game_map, TeamA, TeamB, TeamA_symbols, TeamB_symbols, TeamA_classes, TeamB_classes);
 
-    //ship.getShips();
+    ship.getShips();
 }
