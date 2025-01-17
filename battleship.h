@@ -7,16 +7,24 @@ using namespace std;
 #include "ship.h"
 #include "move.h"
 
-class Battleship : public Ship {
+class Battleship : public Move {
+private:
+    char** game_map;
+    int id;
+    Ship_Details* Ships;
+
 public:
-    Battleship() {
-        cout << "Battleship created!" << endl;
+    Battleship(char** game_map, Ship_Details* Ships) {
+        cout << "Battleship created! " << endl;
+
+        id = Ship::ship_count;
+        this->game_map = game_map;
     }
 
-    // if (TeamA_classes[i - 1] == "Battleship") {
-    //     Ships[ship_counter].ship_ptr = new Battleship;
-    // }
-        
+    void action_plan() override {
+        move(game_map, Ships, id);
+    }
+    
 };
 
 #endif

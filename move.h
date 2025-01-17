@@ -18,16 +18,17 @@ public:
 
         switch (anumber) {
         case 1:
-            cout << "Case 1" << endl;
+            cout << "Up" << endl;
+            
             break;
         case 2:
-            cout << "Case 2" << endl;
+            cout << "Down" << endl;
             break;
         case 3:
-            cout << "Case 3" << endl;
+            cout << "Left" << endl;
             break;
         case 4:
-            cout << "Case 4" << endl;
+            cout << "Right" << endl;
             break;
         default:
             cout << "Default case" << endl;
