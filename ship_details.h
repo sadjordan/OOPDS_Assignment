@@ -13,7 +13,7 @@ using namespace std;
 class Ship;
 
 struct Ship_Details {
-        int id;
+        // int id;
         Ship* ship_ptr;
         char team;
         string type;

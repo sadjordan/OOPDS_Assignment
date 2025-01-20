@@ -22,11 +22,14 @@ class Destroy : public Ship {
 int Ship::ship_count = 0;
 Ship_Details* Game_Setup::Ships = nullptr;
 
-void game_loop(int no_ships, Ship_Details* Ships) {
+void game_loop(int no_ships, Ship_Details* Ships, Game_Setup* setup) {
     for (int i = 0; i < no_ships; i++) {
         if (Ships[i].type == "Battleship") {
             cout << "————————————————————————————————————————————————" << endl;
+            cout << i << endl;
             (Ships[i].ship_ptr)->action_plan();
+
+            setup->Print_Map();
         }
 
     }
@@ -56,7 +59,9 @@ int main() {
     setup.Create_Ship(Ships, no_ships);
     cout << "num ships " << no_ships << endl;
 
-    game_loop(no_ships, Ships);
+    setup.getShips();
+
+    game_loop(no_ships, Ships, &setup);
 
     //ship.getShips();
 }

@@ -271,7 +271,7 @@ public:
                     y = y_dis(gen);
                 } while(game_map[x][y] != '0'); // prevents placement on islands/ occupied coords
                 
-                Ships[ship_counter].id = ship_counter + 1;
+                // Ships[ship_counter].id = ship_counter + 1;
                 Ships[ship_counter].team = 'A';
                 Ships[ship_counter].type = TeamA_classes[i - 1];
                 Ships[ship_counter].symbol = TeamA_symbols[i - 1];
@@ -331,7 +331,7 @@ public:
                 } while(game_map[x][y] != '0'); // prevents placement on islands/ occupied coords
                 game_map[x][y] = TeamB_symbols[i - 1];
 
-                Ships[ship_counter].id = ship_counter + 1;
+                // Ships[ship_counter].id = ship_counter + 1;
                 Ships[ship_counter].team = 'B';
                 Ships[ship_counter].type = TeamB_classes[i - 1];
                 Ships[ship_counter].symbol = TeamB_symbols[i - 1];
@@ -424,15 +424,20 @@ public:
     Ship_Details* getShipDetails() const { return Ships; }
 
     void Create_Ship(Ship_Details* Ships, int no_ships) {
-    cout << "Creating Ships" << endl;
+        cout << "Creating Ships" << endl;
 
-    for (int i = 0; i < no_ships; i++) {
-        if (Ships[i].type == "Battleship") {
-            cout << "Detected" << endl;
-            Ships[i].ship_ptr = new Battleship(game_map, Ships);
+        for (int i = 0; i < no_ships; i++) {
+            if (Ships[i].type == "Battleship") {
+                cout << "Detected" << endl;
+                Ships[i].ship_ptr = new Battleship(game_map, Ships);
+            }
         }
     }
-}
+    void getShips() {
+        for (int i = 0; i < no_ships; i++) {
+            cout << i << ": " << "Pointer: " << Ships[i].ship_ptr << ", Team: " << Ships[i].team << ", Type: " << Ships[i].type << ", Symbol: " << Ships[i].symbol << ", Position: (" << Ships[i].x << ", " << Ships[i].y << "), Status: " << Ships[i].status << ", Lives: " << Ships[i].lives << ", Kills: " << Ships[i].kills << endl;
+            }
+    }
 };
 
 #endif
