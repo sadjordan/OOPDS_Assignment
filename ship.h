@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+#include "linkedlist.cpp"
+
 
 class Ship {
 private:
@@ -24,7 +26,11 @@ public:
     static char** game_map;
     static char* TeamA_symbols;
     static char* TeamB_symbols;
+    static Linked_List<Ship*>* turn_queue;
+    static Linked_List<Ship*>* respawn_queue;
+
     virtual void action_plan() = 0;
+
     Ship() {
         cout << "Ship Created" << endl;
         ship_count++;
@@ -58,7 +64,18 @@ public:
     void set_y(int new_y) { y = new_y; }
     void set_status(const string& new_status) { status = new_status; }
     void set_lives(int new_lives) { lives = new_lives; }
+    void decrement_lives() { lives--; }
     void set_kills(int new_kills) { kills = new_kills; }
+    void increment_kills() { kills++; }
+
+    char get_team() const { return team; }
+    string get_type() const { return type; }
+    char get_symbol() const { return symbol; }
+    int get_x() const { return x; }
+    int get_y() const { return y; }
+    string get_status() const { return status; }
+    int get_lives() const { return lives; }
+    int get_kills() const { return kills; }
 };
 
 #endif

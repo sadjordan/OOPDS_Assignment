@@ -8,7 +8,7 @@ using namespace std;
 #include "move.h"
 #include "shoot.h"
 
-class Frigate : public Move {
+class Frigate : public Shoot {
 private:
 
 public:
@@ -17,7 +17,7 @@ public:
     }
 
     void action_plan() override {
-        move();
+        shoot();
 
     }
     

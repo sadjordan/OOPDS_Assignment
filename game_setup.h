@@ -439,6 +439,7 @@ public:
         return turn_queue;
     }
 
+    
     void Print_Map() {
         cout << "   "; //col headers
                 for (int j = 1; j <= game_settings[2]; j++) {

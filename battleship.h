@@ -21,7 +21,7 @@ public:
     void action_plan() override {
         move();
         shoot();
-
+        shoot();
     }
     
 };
