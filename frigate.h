@@ -11,20 +11,17 @@ using namespace std;
 class Frigate : public Move {
 private:
     char** game_map;
-    Ship_Details* Ships;
 
 public:
-    Frigate(char** game_map, Ship_Details* Ships) {
+    Frigate(char** game_map) {
         cout << "Frigate created! " << endl;
-        cout << Ships << endl;
         this->game_map = game_map;
-        this->Ships = Ships;
 
         cout << "ID: " << id << endl;
     }
 
     void action_plan() override {
-        move(game_map, Ships, id);
+        move(game_map, id);
 
     }
     

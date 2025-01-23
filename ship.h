@@ -20,6 +20,7 @@ protected:
     int lives = 3;
     int kills = 0;
 public:
+    static int* game_settings;
     virtual void action_plan() = 0;
     Ship() {
         cout << "Ship Created" << endl;

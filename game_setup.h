@@ -14,10 +14,8 @@
 #include "destroyer.h"
 #include "frigate.h"
 
-
 class Game_Setup {
 private:
-    int* game_settings;
     int* TeamA;
     int* TeamB;
     char* TeamA_symbols;
@@ -25,8 +23,8 @@ private:
     string* TeamA_classes;
     string* TeamB_classes;
     char** game_map;
-    static Ship_Details* Ships;
     int no_ships;
+    int* game_settings;
 
 public:
     Game_Setup() {
@@ -257,8 +255,6 @@ public:
             no_ships += TeamB[i];
         }
 
-        Ships = new Ship_Details[no_ships];
-
         random_device rd;
         mt19937 gen(rd());
 
@@ -292,19 +288,19 @@ public:
 
                 if (TeamA_classes[i - 1] == "Battleship") {
                     cout << "Detected Battleship" << endl;
-                    temp = new Battleship(game_map, Ships);
+                    temp = new Battleship(game_map);
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Cruiser") {
                     cout << "Detected Cruiser" << endl;
-                    temp = new Cruiser(game_map, Ships);
+                    temp = new Cruiser(game_map);
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Destroyer") {
                     cout << "Detected Destroyer" << endl;
-                    temp = new Destroyer(game_map, Ships);
+                    temp = new Destroyer(game_map);
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Frigate") {
                     cout << "Detected Frigate" << endl;
-                    temp = new Frigate(game_map, Ships);
+                    temp = new Frigate(game_map);
                     turn_queue->push_back(temp);
                 } 
 
@@ -372,19 +368,19 @@ public:
 
                 if (TeamB_classes[i - 1] == "Battleship") {
                     cout << "Detected Battleship" << endl;
-                    Ship* temp = new Battleship(game_map, Ships);
+                    temp = new Battleship(game_map);
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Cruiser") {
                     cout << "Detected Cruiser" << endl;
-                    temp = new Cruiser(game_map, Ships);
+                    temp = new Cruiser(game_map);
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Destroyer") {
                     cout << "Detected Destroyer" << endl;
-                    temp = new Destroyer(game_map, Ships);
+                    temp = new Destroyer(game_map);
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Frigate") {
                     cout << "Detected Frigate" << endl;
-                    temp = new Frigate(game_map, Ships);
+                    temp = new Frigate(game_map);
                     turn_queue->push_back(temp);
                 } 
                 temp->set_team('B');
@@ -478,7 +474,6 @@ public:
     string* get_TeamB_classes() const { return TeamB_classes; }
     char** get_game_map() const { return game_map; }
     int getno_ships() const { return no_ships;}
-    Ship_Details* getShipDetails() const { return Ships; }
 
     // Linked_List<Ship*>* Create_Ship(Ship_Details* Ships, int no_ships) {
     //     cout << "Creating Ships" << endl;
@@ -497,12 +492,6 @@ public:
     //     turn_queue->display();
     //     return turn_queue;
     // }
-
-    void getShips() {
-        for (int i = 0; i < no_ships; i++) {
-            cout << i << ": " << "Pointer: " << Ships[i].ship_ptr << ", Team: " << Ships[i].team << ", Type: " << Ships[i].type << ", Symbol: " << Ships[i].symbol << ", Position: (" << Ships[i].x + 1 << ", " << Ships[i].y + 1 << "), Status: " << Ships[i].status << ", Lives: " << Ships[i].lives << ", Kills: " << Ships[i].kills << endl;
-            }
-    }
 };
 
 #endif

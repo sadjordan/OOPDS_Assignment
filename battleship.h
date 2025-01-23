@@ -11,14 +11,12 @@ using namespace std;
 class Battleship : public Move {
 private:
     char** game_map;
-    Ship_Details* Ships;
+    //int* game_settings;
 
 public:
-    Battleship(char** game_map, Ship_Details* Ships) {
+    Battleship(char** game_map) {
         cout << "Battleship created! " << endl;
-        cout << Ships << endl;
         this->game_map = game_map;
-        this->Ships = Ships;
 
         cout << "ID: " << id << endl;
     }
@@ -28,7 +26,7 @@ public:
     }
 
     void action_plan() override {
-        move(game_map, Ships, id);
+        move(game_map, id);
 
     }
     
