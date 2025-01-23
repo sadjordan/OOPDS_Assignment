@@ -52,7 +52,7 @@ public:
             game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = Ships[ship_id-1].symbol;
             break;
         default:
-            cout << "Default case" << endl;
+            cout << "Technically impossible so if you see this the world must be ending" << endl;
             break;
         }
 

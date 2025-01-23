@@ -1,5 +1,5 @@
-#ifndef DESTROYER_H
-#define DESTROYER_H
+#ifndef CRUISER_H
+#define CRUISER_H
 
 #include <iostream>
 using namespace std;
@@ -8,14 +8,14 @@ using namespace std;
 #include "move.h"
 #include "shoot.h"
 
-class Destroyer : public Move {
+class Cruiser : public Move {
 private:
     char** game_map;
     Ship_Details* Ships;
 
 public:
-    Destroyer(char** game_map, Ship_Details* Ships) {
-        cout << "Destroyer created! " << endl;
+    Cruiser(char** game_map, Ship_Details* Ships) {
+        cout << "Cruiser created! " << endl;
         cout << Ships << endl;
         this->game_map = game_map;
         this->Ships = Ships;

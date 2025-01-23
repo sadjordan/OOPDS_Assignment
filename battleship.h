@@ -6,6 +6,7 @@ using namespace std;
 
 #include "ship.h"
 #include "move.h"
+#include "shoot.h"
 
 class Battleship : public Move {
 private:
@@ -22,8 +23,13 @@ public:
         cout << "ID: " << id << endl;
     }
 
+    Battleship() {
+
+    }
+
     void action_plan() override {
         move(game_map, Ships, id);
+
     }
     
 };
