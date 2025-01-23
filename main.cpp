@@ -13,6 +13,8 @@ using namespace std;
 int* Ship::game_settings = nullptr;
 int Ship::ship_count = 0;
 char** Ship::game_map = nullptr;
+int* Ship::TeamA = nullptr;
+int* Ship::TeamB = nullptr;
 char* Ship::TeamA_symbols = nullptr;
 char* Ship::TeamB_symbols = nullptr;
 Linked_List<Ship*>* Ship::turn_queue = nullptr;
@@ -27,14 +29,16 @@ class Destroy : public Ship {
 };
 
 void game_loop(Game_Setup* setup) {
+    cout << "Another Game Loop" << endl;
+
     for (int i = 0; i < 2; i++) {
-        if (Ship::respawn_queue->list_size() == 0) {
-            break;
-        } else {
+        if (Ship::respawn_queue->list_size() != 0) {
             Ship::turn_queue->push_back((*Ship::respawn_queue)[0]);
             cout << (*Ship::respawn_queue)[0] << endl;
+            setup->Ship_Placement((*Ship::respawn_queue)[0]);
             Ship::respawn_queue->pop_front();
             cout << "Respawned" << endl;
+            cout << Ship::respawn_queue->list_size() << endl;
         }
     }
 
@@ -75,9 +79,15 @@ int main() {
 
     Ship::game_settings = setup.get_game_settings();
     Ship::game_map = setup.get_game_map();
+    Ship::TeamA = setup.get_TeamA();
+    Ship::TeamB = setup.get_TeamA();
     Ship::TeamA_symbols = setup.get_TeamA_symbols();
     Ship::TeamB_symbols = setup.get_TeamB_symbols();
 
     cout << Ship::turn_queue->list_size() << endl;
-    game_loop(&setup);
+
+    for (int i = 0; i < Ship::game_settings[0]; i++) {
+        cout << "Loop number: " << i << endl;
+        game_loop(&setup);
+    }
 }

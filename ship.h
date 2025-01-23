@@ -26,6 +26,8 @@ public:
     static char** game_map;
     static char* TeamA_symbols;
     static char* TeamB_symbols;
+    static int* TeamA;
+    static int* TeamB;
     static Linked_List<Ship*>* turn_queue;
     static Linked_List<Ship*>* respawn_queue;
 

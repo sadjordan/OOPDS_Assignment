@@ -62,9 +62,8 @@ public:
 
         // team A
         TeamA = new int[size_a + 1];
-        TeamA_symbols = new char[size_a + 1];
+        TeamA_symbols = new char[size_a];
         TeamA_classes = new string[size_a];
-        TeamA_symbols[0] = size_a;
         TeamA[0] = size_a;
 
         file.clear();
@@ -89,7 +88,7 @@ public:
                 }
 
                 if (word.size() == 1 && !isdigit(word[0])) {
-                    TeamA_symbols[counter - 3] = word[0];
+                    TeamA_symbols[counter - 4] = word[0];
                     //cout << word[0] << endl;
                 }
 
@@ -121,10 +120,9 @@ public:
 
         //team b
         TeamB = new int[size_b + 1];
-        TeamB_symbols = new char[size_b + 1];
+        TeamB_symbols = new char[size_b];
         TeamB_classes = new string[size_a];
         TeamB[0] = size_b;
-        TeamB_symbols[0] = size_b;
 
         file.clear();
         file.seekg(0, ios::beg);
@@ -148,7 +146,7 @@ public:
                 }
 
                 if (word.size() == 1 && !isdigit(word[0])) {
-                    TeamB_symbols[counter - 4 - size_a] = word[0];
+                    TeamB_symbols[counter - 5 - size_a] = word[0];
                     //cout << word[0] << endl;
                 }
 
@@ -308,16 +306,16 @@ public:
 
                 temp->set_team('A');
                 temp->set_type(TeamA_classes[i - 1]);
-                temp->set_symbol(TeamA_symbols[i]);
+                temp->set_symbol(TeamA_symbols[i - 1]);
                 temp->set_x(x);
                 temp->set_y(y);
                 
                 temp->display_info();
                 
-                game_map[x][y] = TeamA_symbols[i];
+                game_map[x][y] = TeamA_symbols[i - 1];
                 
                 //symbols_placed[i]++;
-                cout << "Placed " << TeamA_symbols[i] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
+                cout << "Placed " << TeamA_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
 
                 cout << "   "; //col headers
                 for (int j = 1; j <= game_settings[2]; j++) {
@@ -356,15 +354,12 @@ public:
             uniform_int_distribution<> x_dis(0, game_settings[1] - 1);
             uniform_int_distribution<> y_dis(0, game_settings[2] - 1);
 
-            
-
             while (TeamB[i]-- > 0) {
-                
                 do {
                     x = x_dis(gen);
                     y = y_dis(gen);
                 } while(game_map[x][y] != '0'); // prevents placement on islands/ occupied coords
-                game_map[x][y] = TeamB_symbols[i];
+                game_map[x][y] = TeamB_symbols[i - 1];
 
                 Ship* temp;
 
@@ -387,7 +382,7 @@ public:
                 } 
                 temp->set_team('B');
                 temp->set_type(TeamB_classes[i - 1]);
-                temp->set_symbol(TeamB_symbols[i]);
+                temp->set_symbol(TeamB_symbols[i - 1]);
                 temp->set_x(x);
                 temp->set_y(y);
 
@@ -395,7 +390,7 @@ public:
                 // Ships[ship_counter].id = ship_counter + 1;
                 
                 //symbols_placed[i]++;
-                cout << "Placed " << TeamB_symbols[i] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
+                cout << "Placed " << TeamB_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
 
                 cout << "   "; //col headers
                 for (int j = 1; j <= game_settings[2]; j++) {
@@ -437,6 +432,24 @@ public:
         //cout << ship_counter << endl;
 
         return turn_queue;
+    }
+
+    void Ship_Placement(Ship* respawning_ship) {
+        random_device rd;
+        mt19937 gen(rd());
+
+        uniform_int_distribution<> x_dis(0, game_settings[1] - 1);
+        uniform_int_distribution<> y_dis(0, game_settings[2] - 1);
+        int x, y;
+
+        do {
+            x = x_dis(gen);
+            y = y_dis(gen);
+        } while(game_map[x][y] != '0');
+
+        game_map[x][y] = respawning_ship->get_symbol();
+        respawning_ship->set_x(x);
+        respawning_ship->set_y(y);
     }
 
     
