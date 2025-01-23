@@ -37,6 +37,8 @@ public:
                 cout << "Pass 5" << endl;
                 // // Decrement the loop counter to check the correct next element
                 // i--;
+
+                break;
             }
         }
     }
