@@ -10,18 +10,14 @@ using namespace std;
 
 class Destroyer : public Move {
 private:
-    char** game_map;
 
 public:
-    Destroyer(char** game_map) {
+    Destroyer() {
         cout << "Destroyer created! " << endl;
-        this->game_map = game_map;
-
-        cout << "ID: " << id << endl;
     }
 
     void action_plan() override {
-        move(game_map, id);
+        move();
 
     }
     

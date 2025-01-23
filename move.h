@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Move : public Ship {
+class Move : virtual public Ship {
 private:
 
 public:
@@ -17,12 +17,11 @@ public:
     //     this->Ships = Ships;
     // }
 
-    void move(char** game_map, int ship_id) {
+    void move() {
         random_device rd;
         mt19937 gen(rd());
 
-        cout << "Move ship id: " << ship_id - 1 << endl;
-
+        // cout << "Move ship id: " << ship_id - 1 << endl;
         cout << type << endl;
 
         uniform_int_distribution<> movement_decider(1, 4);

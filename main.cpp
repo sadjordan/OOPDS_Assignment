@@ -12,6 +12,9 @@ using namespace std;
 
 int* Ship::game_settings = nullptr;
 int Ship::ship_count = 0;
+char** Ship::game_map = nullptr;
+char* Ship::TeamA_symbols = nullptr;
+char* Ship::TeamB_symbols = nullptr;
 
 class Look : public Ship {
 
@@ -28,6 +31,11 @@ void game_loop(Linked_List<Ship*>* turn_queue, Game_Setup* setup) {
         (*turn_queue)[i]->action_plan();
         setup->Print_Map();
     }
+
+    // return 0 - completed without any events
+    // return (coordinates) - destroyed another ship(s)
+
+    cin.get();
 }
 
 // game loop order
@@ -52,7 +60,12 @@ int main() {
     turn_queue = setup.Initial_Ship_Placement();
     cout<<endl;
     turn_queue->display();
+
     Ship::game_settings = setup.get_game_settings();
+    Ship::game_map = setup.get_game_map();
+    Ship::TeamA_symbols = setup.get_TeamA_symbols();
+    Ship::TeamB_symbols = setup.get_TeamB_symbols();
+
     cout << turn_queue->list_size() << endl;
     game_loop(turn_queue, &setup);
 }

@@ -8,25 +8,19 @@ using namespace std;
 #include "move.h"
 #include "shoot.h"
 
-class Battleship : public Move {
+class Battleship : public Move, public Shoot {
 private:
     char** game_map;
     //int* game_settings;
 
 public:
-    Battleship(char** game_map) {
-        cout << "Battleship created! " << endl;
-        this->game_map = game_map;
-
-        cout << "ID: " << id << endl;
-    }
-
     Battleship() {
-
+        cout << "Battleship created! " << endl;
     }
 
     void action_plan() override {
-        move(game_map, id);
+        move();
+        shoot();
 
     }
     

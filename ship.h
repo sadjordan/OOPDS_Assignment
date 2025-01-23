@@ -21,6 +21,9 @@ protected:
     int kills = 0;
 public:
     static int* game_settings;
+    static char** game_map;
+    static char* TeamA_symbols;
+    static char* TeamB_symbols;
     virtual void action_plan() = 0;
     Ship() {
         cout << "Ship Created" << endl;
