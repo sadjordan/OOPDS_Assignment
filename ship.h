@@ -36,6 +36,17 @@ public:
         cout << "Ship death" << endl;
     }
 
+    void display_info() const {
+        cout << "Ship ID: " << id << endl;
+        cout << "Team: " << team << endl;
+        cout << "Type: " << type << endl;
+        cout << "Symbol: " << symbol << endl;
+        cout << "Position: (" << x << ", " << y << ")" << endl;
+        cout << "Status: " << status << endl;
+        cout << "Lives: " << lives << endl;
+        cout << "Kills: " << kills << endl;
+    }
+
     void set_team(char new_team) { team = new_team; }
     void set_type(const string& new_type) { type = new_type; }
     void set_symbol(char new_symbol) { symbol = new_symbol; }

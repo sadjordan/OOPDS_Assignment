@@ -21,7 +21,7 @@ public:
         cout << "Move ship id: " << ship_id-1 << endl;
         cout << Ships << endl;
 
-        cout << Ships[ship_id-1].type << endl;
+        cout << type << endl;
 
         uniform_int_distribution<> movement_decider(1, 4);
         int anumber = movement_decider(gen);
@@ -29,27 +29,27 @@ public:
         switch (anumber) {
         case 1:
             cout << "Up" << endl;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = '0';
-            Ships[ship_id-1].y++;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = Ships[ship_id-1].symbol;
+            game_map[x][y] = '0';
+            y++;
+            game_map[x][y] = symbol;
             break;
         case 2:
             cout << "Down" << endl;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = '0';
-            Ships[ship_id-1].y--;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = Ships[ship_id-1].symbol;
+            game_map[x][y] = '0';
+            y--;
+            game_map[x][y] = symbol;
             break;
         case 3:
             cout << "Left" << endl;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = '0';
-            Ships[ship_id-1].x--;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = Ships[ship_id-1].symbol;
+            game_map[x][y] = '0';
+            x--;
+            game_map[x][y] = symbol;
             break;
         case 4:
             cout << "Right" << endl;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = '0';
-            Ships[ship_id-1].x++;
-            game_map[Ships[ship_id-1].x][Ships[ship_id-1].y] = Ships[ship_id-1].symbol;
+            game_map[x][y] = '0';
+            x++;
+            game_map[x][y] = symbol;
             break;
         default:
             cout << "Technically impossible so if you see this the world must be ending" << endl;

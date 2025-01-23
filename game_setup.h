@@ -314,6 +314,8 @@ public:
                 temp->set_x(x);
                 temp->set_y(y);
                 
+                temp->display_info();
+                
                 game_map[x][y] = TeamA_symbols[i - 1];
                 
                 //symbols_placed[i]++;
@@ -391,6 +393,7 @@ public:
                 temp->set_x(x);
                 temp->set_y(y);
 
+                temp->display_info();
                 // Ships[ship_counter].id = ship_counter + 1;
                 
                 //symbols_placed[i]++;

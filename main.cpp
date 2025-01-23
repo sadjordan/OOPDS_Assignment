@@ -54,6 +54,10 @@ int main() {
     Linked_List<Ship*>* turn_queue;
     turn_queue = setup.Initial_Ship_Placement();
     setup.getShips();
+
+    cout<<endl;
+    turn_queue->display();
+    cout << turn_queue->list_size() << endl;
     game_loop(turn_queue, &setup);
 
 }
