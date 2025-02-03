@@ -194,6 +194,7 @@ public:
             while (iss >> value) {
                 char temp = value + '0';
                 game_map[counter][internal_counter] = temp;
+                cout << "Counter: " << counter << " Internal Counter: " << internal_counter << " value: " << temp << endl;
 
                 //cout << internal_counter << endl;
                 internal_counter++;

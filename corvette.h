@@ -1,5 +1,5 @@
-#ifndef FRIGATE_H
-#define FRIGATE_H
+#ifndef CORVETTE_H
+#define CORVETTE_H
 
 #include <iostream>
 using namespace std;
@@ -8,31 +8,30 @@ using namespace std;
 #include "move.h"
 #include "shoot.h"
 
-class Frigate : public Shoot {
+class Corvette : public Shoot {
 private:
-    int cycle = 0;
+
 public:
-    Frigate() {
-        cout << "Frigate created! " << endl;
+    Corvette() {
+        cout << "Corvette created! " << endl;
     }
 
-    void shoot() override {
-        int directions[8][2] = { {-1, 1},  {0, 1},  {1, 1},  // Up-left, Up, Up-right
-                                 {-1, 0},           {1, 0},  // Left,       Right
-                                 {-1, -1}, {0, -1}, {1, -1}  // Down-left, Down, Down-right
+        void shoot() override {
+        int directions[8][2] = {
+            {-1, -1}, {-1, 0}, {-1, 1},  // Up-left, Up, Up-right
+            {0, -1},          {0, 1},   // Left,       Right
+            {1, -1},  {1, 0}, {1, 1}    // Down-left, Down, Down-right
         };
-        // if a ship cannot look, then it cannot possibly know that its shot will exceed the map
-        // or if a ship shoots randomly, then it must also disregard the map bounds
 
-        if (cycle == 7) {
-            cycle = 0;
-        }
+        // will select a direction randomly to shoot
+        random_device rd;
+        mt19937 gen(rd());
+        uniform_int_distribution<> dir_dis(0, 7);
+        int dir = dir_dis(gen);
 
         // this will calculate target position
-        int target_x = x + directions[cycle][0];
-        int target_y = y + directions[cycle][1];
-
-        cycle++;
+        int target_x = x + directions[dir][0];
+        int target_y = y + directions[dir][1];
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
         cout << TeamA_symbols[0] << endl;

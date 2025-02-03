@@ -15,18 +15,14 @@ int Ship::ship_count = 0;
 char** Ship::game_map = nullptr;
 int* Ship::TeamA = nullptr;
 int* Ship::TeamB = nullptr;
+string* Ship::TeamA_classes = nullptr;
+string* Ship::TeamB_classes = nullptr;
 char* Ship::TeamA_symbols = nullptr;
 char* Ship::TeamB_symbols = nullptr;
 Linked_List<Ship*>* Ship::turn_queue = nullptr;
 Linked_List<Ship*>* Ship::respawn_queue = nullptr;
-
-class Look : public Ship {
-
-};
-
-class Destroy : public Ship {
-
-};
+char* Ship::default_teamA_symbols = nullptr;
+char* Ship::default_teamB_symbols = nullptr; 
 
 void game_loop(Game_Setup* setup) {
     cout << "Another Game Loop" << endl;
@@ -35,7 +31,10 @@ void game_loop(Game_Setup* setup) {
         if (Ship::respawn_queue->list_size() != 0) {
             Ship::turn_queue->push_back((*Ship::respawn_queue)[0]);
             cout << (*Ship::respawn_queue)[0] << endl;
+            cout << (*Ship::respawn_queue)[0]->get_type() << endl;
             setup->Ship_Placement((*Ship::respawn_queue)[0]);
+            cout << (*Ship::respawn_queue)[0]->get_x() << endl;
+            cout << (*Ship::respawn_queue)[0]->get_y() << endl;
             Ship::respawn_queue->pop_front();
             cout << "Respawned" << endl;
             cout << Ship::respawn_queue->list_size() << endl;
@@ -48,9 +47,6 @@ void game_loop(Game_Setup* setup) {
         (*Ship::turn_queue)[i]->action_plan();
         setup->Print_Map();
     }
-
-    // return 0 - completed without any events
-    // return (coordinates) - destroyed another ship(s)
 
     cin.get();
 }
@@ -81,13 +77,35 @@ int main() {
     Ship::game_map = setup.get_game_map();
     Ship::TeamA = setup.get_TeamA();
     Ship::TeamB = setup.get_TeamA();
+    Ship::TeamA_classes = setup.get_TeamA_classes();
+    Ship::TeamB_classes = setup.get_TeamB_classes();
     Ship::TeamA_symbols = setup.get_TeamA_symbols();
     Ship::TeamB_symbols = setup.get_TeamB_symbols();
 
+    Ship::default_teamA_symbols = new char[7]; // {"å", "ß", "ö", "Å", "◊", "Ö", "∑"};
+    Ship::default_teamB_symbols = new char[7]; // {"∆", "∫", "µ", "√", "ç", "Ω", "æ"};
+    
+    {
+        string tempA = "QWERTYU";
+        string tempB = "ASDFGHJ";
+        // From left to right: Battleship, Cruiser, Destroyer, Frigate, Corvette, Amphibious, SuperShip
+
+        for (int i = 0; i < 7; i++) {
+            Ship::default_teamA_symbols[i] = tempA[i];
+            Ship::default_teamB_symbols[i] = tempB[i];
+        }
+    }
     cout << Ship::turn_queue->list_size() << endl;
+
+    cin.get();
+
+    cout << Ship::game_map << endl;
 
     for (int i = 0; i < Ship::game_settings[0]; i++) {
         cout << "Loop number: " << i << endl;
         game_loop(&setup);
     }
 }
+
+// char tempA[] = {"1", "2", "ö", "Å", "◊", "Ö", "∑"};
+// char tempB[] = {"∆", "∫", "µ", "√", "ç", "Ω", "æ"};

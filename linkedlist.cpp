@@ -220,6 +220,21 @@ public:
         return current->data; // Return the data at the node
     }
 
+    int find_index(T value)
+    {
+        Node<T>* current = head;
+        int index = 0;
+        while (current != nullptr) {
+            if (current->data == value)
+            {
+                return index;
+            }
+            current = current->next;
+            index++;
+        }
+        return -1;
+    }
+
     // Destructor to free all nodes
     ~Linked_List()
     {

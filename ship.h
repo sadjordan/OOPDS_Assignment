@@ -21,15 +21,20 @@ protected:
     string status = "Deployed";
     int lives = 3;
     int kills = 0;
+
 public:
     static int* game_settings;
     static char** game_map;
     static char* TeamA_symbols;
     static char* TeamB_symbols;
+    static string* TeamA_classes;
+    static string* TeamB_classes;
     static int* TeamA;
     static int* TeamB;
     static Linked_List<Ship*>* turn_queue;
     static Linked_List<Ship*>* respawn_queue;
+    static char* default_teamA_symbols;
+    static char* default_teamB_symbols;
 
     virtual void action_plan() = 0;
 
@@ -42,10 +47,10 @@ public:
         //Ships = Game_Setup::Ships;
     }
 
-    ~Ship() {
+    virtual ~Ship() {
         ship_count--;
 
-        cout << "Ship death" << endl;
+        cout << "Ship died" << endl;
     }
 
     void display_info() const {
