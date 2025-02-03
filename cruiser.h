@@ -11,6 +11,7 @@ using namespace std;
 
 class Cruiser : public Move, public Destroy, public Look {
 private:
+    bool target_acquired = false;
 public:
     Cruiser() {
         cout << "Cruiser created! " << endl;
@@ -44,7 +45,7 @@ public:
             }
         } else {
             for (int i = 0; i < TeamB[0]; i++) {
-                if (TeamB_classes[i] == "Cruiser") {
+                if (TeamB_classes[i] == "Destroyer") {
                     promoted_ship->set_symbol(TeamB_symbols[i]);
                     found_symbol = true;
                     break;
@@ -79,178 +80,46 @@ public:
     }
 
     void move() override {
-        cout << "Cruiser move" << endl;
+        target_acquired = false;
 
-        // cout << "Move ship id: " << ship_id - 1 << endl;
-        cout << type << endl;
-
-        for (int i = 0; i < 8; i++) {
-            cout << look_results[i] << endl;
-        }
-        
-        
+        // Check for adjacent enemies
         for (int i = 0; i < 8; i++) {
             if (look_results[i] != '0' && look_results[i] != '1' && look_results[i] != '5') {
-                if (team == 'A') {
-                    for (int i = 0; i < TeamB[0]; i++) {
-                        if (TeamB_symbols[i] == look_results[i]) {
-                            if (i == 1 || i == 3 || i == 4 || i == 6) {
-                                // abstain from moving in order to destroy next turn
-                                target[0] = x + directions[i][0];
-                                target[1] = y + directions[i][1];
-                                return;
-                            } else if (i == 0) { //i == 5
-                                if (game_map[x - 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y + 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y + 1;
-                                    return;
-                                }
-                            } else if (i == 5) {
-                                if (game_map[x - 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y - 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y - 1;
-                                    return;
-                                }
-                            } else if (i == 2) {
-                                if (game_map[x + 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y + 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y + 1;
-                                    return;
-                                }
-                            }
-                            else if (i == 7) {
-                                if (game_map[x + 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y - 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y - 1;
-                                    return;
-                                }
-                            }
-                        }
-                    }
-                } else {
-                    for (int i = 0; i < TeamA[0]; i++) {
-                        if (TeamA_symbols[i] == look_results[i]) {
-                            if (i == 1 || i == 3 || i == 4 || i == 6) {
-                                // abstain from moving in order to destroy next turn
-                                target[0] = x + directions[i][0];
-                                target[1] = y + directions[i][1];
-                                return;
-                            } else if (i == 0) { //i == 5
-                                if (game_map[x - 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y + 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y + 1;
-                                    return;
-                                }
-                            } else if (i == 5) {
-                                if (game_map[x - 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y - 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x - 1;
-                                    target[1] = y - 1;
-                                    return;
-                                }
-                            } else if (i == 2) {
-                                if (game_map[x + 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y + 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y + 1;
-                                    return;
-                                }
-                            }
-                            else if (i == 7) {
-                                if (game_map[x + 1][y] == '0') {
-                                    game_map[x][y] = '0';
-                                    x++;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y - 1;
-                                    return;
-                                } else if (game_map[x][y - 1] == '0') {
-                                    game_map[x][y] = '0';
-                                    y--;
-                                    game_map[x][y] = symbol;
-                                    target[0] = x + 1;
-                                    target[1] = y - 1;
-                                    return;
-                                }
-                            }
+                if ((i == 1 || i == 3 || i == 4 || i == 6) && 
+                    ((team == 'A' && look_results[i] == 'B') || (team == 'B' && look_results[i] == 'A'))) {
+                    // Enemy is adjacent, abstain from moving
+                    target[0] = x + directions[i][0];
+                    target[1] = y + directions[i][1];
+                    target_acquired = true;
+                    return;
+                }
+            }
+        }
+
+        // Move towards enemy units if not adjacent
+        for (int i = 0; i < 8; i++) {
+            if (look_results[i] != '0' && look_results[i] != '1' && look_results[i] != '5') {
+                if ((team == 'A' && look_results[i] == 'B') || (team == 'B' && look_results[i] == 'A')) {
+                    if (i == 0 || i == 2 || i == 5 || i == 7) {
+                        int new_x = x + directions[i][0];
+                        int new_y = y + directions[i][1];
+                        if (game_map[new_x][new_y] == '0') {
+                            game_map[x][y] = '0';
+                            x = new_x;
+                            y = new_y;
+                            game_map[x][y] = symbol;
+                            // Save target coordinates (enemy position)
+                            target[0] = x + directions[i][0];
+                            target[1] = y + directions[i][1];
+                            target_acquired = true;
+                            return;
                         }
                     }
                 }
             }
         }
 
-        //if nothing is seen revert to random movement
-        cout << "Random movement" << endl;
-        cout << symbol << endl;
-        
+        // If no enemies are found, move randomly
         bool valid_move = false;
         int counter = 0;
 
@@ -269,54 +138,42 @@ public:
             switch (anumber) {
             case 1: // Up
                 if (y + 1 < game_settings[2] && game_map[x][y + 1] == '0') {
-                    cout << "(" << x << ", " << y << ")" << endl;
-                    cout << "Up" << endl;
                     game_map[x][y] = '0';
                     y++;
                     game_map[x][y] = symbol;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Up, out of bounds. Retrying..." << endl;
                 }
                 break;
             case 2: // Down
                 if (y - 1 >= 0 && game_map[x][y - 1] == '0') {
-                    cout << "(" << x << ", " << y << ")" << endl;
-                    cout << "Down" << endl;
                     game_map[x][y] = '0';
                     y--;
                     game_map[x][y] = symbol;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Down, out of bounds. Retrying..." << endl;
                 }
                 break;
             case 3: // Left
                 if (x - 1 >= 0 && game_map[x - 1][y] == '0') {
-                    cout << "(" << x << ", " << y << ")" << endl;
-                    cout << "Left" << endl;
                     game_map[x][y] = '0';
                     x--;
                     game_map[x][y] = symbol;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Left, out of bounds. Retrying..." << endl;
                 }
                 break;
             case 4: // Right
                 if (x + 1 < game_settings[1] && game_map[x + 1][y] == '0') {
-                    cout << "(" << x << ", " << y << ")" << endl;
-                    cout << "Right" << endl;
                     game_map[x][y] = '0';
                     x++;
                     game_map[x][y] = symbol;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Right, out of bounds. Retrying..." << endl;
                 }
                 break;
             default:
@@ -324,14 +181,6 @@ public:
                 break;
             }
         }
-
-        if (x != old_x || y != old_y) {
-            cout << "Movement successful!" << endl;
-        } else {
-            cout << "No movement was made" << endl;
-        }
-
-        cout << "Move end" << endl;
     }
 
     void destroy() override {
@@ -347,12 +196,20 @@ public:
                 Destroy::kill((*turn_queue)[i]);
             }
         }
+
+        game_map[x][y] = symbol;
     }
 
     void action_plan() override {
         look();
         move();
-        destroy();
+        if (target_acquired == true) {
+            destroy();
+        }
+        if (kills > 3) {
+            promotion();
+        }
+        cout << "(" << x << ", " << y << ")" << endl;
     }
     
 };

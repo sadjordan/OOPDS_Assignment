@@ -13,6 +13,9 @@
 #include "cruiser.h"
 #include "destroyer.h"
 #include "frigate.h"
+#include "corvette.h"
+#include "amphibious.h"
+#include "supership.h"
 
 class Game_Setup {
 private:

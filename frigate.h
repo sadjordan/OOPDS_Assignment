@@ -7,6 +7,7 @@ using namespace std;
 #include "ship.h"
 #include "move.h"
 #include "shoot.h"
+#include "corvette.h"
 
 class Frigate : public Shoot {
 private:
@@ -15,6 +16,58 @@ public:
     Frigate() {
         cout << "Frigate created! " << endl;
     }
+
+    void promotion() {
+        cout << "Frigate has been promoted to Corvette!" << endl;
+
+        // cin.get();
+
+        Ship* promoted_ship = new Corvette();
+
+        int replace_index = turn_queue->find_index(this);
+
+        turn_queue->replace(replace_index, promoted_ship);
+
+        promoted_ship->set_x(x);
+        promoted_ship->set_y(y);
+        promoted_ship->set_team(team);
+        promoted_ship->set_type("Corvette");
+
+        bool found_symbol = false;
+
+        if (team == 'A') {
+            for (int i = 0; i < TeamA[0]; i++) {
+                if (TeamA_classes[i] == "Corvette") {
+                    promoted_ship->set_symbol(TeamA_symbols[i]);
+                    found_symbol = true;
+                    break;
+                }
+            }
+        } else {
+            for (int i = 0; i < TeamB[0]; i++) {
+                if (TeamB_classes[i] == "Corvette") {
+                    promoted_ship->set_symbol(TeamB_symbols[i]);
+                    found_symbol = true;
+                    break;
+                }
+            }
+        }
+
+        if (found_symbol == false && team == 'A') {
+            cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            promoted_ship->set_symbol(default_teamA_symbols[4]);
+        } else if (found_symbol == false && team == 'B') {
+            cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            promoted_ship->set_symbol(default_teamB_symbols[4]);
+        }
+
+        //promoted_ship->set_symbol('5');
+
+        game_map[x][y] = promoted_ship->get_symbol();
+
+        delete this;
+    }
+
 
     void shoot() override {
         int directions[8][2] = { {-1, 1},  {0, 1},  {1, 1},  // Up-left, Up, Up-right
@@ -83,6 +136,9 @@ public:
     void action_plan() override {
         shoot();
 
+        if (kills > 3) {
+            promotion();
+        }
     }
     
 };

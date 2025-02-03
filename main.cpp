@@ -105,7 +105,5 @@ int main() {
         cout << "Loop number: " << i << endl;
         game_loop(&setup);
     }
+    
 }
-
-// char tempA[] = {"1", "2", "ö", "Å", "◊", "Ö", "∑"};
-// char tempB[] = {"∆", "∫", "µ", "√", "ç", "Ω", "æ"};

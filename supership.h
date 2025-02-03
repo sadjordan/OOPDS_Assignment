@@ -1,5 +1,5 @@
-#ifndef DESTROYER_H
-#define DESTROYER_H
+#ifndef SUPERSHIP_H
+#define SUPERSHIP_H
 
 #include <iostream>
 using namespace std;
@@ -10,13 +10,14 @@ using namespace std;
 #include "destroy.h"
 #include "look.h"
 
-class Destroyer : public Move, public Shoot, public Destroy, public Look {
+class Supership : public Move, public Shoot, public Destroy, public Look {
 private:
-bool target_acquired = false;
+    bool target_acquired = false;
+    int previous[2];
 
 public:
-    Destroyer() {
-        cout << "Destroyer created! " << endl;
+    Supership() {
+        cout << "Supership created! " << endl;
     }
 
     void look() override {
@@ -152,20 +153,32 @@ public:
     }
 
     void shoot() override {
+        int directions[8][2] = {
+            {-1, -1}, {-1, 0}, {-1, 1},  // Up-left, Up, Up-right
+            {0, -1},          {0, 1},   // Left,       Right
+            {1, -1},  {1, 0}, {1, 1}    // Down-left, Down, Down-right
+        };
+
+        // will select a direction randomly to shoot
         random_device rd;
         mt19937 gen(rd());
-        uniform_int_distribution<> dir_dis(-5, 5);
-        int random_x = dir_dis(gen);
-        int random_y = dir_dis(gen);
+        uniform_int_distribution<> dir_dis(0, 7);
+        int dir;
 
-        while (abs(random_x) + abs(random_y) > 5 || abs(random_x) + abs(random_y) == 0) {
-            random_x = dir_dis(gen);
-            random_y = dir_dis(gen);
+        do {
+            dir = dir_dis(gen);
+        } while (dir == previous[0] || dir == previous[1]);
+
+        if (previous[0] == -1) {
+            previous[0] = dir;
+        } else if (previous[1] == -1) {
+            previous[1] = previous[0];
+            previous[0] = dir;
         }
 
         // this will calculate target position
-        int target_x = x + random_x;
-        int target_y = y + random_y;
+        int target_x = x + directions[dir][0];
+        int target_y = y + directions[dir][1];
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
         cout << TeamA_symbols[0] << endl;
@@ -186,7 +199,7 @@ public:
 
                         kills++;
                         cout << "Kill incremented" << endl;
-                        Shoot::kill(target_x, target_y);
+                        kill(target_x, target_y);
 
                         //add promotion logic here?
                         //remember to change the ship symbol on the map
@@ -201,7 +214,7 @@ public:
 
                         kills++;
                         cout << "Kill incremented" << endl;
-                        Shoot::kill(target_x, target_y);
+                        kill(target_x, target_y);
                         break;
                     }
                 }
@@ -214,9 +227,12 @@ public:
     }
 
     void action_plan() override {
+        previous = [-1, -1];
         look();
         move();
         destroy();
+        shoot();
+        shoot();
         shoot();
     }
     

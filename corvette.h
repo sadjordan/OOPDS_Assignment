@@ -16,7 +16,7 @@ public:
         cout << "Corvette created! " << endl;
     }
 
-        void shoot() override {
+    void shoot() override {
         int directions[8][2] = {
             {-1, -1}, {-1, 0}, {-1, 1},  // Up-left, Up, Up-right
             {0, -1},          {0, 1},   // Left,       Right
