@@ -24,7 +24,7 @@ public:
             if (x + directions[i][0] < 0 || x + directions[i][0] >= game_settings[1] || y + directions[i][1] < 0 || y + directions[i][1] >= game_settings[2]) {
                 look_results[i] = '5';
             } else {
-                cout << "test" << endl;
+                // cout << "test" << endl;
                 look_results[i] = game_map[x + directions[i][0]][y + directions[i][1]];
             }
         }
