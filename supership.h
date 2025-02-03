@@ -199,7 +199,7 @@ public:
 
                         kills++;
                         cout << "Kill incremented" << endl;
-                        kill(target_x, target_y);
+                        Shoot::kill(target_x, target_y);
 
                         //add promotion logic here?
                         //remember to change the ship symbol on the map
@@ -214,7 +214,7 @@ public:
 
                         kills++;
                         cout << "Kill incremented" << endl;
-                        kill(target_x, target_y);
+                        Shoot::kill(target_x, target_y);
                         break;
                     }
                 }
@@ -227,7 +227,8 @@ public:
     }
 
     void action_plan() override {
-        previous = [-1, -1];
+        previous[0] = -1;
+        previous[1] = -1;
         look();
         move();
         destroy();

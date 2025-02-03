@@ -306,7 +306,19 @@ public:
                     cout << "Detected Frigate" << endl;
                     temp = new Frigate();
                     turn_queue->push_back(temp);
-                } 
+                } else if (TeamA_classes[i - 1] == "Corvette") {
+                    cout << "Detected Corvette" << endl;
+                    temp = new Corvette();
+                    turn_queue->push_back(temp);
+                } else if (TeamA_classes[i - 1] == "Amphibious") {
+                    cout << "Detected Amphibious" << endl;
+                    temp = new Amphibious();
+                    turn_queue->push_back(temp);
+                } else if (TeamA_classes[i - 1] == "Supership") {
+                    cout << "Detected Supership" << endl;
+                    temp = new Supership();
+                    turn_queue->push_back(temp);
+                }
 
                 temp->set_team('A');
                 temp->set_type(TeamA_classes[i - 1]);
@@ -383,7 +395,19 @@ public:
                     cout << "Detected Frigate" << endl;
                     temp = new Frigate();
                     turn_queue->push_back(temp);
-                } 
+                } else if (TeamB_classes[i - 1] == "Corvette") {
+                    cout << "Detected Corvette" << endl;
+                    temp = new Corvette();
+                    turn_queue->push_back(temp);
+                } else if (TeamB_classes[i - 1] == "Amphibious") {
+                    cout << "Detected Amphibious" << endl;
+                    temp = new Amphibious();
+                    turn_queue->push_back(temp);
+                } else if (TeamB_classes[i - 1] == "Supership") {
+                    cout << "Detected Supership" << endl;
+                    temp = new Supership();
+                    turn_queue->push_back(temp);
+                }
                 temp->set_team('B');
                 temp->set_type(TeamB_classes[i - 1]);
                 temp->set_symbol(TeamB_symbols[i - 1]);
