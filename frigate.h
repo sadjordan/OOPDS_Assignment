@@ -53,10 +53,10 @@ public:
         }
 
         if (found_symbol == false && team == 'A') {
-            cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            cout << "No symbol found for Corvette. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamA_symbols[4]);
         } else if (found_symbol == false && team == 'B') {
-            cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            cout << "No symbol found for Corvette. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamB_symbols[4]);
         }
 

@@ -7,23 +7,23 @@ using namespace std;
 #include "ship.h"
 #include "movingship.h"
 #include "shootingship.h"
-#include "destroyer.h"
+#include "supership.h"
 
 class Amphibious : public MovingShip, public ShootingShip {
 private:
     char ship_is_on = '0';
 
 public:
-    Amphibious() {
-        cout << "Amphibious created! " << endl;
-    }
+    // Amphibious() {
+    //     cout << "Amphibious created! " << endl;
+    // }
 
     void promotion() {
-        cout << "Amphibious has been promoted to Destroyer!" << endl;
+        cout << "Amphibious has been promoted to SuperShip!" << endl;
 
         // cin.get();
 
-        Ship* promoted_ship = new Destroyer;
+        Ship* promoted_ship = new SuperShip;
 
         int replace_index = turn_queue->find_index(this);
 
@@ -32,13 +32,13 @@ public:
         promoted_ship->set_x(x);
         promoted_ship->set_y(y);
         promoted_ship->set_team(team);
-        promoted_ship->set_type("Destroyer");
+        promoted_ship->set_type("SuperShip");
 
         bool found_symbol = false;
 
         if (team == 'A') {
             for (int i = 0; i < TeamA[0]; i++) {
-                if (TeamA_classes[i] == "Destroyer") {
+                if (TeamA_classes[i] == "SuperShip") {
                     promoted_ship->set_symbol(TeamA_symbols[i]);
                     found_symbol = true;
                     break;
@@ -46,7 +46,7 @@ public:
             }
         } else {
             for (int i = 0; i < TeamB[0]; i++) {
-                if (TeamB_classes[i] == "Cruiser") {
+                if (TeamB_classes[i] == "SuperShip") {
                     promoted_ship->set_symbol(TeamB_symbols[i]);
                     found_symbol = true;
                     break;
@@ -55,10 +55,10 @@ public:
         }
 
         if (found_symbol == false && team == 'A') {
-            cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            cout << "No symbol found for SuperShip. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamA_symbols[1]);
         } else if (found_symbol == false && team == 'B') {
-            cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            cout << "No symbol found for SuperShip. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamB_symbols[1]);
         }
 
@@ -225,7 +225,7 @@ public:
         shoot();
         shoot();
 
-        if (kills > 3) {
+        if (kills > 4) {
             promotion();
         }
     }

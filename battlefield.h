@@ -31,34 +31,31 @@ private:
 
 public:
     void Print_Map() {
-        cout << endl;
+        cout << "   "; //col headers
+                for (int j = 1; j <= game_settings[2]; j++) {
+                    cout << " " << setw(3) << j;
+                }
+                cout << endl;
 
-        for (int y = 0; y < game_settings[2]; y++) {  // Loop over height (rows)
-            cout << "    ";
-            for (int x = 0; x < game_settings[1]; x++) {  // Loop over width (columns)
-                cout << "+---";
-            }
-            cout << "+" << endl;
+                for (int i = 0; i < game_settings[1]; i++) {
+                    cout << "    ";
+                    for (int j = 0; j < game_settings[2]; j++) {
+                        cout << "+---";
+                    }
+                    cout << "+" << endl;
 
-            cout << setw(3) << game_settings[2] - y << " ";  // Row numbering (y-axis)
-            for (int x = 0; x < game_settings[1]; x++) {
-                cout << "| " << game_map[x][y] << " ";  // FIX: Access game_map[x][y]
-            }
-            cout << "|" << endl;
-        }
+                    cout << setw(3) << i + 1 << " ";
+                    for (int j = 0; j < game_settings[2]; j++) {
+                        cout << "| " << game_map[i][j] << " ";
+                    }
+                    cout << "|" << endl;
+                }
 
-        cout << "    "; // Final row border
-        for (int x = 0; x < game_settings[1]; x++) {
-            cout << "+---";
-        }
-        cout << "+" << endl;
-
-        cout << "   "; // Column headers (x-axis)
-        for (int x = 1; x <= game_settings[1]; x++) {
-            cout << " " << setw(3) << x;
-        }
-
-        cout << endl;
+                cout << "    "; // final row stuff
+                for (int j = 0; j < game_settings[2]; j++) {
+                    cout << "+---";
+                }
+                cout << "+" << endl;
     }
 
     Battlefield() {
@@ -93,6 +90,10 @@ public:
 
             counter++;
         }
+
+        swap(game_settings[1], game_settings[2]);
+
+        // cout << "huh" << game_settings[1] << game_settings[2] << endl;
 
         // team A
         TeamA = new int[size_a + 1];
@@ -204,9 +205,9 @@ public:
         } */
 
         int width = game_settings[1], height = game_settings[2];
-        game_map = new char*[width];
-        for (int i = 0; i < width; ++i) {
-            game_map[i] = new char[height]();
+        game_map = new char*[height];
+        for (int i = 0; i < height; i++) {
+            game_map[i] = new char[width];
         } //2d dynamically allocated arrauy
 
         // fixed the first line not appearing
@@ -217,7 +218,7 @@ public:
             getline(file, line);
         }
 
-        counter = width - 1;
+        counter = 0;
         while(getline(file, line)) {
             //cout << counter << endl;
 
@@ -228,16 +229,13 @@ public:
             while (iss >> value) {
                 char temp = value + '0';
                 game_map[counter][internal_counter] = temp;
+                cout << "Counter: " << counter << " Internal Counter: " << internal_counter << " value: " << temp << endl;
 
                 //cout << internal_counter << endl;
                 internal_counter++;
             }
-            counter--;
+            counter++;
         }
-
-        // for (int i = 0; i < width / 2; ++i) {
-        //     swap(game_map[i], game_map[width - 1 - i]);
-        // }
 
         //for (int i = 0; i < 9; i++) {
         //    cout << game_settings[i] << endl;
@@ -252,8 +250,6 @@ public:
     ~Battlefield() {
         cout << "Died" << endl;
     }
-
-    
 
     Linked_List<Ship*>* Initial_Ship_Placement() {
         //Random placement for the ships, initialises everything
@@ -326,9 +322,9 @@ public:
                     cout << "Detected Amphibious" << endl;
                     temp = new Amphibious();
                     turn_queue->push_back(temp);
-                } else if (TeamA_classes[i - 1] == "Supership") {
-                    cout << "Detected Supership" << endl;
-                    temp = new Supership();
+                } else if (TeamA_classes[i - 1] == "SuperShip") {
+                    cout << "Detected SuperShip" << endl;
+                    temp = new SuperShip();
                     turn_queue->push_back(temp);
                 }
 
@@ -346,10 +342,6 @@ public:
                 cout << "Placed " << TeamA_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
 
                 Print_Map();
-
-                //for (auto i : symbols_placed) {
-                //   cout << i << endl;
-                //}
                 ship_counter++;
             }
         }
@@ -391,9 +383,9 @@ public:
                     cout << "Detected Amphibious" << endl;
                     temp = new Amphibious();
                     turn_queue->push_back(temp);
-                } else if (TeamB_classes[i - 1] == "Supership") {
-                    cout << "Detected Supership" << endl;
-                    temp = new Supership();
+                } else if (TeamB_classes[i - 1] == "SuperShip") {
+                    cout << "Detected SuperShip" << endl;
+                    temp = new SuperShip();
                     turn_queue->push_back(temp);
                 }
                 temp->set_team('B');
@@ -406,13 +398,7 @@ public:
                 // Ships[ship_counter].id = ship_counter + 1;
                 
                 //symbols_placed[i]++;
-                cout << "Placed " << TeamB_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
-
                 Print_Map();
-
-                //for (auto i : symbols_placed) {
-                //   cout << i << endl;
-                //}
                 ship_counter++;
             }
         }

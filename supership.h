@@ -10,13 +10,13 @@ using namespace std;
 #include "ramship.h"
 #include "seeingrobot.h"
 
-class Supership : public MovingShip, public ShootingShip, public RamShip, public SeeingRobot {
+class SuperShip : public MovingShip, public ShootingShip, public RamShip, public SeeingRobot {
 private:
     bool target_acquired = false;
     int previous[2];
 
 public:
-    Supership() {
+    SuperShip() {
         cout << "Supership created! " << endl;
     }
 
@@ -38,46 +38,128 @@ public:
 void move() override {
         target_acquired = false;
 
-        // Check for adjacent enemies
+        //check for adjacent enemies
         for (int i = 0; i < 8; i++) {
             if (look_results[i] != '0' && look_results[i] != '1' && look_results[i] != '5') {
-                if ((i == 1 || i == 3 || i == 4 || i == 6) && 
-                    ((team == 'A' && look_results[i] == 'B') || (team == 'B' && look_results[i] == 'A'))) {
-                    // Enemy is adjacent, abstain from moving
-                    cout << "abstaining" << endl;
-                    target[0] = x + directions[i][0];
-                    target[1] = y + directions[i][1];
-                    target_acquired = true;
-                    return;
-                }
-            }
-        }
+                if (i == 1 || i == 3 || i == 4 || i == 6) {
+                    if (team == 'A') {
+                        for (int j = 0; j < TeamB[0]; j++) {
+                            if (look_results[i] == TeamB_symbols[j]) {
+                                target[0] = x + directions[i][0];
+                                target[1] = y + directions[i][1];
+                                target_acquired = true;
+                                //enemy is rihgt left ontop or below, abstain from moving
+                                cout << "abstaining" << endl;
+                                return;
 
-        // Move towards enemy units if not adjacent
-        for (int i = 0; i < 8; i++) {
-            if (look_results[i] != '0' && look_results[i] != '1' && look_results[i] != '5') {
-                if ((team == 'A' && look_results[i] == 'B') || (team == 'B' && look_results[i] == 'A')) {
-                    if (i == 0 || i == 2 || i == 5 || i == 7) {
-                        int new_x = x + directions[i][0];
-                        int new_y = y + directions[i][1];
-                        if (game_map[new_x][new_y] == '0') {
-                            game_map[x][y] = '0';
-                            x = new_x;
-                            y = new_y;
-                            game_map[x][y] = symbol;
-                            // Save target coordinates (enemy position)
-                            target[0] = x + directions[i][0];
-                            target[1] = y + directions[i][1];
-                            target_acquired = true;
-                            cout << "target acquired" << endl;
-                            return;
+                                //Okay quick explanation time
+                                //Basically what is happening is that the program is checking if a target 
+                                //exists below, above, on the right or left of the ship
+                                //If it does exist the ship will abstain from moving in order to
+                                //attack it when it calls its destriy function
+                                //the location of the target is stored in the private attribute
+                                //"target" which will then be used by destroy to 'step' onto the enemy ship
+                            }
+                        }
+                    } else {
+                        for (int j = 0; j < TeamA[0]; j++) {
+                            if (look_results[i] == TeamA_symbols[j]) {
+                                target[0] = x + directions[i][0];
+                                target[1] = y + directions[i][1];
+                                target_acquired = true;
+                                //enemy is rihgt left ontop or below, abstain from moving
+                                cout << "abstaining" << endl;
+                                return;
+                            }
                         }
                     }
                 }
             }
         }
 
-        // If no enemies are found, move randomly
+        // move towards eneym units if in one of the corners
+        for (int i = 0; i < 8; i++) {
+            if (look_results[i] != '0' && look_results[i] != '1' && look_results[i] != '5') {
+                if (i == 0 || i == 2 || i == 5 || i == 7) {
+                    if (team == 'A') {
+                        for (int j = 0; j < TeamB[0]; j++) {
+                            if (look_results[i] == TeamB_symbols[j]) {
+                                int new_x = x + directions[i][0];
+                                int new_y = y + directions[i][1];
+                                if (game_map[new_x][y] == '0') {
+                                    target[0] = x + directions[i][0];
+                                    target[1] = y + directions[i][1];
+                                    game_map[x][y] = '0';
+                                    x = new_x;
+                                    game_map[x][y] = symbol;
+                                    target_acquired = true;
+                                    cout << "target acquired" << endl;
+                                    return;
+                                } else if (game_map[x][new_y] == '0') {
+                                    target[0] = x + directions[i][0];
+                                    target[1] = y + directions[i][1];
+                                    game_map[x][y] = '0';
+                                    y = new_y;
+                                    game_map[x][y] = symbol;
+                                    target_acquired = true;
+                                    cout << "target acquired" << endl;
+                                    return;
+
+                                    //mega complicated part (this is as short and efficient as I can make
+                                    //it so just hear me out)
+                                    //if an enemy ship is present in one of the corners (top left, top
+                                    //right, bottom left, bottom right) the ship will move up, down
+                                    // or wherever will get it closer to the enemy ship so it can 'step'
+                                    //or 'ram' into it when it calls its destroy func
+                                    //now because of how squares work there are 2 paths to the enemy ship,
+                                    // both result in the same result if both paths are not blocked
+                                    // if a path is blocked the program will detect this can try the
+                                    //other path, hence why there are if statements checking for available
+                                    //positions. 
+                                    //now how it gets the coords for this position is by taking the look_results
+                                    //and using the 'directions' array to check where the look function found
+                                    // the enemy ship
+                                    //since these corners have a one coordinate position difference on both
+                                    // the x and y axis, there is no need for an undoable number of if statements
+                                    //to implement this move algorithm (which was my initial plan until I used
+                                    // a brain cell)
+                                    // oh and x2 for checking for team-a ships
+                                }
+                            }
+                        }
+                    } else if (team == 'B') {
+                        for (int j = 0; j < TeamB[0]; j++) {
+                            if (look_results[i] == TeamB_symbols[j]) {
+                                int new_x = x + directions[i][0];
+                                int new_y = y + directions[i][1];
+                                if (game_map[new_x][y] == '0') {
+                                    target[0] = x + directions[i][0];
+                                    target[1] = y + directions[i][1];
+                                    game_map[x][y] = '0';
+                                    x = new_x;
+                                    game_map[x][y] = symbol;
+                                    target_acquired = true;
+                                    cout << "target acquired" << endl;
+                                    return;
+                                } else if (game_map[x][new_y] == '0') {
+                                    target[0] = x + directions[i][0];
+                                    target[1] = y + directions[i][1];
+                                    game_map[x][y] = '0';
+                                    y = new_y;
+                                    game_map[x][y] = symbol;
+                                    target_acquired = true;
+                                    cout << "target acquired" << endl;
+                                    return;
+                                }
+                                // if no valid paths, resort to random movement
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // if no enemies are found by look or no valid paths exist, move randomly
         bool valid_move = false;
         int counter = 0;
 
@@ -94,7 +176,7 @@ void move() override {
             anumber = movement_decider(gen);
 
             switch (anumber) {
-            case 1: // Up
+            case 1: // up
                 if (y + 1 < game_settings[2] && game_map[x][y + 1] == '0') {
                     game_map[x][y] = '0';
                     y++;
@@ -104,7 +186,7 @@ void move() override {
                     counter++;
                 }
                 break;
-            case 2: // Down
+            case 2: // down
                 if (y - 1 >= 0 && game_map[x][y - 1] == '0') {
                     game_map[x][y] = '0';
                     y--;
@@ -114,7 +196,7 @@ void move() override {
                     counter++;
                 }
                 break;
-            case 3: // Left
+            case 3: // left
                 if (x - 1 >= 0 && game_map[x - 1][y] == '0') {
                     game_map[x][y] = '0';
                     x--;
@@ -124,7 +206,7 @@ void move() override {
                     counter++;
                 }
                 break;
-            case 4: // Right
+            case 4: // right
                 if (x + 1 < game_settings[1] && game_map[x + 1][y] == '0') {
                     game_map[x][y] = '0';
                     x++;
@@ -142,19 +224,22 @@ void move() override {
     }
 
     void destroy() override {
-        //moving to destroy
-
-        game_map[x][y] = '0'; 
+        //moving to destroy/ step/ ram/ whatever
 
         if (target_acquired == true) {
+            game_map[x][y] = '0'; 
             x = target[0];
             y = target[1];
+        } else {
+            return; // if theres no target the ship cannot destroy anything
         }
     
         for (int i = 0; i < turn_queue->list_size(); i++) {
+            //checking which ship actually needs to die
             if ((*turn_queue)[i]->get_x() == x && (*turn_queue)[i]->get_y() == y && (*turn_queue)[i]->get_team() != team) {
                 // cout << "Destroy function called!" << endl;
                 ram((*turn_queue)[i]);
+               
             }
         }
 

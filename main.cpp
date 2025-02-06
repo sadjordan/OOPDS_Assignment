@@ -30,11 +30,13 @@ void game_loop(Battlefield* setup) {
     for (int i = 0; i < 2; i++) {
         if (Ship::respawn_queue->list_size() != 0) {
             Ship::turn_queue->push_back((*Ship::respawn_queue)[0]);
-            cout << (*Ship::respawn_queue)[0] << endl;
-            cout << (*Ship::respawn_queue)[0]->get_type() << endl;
+            // cout << (*Ship::respawn_queue)[0] << endl;
+            // cout << (*Ship::respawn_queue)[0]->get_type() << endl;
             setup->Ship_Placement((*Ship::respawn_queue)[0]);
-            cout << (*Ship::respawn_queue)[0]->get_x() << endl;
-            cout << (*Ship::respawn_queue)[0]->get_y() << endl;
+            (*Ship::respawn_queue)[0]->set_status("Deployed");
+            
+            // cout << (*Ship::respawn_queue)[0]->get_x() << endl;
+            // cout << (*Ship::respawn_queue)[0]->get_y() << endl;
             Ship::respawn_queue->pop_front();
             cout << "Respawned" << endl;
             cout << Ship::respawn_queue->list_size() << endl;
@@ -105,8 +107,41 @@ int main() {
     cout << Ship::game_map << endl;
 
     for (int i = 0; i < Ship::game_settings[0]; i++) {
+        cout<<endl;
+        cout<< "_________________________________________________________________"<<endl;
         cout << "Loop number: " << i << endl;
         game_loop(&setup);
+
+
+        int TeamA_counter = 0;
+        int TeamB_counter = 0;
+
+        for (int i = 0; i < Ship::turn_queue->list_size(); i++) {
+            if ((*Ship::turn_queue)[i]->get_team() == 'A') {
+                TeamA_counter++;
+            } else {
+                TeamB_counter++;
+            }
+        }
+
+        for (int i = 0; i < Ship::respawn_queue->list_size(); i++) {
+            if ((*Ship::respawn_queue)[i]->get_team() == 'A') {
+                TeamA_counter++;
+            } else {
+                TeamB_counter++;
+            }
+        }
+
+        if (TeamA_counter == 0) {
+            cout << "Team B has Won the Game after a great struggle lasting " << i << " turns!" << endl;
+            break;
+        } else if (TeamB_counter == 0) {
+            cout << "Team A has Won the Game after a bloody war lasting " << i << " turns!" << endl;
+            break;
+        }
+
+        if (i == Ship::game_settings[0] - 1) {
+            cout << "It's a tie!" << endl;
+        }
     }
-    
 }

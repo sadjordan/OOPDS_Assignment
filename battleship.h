@@ -46,7 +46,7 @@ public:
             }
         } else {
             for (int i = 0; i < TeamB[0]; i++) {
-                if (TeamB_classes[i] == "Cruiser") {
+                if (TeamB_classes[i] == "Destroyer") {
                     promoted_ship->set_symbol(TeamB_symbols[i]);
                     found_symbol = true;
                     break;
@@ -55,10 +55,10 @@ public:
         }
 
         if (found_symbol == false && team == 'A') {
-            // cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            cout << "No symbol found for Destroyer. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamA_symbols[1]);
         } else if (found_symbol == false && team == 'B') {
-            // cout << "No symbol found for Cruiser. Using default symbol." << endl;
+            cout << "No symbol found for Destroyer. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamB_symbols[1]);
         }
 
@@ -217,7 +217,7 @@ public:
         shoot();
         shoot();
 
-        if (kills > 3) {
+        if (kills > 4) {
             promotion();
         }
     }
