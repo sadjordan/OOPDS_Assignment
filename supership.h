@@ -5,12 +5,12 @@
 using namespace std;
 
 #include "ship.h"
-#include "move.h"
-#include "shoot.h"
-#include "destroy.h"
-#include "look.h"
+#include "movingship.h"
+#include "shootingship.h"
+#include "ramship.h"
+#include "seeingrobot.h"
 
-class Supership : public Move, public Shoot, public Destroy, public Look {
+class Supership : public MovingShip, public ShootingShip, public RamShip, public SeeingRobot {
 private:
     bool target_acquired = false;
     int previous[2];
@@ -29,9 +29,13 @@ public:
                 look_results[i] = game_map[x + directions[i][0]][y + directions[i][1]];
             }
         }
+
+        for (int i = 0; i < 8; i++) {
+            cout << "Look results " << i << " :" << look_results[i] << endl;
+        }
     }
 
-    void move() override {
+void move() override {
         target_acquired = false;
 
         // Check for adjacent enemies
@@ -40,6 +44,7 @@ public:
                 if ((i == 1 || i == 3 || i == 4 || i == 6) && 
                     ((team == 'A' && look_results[i] == 'B') || (team == 'B' && look_results[i] == 'A'))) {
                     // Enemy is adjacent, abstain from moving
+                    cout << "abstaining" << endl;
                     target[0] = x + directions[i][0];
                     target[1] = y + directions[i][1];
                     target_acquired = true;
@@ -64,6 +69,7 @@ public:
                             target[0] = x + directions[i][0];
                             target[1] = y + directions[i][1];
                             target_acquired = true;
+                            cout << "target acquired" << endl;
                             return;
                         }
                     }
@@ -139,13 +145,16 @@ public:
         //moving to destroy
 
         game_map[x][y] = '0'; 
-        x = target[0];
-        y = target[1];
 
+        if (target_acquired == true) {
+            x = target[0];
+            y = target[1];
+        }
+    
         for (int i = 0; i < turn_queue->list_size(); i++) {
             if ((*turn_queue)[i]->get_x() == x && (*turn_queue)[i]->get_y() == y && (*turn_queue)[i]->get_team() != team) {
-                cout << "Destroy function called!" << endl;
-                Destroy::kill((*turn_queue)[i]);
+                // cout << "Destroy function called!" << endl;
+                ram((*turn_queue)[i]);
             }
         }
 
@@ -181,9 +190,9 @@ public:
         int target_y = y + directions[dir][1];
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
-        cout << TeamA_symbols[0] << endl;
-        cout << TeamB_symbols[0] << endl;
-        cout << endl;
+        // cout << TeamA_symbols[0] << endl;
+        // cout << TeamB_symbols[0] << endl;
+        // cout << endl;
 
         if (target_x < 0 || target_x >= game_settings[1] || target_y < 0 || target_y >= game_settings[2]) {
             cout << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
@@ -198,8 +207,9 @@ public:
                         cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
-                        Shoot::kill(target_x, target_y);
+                        // cout << "Kill incremented" << endl;
+                        // cout << "TeamB killed" << endl;
+                        kill(target_x, target_y);
 
                         //add promotion logic here?
                         //remember to change the ship symbol on the map
@@ -208,13 +218,14 @@ public:
                 }
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
-                    if (TeamA_symbols[i] != game_map[target_x][target_y]) {
+                    if (TeamA_symbols[i] == game_map[target_x][target_y]) {
                         cout << TeamA_symbols[i] << endl;
                         cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
-                        Shoot::kill(target_x, target_y);
+                        // cout << "Kill incremented" << endl;
+                        // cout << "TeamA killed" << endl;
+                        kill(target_x, target_y);
                         break;
                     }
                 }

@@ -5,11 +5,11 @@
 using namespace std;
 
 #include "ship.h"
-#include "move.h"
-#include "destroy.h"
-#include "look.h"
+#include "movingship.h"
+#include "ramship.h"
+#include "seeingrobot.h"
 
-class Cruiser : public Move, public Destroy, public Look {
+class Cruiser : public MovingShip, public RamShip, public SeeingRobot {
 private:
     bool target_acquired = false;
 public:
@@ -192,7 +192,7 @@ public:
         for (int i = 0; i < turn_queue->list_size(); i++) {
             if ((*turn_queue)[i]->get_x() == x && (*turn_queue)[i]->get_y() == y && (*turn_queue)[i]->get_team() != team) {
                 // cout << "Destroy function called!" << endl;
-                Destroy::kill((*turn_queue)[i]);
+                ram((*turn_queue)[i]);
             }
         }
 

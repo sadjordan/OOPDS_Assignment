@@ -1,16 +1,14 @@
-#ifndef DESTROY_H
-#define DESTROY_H
+#ifndef RAMSHIP_H
+#define RAMSHIP_H
 
 #include <iostream>
 #include <random>
 
-
-
-class Destroy : virtual public Ship {
+class RamShip : virtual public Ship {
 private:
 
 public:
-    void kill(Ship* to_be_killed) {
+    void ram(Ship* to_be_killed) {
         if (to_be_killed->get_lives() == 0) {
             cout << "The ship has no more lives" << endl;
             Ship* temp = to_be_killed;

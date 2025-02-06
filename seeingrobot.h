@@ -1,15 +1,12 @@
-#ifndef LOOK_H
-#define LOOK_H
+#ifndef SEEINGROBOT_H
+#define SEEINGROBOT_H
 
 #include <random>
 #include <iostream>
 
-#include "game_setup.h"
-#include "ship.h"
-
 using namespace std;
 
-class Look : virtual public Ship {
+class SeeingRobot : virtual public Ship {
 private:
 
 protected:

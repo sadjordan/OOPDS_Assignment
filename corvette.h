@@ -5,10 +5,9 @@
 using namespace std;
 
 #include "ship.h"
-#include "move.h"
-#include "shoot.h"
+#include "shootingship.h"
 
-class Corvette : public Shoot {
+class Corvette : public ShootingShip {
 private:
 
 public:
@@ -61,7 +60,7 @@ public:
                 }
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
-                    if (TeamA_symbols[i] != game_map[target_x][target_y]) {
+                    if (TeamA_symbols[i] == game_map[target_x][target_y]) {
                         cout << TeamA_symbols[i] << endl;
                         cout << game_map[target_x][target_y] << endl; 
 

@@ -1,19 +1,13 @@
-#ifndef SHOOT_H
-#define SHOOT_H
+#ifndef SHOOTINGSHIP_H
+#define SHOOTINGSHIP_H
 
 #include <iostream>
 #include <random>
-#include "ship.h"
-#include "linkedlist.cpp"
 
-class Shoot : virtual public Ship {  // INHERITANCE: Shoot inherits from the base class Ship
+class ShootingShip : virtual public Ship {  // INHERITANCE: Shoot inherits from the base class Ship
 private:
 
 public:
-    // Constructor
-    Shoot() {
-    }
-
     void kill(int target_x, int target_y) {
         for (int i = 0; i < turn_queue->list_size(); i++) {
             if ((*turn_queue)[i]->get_x() == target_x && (*turn_queue)[i]->get_y() == target_y) {

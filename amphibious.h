@@ -5,11 +5,11 @@
 using namespace std;
 
 #include "ship.h"
-#include "move.h"
-#include "shoot.h"
+#include "movingship.h"
+#include "shootingship.h"
 #include "destroyer.h"
 
-class Amphibious : public Move, public Shoot {
+class Amphibious : public MovingShip, public ShootingShip {
 private:
     char ship_is_on = '0';
 
@@ -86,11 +86,6 @@ public:
 
         while (!valid_move && counter < 12) {
             anumber = movement_decider(gen);
-            // cout << "Test 1" << endl;
-            // cout << "x: " << x << endl;
-            // cout << "y: " << y << endl;
-            // cout << game_map << endl;
-            // cout << game_map[x][y + 1] << endl;
 
             switch (anumber) {
             case 1: // Up
@@ -207,7 +202,7 @@ public:
                 }
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
-                    if (TeamA_symbols[i] != game_map[target_x][target_y]) {
+                    if (TeamA_symbols[i] == game_map[target_x][target_y]) {
                         cout << TeamA_symbols[i] << endl;
                         cout << game_map[target_x][target_y] << endl; 
 

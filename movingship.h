@@ -1,22 +1,15 @@
-#ifndef MOVE_H
-#define MOVE_H
+#ifndef MOVINGSHIP_H
+#define MOVINGSHIP_H
 
 #include <random>
 #include <iostream>
 
-#include "game_setup.h"
-
 using namespace std;
 
-class Move : virtual public Ship {
+class MovingShip : virtual public Ship {
 private:
 
 public:
-    // Constructor if needed
-    // Move(Ship_Details* Ships) {
-    //     this->Ships = Ships;
-    // }
-
     virtual void move() = 0;
     // {
     //     random_device rd;

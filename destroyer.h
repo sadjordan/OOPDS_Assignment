@@ -5,12 +5,12 @@
 using namespace std;
 
 #include "ship.h"
-#include "move.h"
-#include "shoot.h"
-#include "destroy.h"
-#include "look.h"
+#include "movingship.h"
+#include "shootingship.h"
+#include "ramship.h"
+#include "seeingrobot.h"
 
-class Destroyer : public Move, public Shoot, public Destroy, public Look {
+class Destroyer : public MovingShip, public ShootingShip, public RamShip, public SeeingRobot {
 private:
 bool target_acquired = false;
 
@@ -144,7 +144,7 @@ public:
         for (int i = 0; i < turn_queue->list_size(); i++) {
             if ((*turn_queue)[i]->get_x() == x && (*turn_queue)[i]->get_y() == y && (*turn_queue)[i]->get_team() != team) {
                 cout << "Destroy function called!" << endl;
-                Destroy::kill((*turn_queue)[i]);
+                ram((*turn_queue)[i]);
             }
         }
 
@@ -186,7 +186,7 @@ public:
 
                         kills++;
                         cout << "Kill incremented" << endl;
-                        Shoot::kill(target_x, target_y);
+                        kill(target_x, target_y);
 
                         //add promotion logic here?
                         //remember to change the ship symbol on the map
@@ -195,13 +195,13 @@ public:
                 }
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
-                    if (TeamA_symbols[i] != game_map[target_x][target_y]) {
+                    if (TeamA_symbols[i] == game_map[target_x][target_y]) {
                         cout << TeamA_symbols[i] << endl;
                         cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
                         cout << "Kill incremented" << endl;
-                        Shoot::kill(target_x, target_y);
+                        kill(target_x, target_y);
                         break;
                     }
                 }

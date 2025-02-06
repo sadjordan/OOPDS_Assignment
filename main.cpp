@@ -5,7 +5,7 @@
 #include <random>
 #include <iomanip>
 
-#include "game_setup.h"
+#include "battlefield.h"
 #include "linkedlist.cpp"
 
 using namespace std;
@@ -24,7 +24,7 @@ Linked_List<Ship*>* Ship::respawn_queue = nullptr;
 char* Ship::default_teamA_symbols = nullptr;
 char* Ship::default_teamB_symbols = nullptr; 
 
-void game_loop(Game_Setup* setup) {
+void game_loop(Battlefield* setup) {
     cout << "Another Game Loop" << endl;
 
     for (int i = 0; i < 2; i++) {
@@ -43,11 +43,14 @@ void game_loop(Game_Setup* setup) {
 
     for (int i = 0; i < Ship::turn_queue->list_size(); i++) {
         cout << "————————————————————————————————————————————————" << endl;
-        cout << i << endl;
+        cout << "Turn: " << i << endl;
+        cout << (*Ship::turn_queue)[i]->get_type() << endl;
+        cout << "(" << (*Ship::turn_queue)[i]->get_x()+ 1<< ", " << (*Ship::turn_queue)[i]->get_y()+1 << ")" << endl;
         (*Ship::turn_queue)[i]->action_plan();
         setup->Print_Map();
     }
 
+    Ship::respawn_queue->display();
     cin.get();
 }
 
@@ -57,7 +60,7 @@ void game_loop(Game_Setup* setup) {
 // 3. iterate turn by 1
 
 int main() {
-    Game_Setup setup;
+    Battlefield setup;
 
 
     // int* game_settings = setup.get_game_settings();
