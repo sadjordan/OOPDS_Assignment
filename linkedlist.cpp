@@ -51,8 +51,8 @@ public:
         }
         else
         {
-            Node<T>* temp = head;            // Create a ptr to traverse the list starting from the beginning(head) until it reaches the last element where its ptr->next == nullptr
-            while (temp->next != nullptr) // Searches until the next pointer is null
+            Node<T>* temp = head;
+            while (temp->next != nullptr)
             {
                 temp = temp->next;
             }

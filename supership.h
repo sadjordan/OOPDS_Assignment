@@ -17,7 +17,8 @@ private:
 
 public:
     SuperShip() {
-        cout << "Supership created! " << endl;
+        cout << "Supership created!" << endl;
+        outputFile << "Supership created!" << endl;
     }
 
     void look() override {
@@ -25,17 +26,20 @@ public:
             if (x + directions[i][0] < 0 || x + directions[i][0] >= game_settings[1] || y + directions[i][1] < 0 || y + directions[i][1] >= game_settings[2]) {
                 look_results[i] = '5';
             } else {
-                cout << "test" << endl;
+                // cout << "test" << endl;
                 look_results[i] = game_map[x + directions[i][0]][y + directions[i][1]];
             }
         }
 
-        for (int i = 0; i < 8; i++) {
-            cout << "Look results " << i << " :" << look_results[i] << endl;
-        }
+        cout << "Ship completed looking!" << endl;
+        outputFile << "Ship completed looking!" << endl;
+
+        // for (int i = 0; i < 8; i++) {
+        //     // cout << "Look results " << i << " :" << look_results[i] << endl;
+        // }
     }
 
-void move() override {
+    void move() override {
         target_acquired = false;
 
         //check for adjacent enemies
@@ -49,7 +53,7 @@ void move() override {
                                 target[1] = y + directions[i][1];
                                 target_acquired = true;
                                 //enemy is rihgt left ontop or below, abstain from moving
-                                cout << "abstaining" << endl;
+                                // cout << "abstaining" << endl;
                                 return;
 
                                 //Okay quick explanation time
@@ -68,7 +72,7 @@ void move() override {
                                 target[1] = y + directions[i][1];
                                 target_acquired = true;
                                 //enemy is rihgt left ontop or below, abstain from moving
-                                cout << "abstaining" << endl;
+                                // cout << "abstaining" << endl;
                                 return;
                             }
                         }
@@ -90,19 +94,23 @@ void move() override {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     x = new_x;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
                                 } else if (game_map[x][new_y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     y = new_y;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
 
                                     //mega complicated part (this is as short and efficient as I can make
@@ -136,19 +144,23 @@ void move() override {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     x = new_x;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
                                 } else if (game_map[x][new_y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     y = new_y;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
                                 }
                                 // if no valid paths, resort to random movement
@@ -176,11 +188,14 @@ void move() override {
             anumber = movement_decider(gen);
 
             switch (anumber) {
-            case 1: // up
+            case 1:
                 if (y + 1 < game_settings[2] && game_map[x][y + 1] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
+                    cout << ""
                     y++;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -189,8 +204,10 @@ void move() override {
             case 2: // down
                 if (y - 1 >= 0 && game_map[x][y - 1] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     y--;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -199,8 +216,10 @@ void move() override {
             case 3: // left
                 if (x - 1 >= 0 && game_map[x - 1][y] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     x--;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -209,16 +228,18 @@ void move() override {
             case 4: // right
                 if (x + 1 < game_settings[1] && game_map[x + 1][y] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     x++;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
                 }
                 break;
-            default:
-                cout << "Technically impossible so if you see this the world must be ending" << endl;
-                break;
+            // default:
+                // cout << "Technically impossible so if you see this the world must be ending" << endl;
+                // break;
             }
         }
     }
@@ -227,9 +248,14 @@ void move() override {
         //moving to destroy/ step/ ram/ whatever
 
         if (target_acquired == true) {
-            game_map[x][y] = '0'; 
+            game_map[x][y] = '0';
+            symbol_map[x][y] = NULL;
             x = target[0];
             y = target[1];
+
+            cout << "Ramming target at (" << x << " ," << y << " )!" << endl;
+            outputFile << "Ramming target at (" << x << " ," << y << " )!" << endl;
+
         } else {
             return; // if theres no target the ship cannot destroy anything
         }
@@ -244,6 +270,7 @@ void move() override {
         }
 
         game_map[x][y] = symbol;
+        symbol_map[x][y] = id;
     }
 
     void shoot() override {
@@ -275,12 +302,14 @@ void move() override {
         int target_y = y + directions[dir][1];
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
+        outputFile << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
         // cout << TeamA_symbols[0] << endl;
         // cout << TeamB_symbols[0] << endl;
         // cout << endl;
 
         if (target_x < 0 || target_x >= game_settings[1] || target_y < 0 || target_y >= game_settings[2]) {
-            cout << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
+            cout << "Wasted a shot! The " << type << " shot at a position exceeding the game map!" << endl;
+            outputFile << "Wasted a shot! The " << type << " shot at a position exceeding the game map!" << endl;
             return;
         }
 
@@ -288,9 +317,8 @@ void move() override {
             if (team == 'A') {
                 for (int i = 0; i < TeamB[0]; i++) {
                     if (TeamB_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamB_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
-
+                        // cout << TeamB_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
                         kills++;
                         // cout << "Kill incremented" << endl;
                         // cout << "TeamB killed" << endl;
@@ -299,13 +327,16 @@ void move() override {
                         //add promotion logic here?
                         //remember to change the ship symbol on the map
                         break;
+                    } else {
+                        cout << "Order cancelled! Almost shot at a friendly ship!" << endl;
+                        outputFile << "Order cancelled! Almost shot at a friendly ship!" << endl;
                     }
                 }
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
                     if (TeamA_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamA_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamA_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
                         // cout << "Kill incremented" << endl;
@@ -319,6 +350,8 @@ void move() override {
 
         if (game_map[target_x][target_y] == '0' || game_map[target_x][target_y] == '1') {
             cout << "Missed! No enemy ship at target location." << endl;
+            outputFile << "Missed! No enemy ship at target location." << endl;
+
         }
     }
 

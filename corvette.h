@@ -12,7 +12,8 @@ private:
 
 public:
     Corvette() {
-        cout << "Corvette created! " << endl;
+        cout << "Corvette created!" << endl;
+        outputFile << "Corvette created!" << endl;
     }
 
     void shoot() override {
@@ -33,12 +34,14 @@ public:
         int target_y = y + directions[dir][1];
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
-        cout << TeamA_symbols[0] << endl;
-        cout << TeamB_symbols[0] << endl;
-        cout << endl;
+        outputFile << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
+        // cout << TeamA_symbols[0] << endl;
+        // cout << TeamB_symbols[0] << endl;
+        // cout << endl;
 
         if (target_x < 0 || target_x >= game_settings[1] || target_y < 0 || target_y >= game_settings[2]) {
-            cout << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
+            cout << "Wasted a shot! The " << type << " shot at a position exceeding the game map!" << endl;
+            outputFile << "Wasted a shot! The " << type << " shot at a position exceeding the game map!" << endl;
             return;
         }
 
@@ -46,11 +49,11 @@ public:
             if (team == 'A') {
                 for (int i = 0; i < TeamB[0]; i++) {
                     if (TeamB_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamB_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamB_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
 
                         //add promotion logic here?
@@ -61,11 +64,11 @@ public:
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
                     if (TeamA_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamA_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamA_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
                         break;
                     }
@@ -75,12 +78,12 @@ public:
 
         if (game_map[target_x][target_y] == '0' || game_map[target_x][target_y] == '1') {
             cout << "Missed! No enemy ship at target location." << endl;
+            outputFile << "Missed! No enemy ship at target location." << endl;
         }
     }
 
     void action_plan() override {
         shoot();
-
     }
     
 };

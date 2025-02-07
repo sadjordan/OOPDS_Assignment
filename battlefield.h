@@ -28,34 +28,54 @@ private:
     char** game_map;
     int no_ships;
     int* game_settings;
+    int** symbol_map;
 
 public:
     void Print_Map() {
-        cout << "   "; //col headers
-                for (int j = 1; j <= game_settings[2]; j++) {
-                    cout << " " << setw(3) << j;
-                }
-                cout << endl;
+        cout << "     "; // col headers
+        for (int j = 1; j <= game_settings[2]; j++) {
+            cout << setw(7) << j; // Apply setw(4) for column numbers
+        }
+        cout << endl;
 
-                for (int i = 0; i < game_settings[1]; i++) {
-                    cout << "    ";
-                    for (int j = 0; j < game_settings[2]; j++) {
-                        cout << "+---";
-                    }
-                    cout << "+" << endl;
 
-                    cout << setw(3) << i + 1 << " ";
-                    for (int j = 0; j < game_settings[2]; j++) {
-                        cout << "| " << game_map[i][j] << " ";
-                    }
-                    cout << "|" << endl;
-                }
+        for (int i = 0; i < game_settings[1]; i++) {
+            cout << "       ";
+            for (int j = 0; j < game_settings[2]; j++) {
+                cout << "+------"; // Row separators
+            }
+            cout << "+" << endl;
 
-                cout << "    "; // final row stuff
-                for (int j = 0; j < game_settings[2]; j++) {
-                    cout << "+---";
-                }
-                cout << "+" << endl;
+            cout << setw(5) << i + 1 << "  "; // Row number
+            for (int j = 0; j < game_settings[2]; j++) {
+                cout << "|" << setw(3) << game_map[i][j] << setw(1);
+                if (symbol_map[i][j] > 0) { cout << setw(2) << symbol_map[i][j];
+                } else { cout << "  "; }
+                cout << " ";
+            }
+            cout << "|" << endl;
+        }
+
+
+        // for (int i = 0; i < game_settings[1]; i++) {
+        //     cout << "     ";
+        //     for (int j = 0; j < game_settings[2]; j++) {
+        //         cout << "+----"; // Row separators
+        //     }
+        //     cout << "+" << endl;
+
+        //     cout << setw(4) << i + 1 << " "; // Row number
+        //     for (int j = 0; j < game_settings[2]; j++) {
+        //         cout << "| " << setw(2) << game_map[i][j] << " "; // Cell content with setw(2)
+        //     }
+        //     cout << "|" << endl;
+        // }
+
+        cout << "       "; // final row stuff
+        for (int j = 0; j < game_settings[2]; j++) {
+            cout << "+------";
+        }
+        cout << "+" << endl;
     }
 
     Battlefield() {
@@ -210,6 +230,17 @@ public:
             game_map[i] = new char[width];
         } //2d dynamically allocated arrauy
 
+        symbol_map = new int*[height];
+        for (int i = 0; i < height; i++) {
+            symbol_map[i] = new int[width];
+        }
+
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                symbol_map[i][j] = NULL;
+            }
+        }
+
         // fixed the first line not appearing
         // map processing
         file.clear();
@@ -229,7 +260,7 @@ public:
             while (iss >> value) {
                 char temp = value + '0';
                 game_map[counter][internal_counter] = temp;
-                cout << "Counter: " << counter << " Internal Counter: " << internal_counter << " value: " << temp << endl;
+                // cout << "Counter: " << counter << " Internal Counter: " << internal_counter << " value: " << temp << endl;
 
                 //cout << internal_counter << endl;
                 internal_counter++;
@@ -248,7 +279,26 @@ public:
     }
 
     ~Battlefield() {
-        cout << "Died" << endl;
+        cout << "Destroying Battlefield" << endl;
+
+        TeamA = nullptr;
+        cout << "Set TeamA to nullptr" << endl;
+        TeamB = nullptr;
+        cout << "Set TeamB to nullptr" << endl;
+        TeamA_symbols = nullptr;
+        cout << "Set TeamA_symbols to nullptr" << endl;
+        TeamB_symbols = nullptr;
+        cout << "Set TeamB_symbols to nullptr" << endl;
+        TeamA_classes = nullptr;
+        cout << "Set TeamA_classes to nullptr" << endl;
+        TeamB_classes = nullptr;
+        cout << "Set TeamB_classes to nullptr" << endl;
+        game_settings = nullptr;
+        cout << "Set game_settings to nullptr" << endl;
+        game_map = nullptr;
+        cout << "Set game_map to nullptr" << endl;
+        symbol_map = nullptr;
+        cout << "Set symbol_map to nullptr" << endl;
     }
 
     Linked_List<Ship*>* Initial_Ship_Placement() {
@@ -286,6 +336,8 @@ public:
         for (int i = 1; i < TeamA[0] + 1; i++) {
             uniform_int_distribution<> x_dis(0, game_settings[1] - 1);
             uniform_int_distribution<> y_dis(0, game_settings[2] - 1);
+            int id_counter = 1;
+            // int id_max = TeamA[i];
 
             while (TeamA[i]-- > 0) {
                 
@@ -327,7 +379,11 @@ public:
                     temp = new SuperShip();
                     turn_queue->push_back(temp);
                 }
+                cout << "id: " << id_counter << endl;
 
+                // cin.get();
+
+                temp->set_id(id_counter);
                 temp->set_team('A');
                 temp->set_type(TeamA_classes[i - 1]);
                 temp->set_symbol(TeamA_symbols[i - 1]);
@@ -337,6 +393,9 @@ public:
                 temp->display_info();
                 
                 game_map[x][y] = TeamA_symbols[i - 1];
+                symbol_map[x][y] = temp->get_id();
+
+                id_counter++;
                 
                 //symbols_placed[i]++;
                 cout << "Placed " << TeamA_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
@@ -349,13 +408,13 @@ public:
         for (int i = 1; i < TeamB[0] + 1; i++) {
             uniform_int_distribution<> x_dis(0, game_settings[1] - 1);
             uniform_int_distribution<> y_dis(0, game_settings[2] - 1);
+            int id_counter = 1;
 
             while (TeamB[i]-- > 0) {
                 do {
                     x = x_dis(gen);
                     y = y_dis(gen);
                 } while(game_map[x][y] != '0'); // prevents placement on islands/ occupied coords
-                game_map[x][y] = TeamB_symbols[i - 1];
 
                 Ship* temp;
 
@@ -388,11 +447,17 @@ public:
                     temp = new SuperShip();
                     turn_queue->push_back(temp);
                 }
+                temp->set_id(id_counter);
                 temp->set_team('B');
                 temp->set_type(TeamB_classes[i - 1]);
                 temp->set_symbol(TeamB_symbols[i - 1]);
                 temp->set_x(x);
                 temp->set_y(y);
+
+                symbol_map[x][y] = temp->get_id();
+                game_map[x][y] = TeamB_symbols[i - 1];
+
+                id_counter++;
 
                 temp->display_info();
                 // Ships[ship_counter].id = ship_counter + 1;
@@ -426,6 +491,7 @@ public:
         } while(game_map[x][y] != '0');
 
         game_map[x][y] = respawning_ship->get_symbol();
+        symbol_map[x][y] = respawning_ship->get_id();
         respawning_ship->set_x(x);
         respawning_ship->set_y(y);
     }
@@ -439,24 +505,7 @@ public:
     string* get_TeamB_classes() const { return TeamB_classes; }
     char** get_game_map() const { return game_map; }
     int getno_ships() const { return no_ships;}
-
-    // Linked_List<Ship*>* Create_Ship(Ship_Details* Ships, int no_ships) {
-    //     cout << "Creating Ships" << endl;
-
-    //     Linked_List<Ship*>* turn_queue = new Linked_List<Ship*>;
-
-    //     for (int i = 0; i < no_ships; i++) {
-    //         if (Ships[i].type == "Battleship") {
-    //             cout << "Detected" << endl;
-    //             Ships[i].ship_ptr = new Battleship(game_map, Ships);
-    //             turn_queue->push_back(Ships[i].ship_ptr);
-    //         }
-    //     }
-
-
-    //     turn_queue->display();
-    //     return turn_queue;
-    // }
+    int** get_symbol_map() const { return symbol_map; }
 };
 
 #endif

@@ -15,11 +15,13 @@ private:
 
 public:
     Battleship() {
-        cout << "Battleship created! " << endl;
+        cout << "Battleship created!" << endl;
+        outputFile << "Battleship created!" << endl;
     }
 
     void promotion() {
         cout << "Battleship has been promoted to Destroyer!" << endl;
+        outputFile << "Battleship has been promoted to Destroyer!" << endl;
 
         // cin.get();
 
@@ -29,6 +31,7 @@ public:
 
         turn_queue->replace(replace_index, promoted_ship);
 
+        promoted_ship->set_id(id);
         promoted_ship->set_x(x);
         promoted_ship->set_y(y);
         promoted_ship->set_team(team);
@@ -55,16 +58,17 @@ public:
         }
 
         if (found_symbol == false && team == 'A') {
-            cout << "No symbol found for Destroyer. Using default symbol." << endl;
+            // cout << "No symbol found for Destroyer. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamA_symbols[1]);
         } else if (found_symbol == false && team == 'B') {
-            cout << "No symbol found for Destroyer. Using default symbol." << endl;
+            // cout << "No symbol found for Destroyer. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamB_symbols[1]);
         }
 
         //promoted_ship->set_symbol('5');
 
         game_map[x][y] = promoted_ship->get_symbol();
+        symbol_map[x][y] = promoted_ship->get_id();
 
         delete this;
     }
@@ -96,8 +100,10 @@ public:
             case 1:
                 if (y + 1 < game_settings[2] && game_map[x][y + 1] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     y++;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -107,8 +113,10 @@ public:
             case 2:
                 if (y - 1 >= 0 && game_map[x][y - 1] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     y--;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -118,8 +126,10 @@ public:
             case 3:
                 if (x - 1 >= 0 && game_map[x - 1][y] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     x--;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -128,8 +138,10 @@ public:
             case 4:
                 if (x + 1 < game_settings[1] && game_map[x + 1][y] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     x++;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -137,7 +149,7 @@ public:
                 }
                 break;
             default:
-                cout << "Technically impossible so if you see this the world must be ending" << endl;
+                // cout << "Technically impossible so if you see this the world must be ending" << endl;
                 break;
             }
         }

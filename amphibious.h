@@ -29,6 +29,7 @@ public:
 
         turn_queue->replace(replace_index, promoted_ship);
 
+        promoted_ship->set_id(id);
         promoted_ship->set_x(x);
         promoted_ship->set_y(y);
         promoted_ship->set_team(team);
@@ -65,6 +66,7 @@ public:
         //promoted_ship->set_symbol('5');
 
         game_map[x][y] = promoted_ship->get_symbol();
+        symbol_map[x][y] = promoted_ship->get_id();
 
         delete this;
     }
@@ -96,6 +98,7 @@ public:
                     y++;
                     ship_is_on = game_map[x][y];
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -110,6 +113,7 @@ public:
                     y--;
                     ship_is_on = game_map[x][y];
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -124,6 +128,7 @@ public:
                     x--;
                     ship_is_on = game_map[x][y];
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -138,6 +143,7 @@ public:
                     x++;
                     ship_is_on = game_map[x][y];
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;

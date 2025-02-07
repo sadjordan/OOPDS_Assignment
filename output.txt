@@ -1,0 +1,4429 @@
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+Supership created!
+
+0x12ff041c0
+
+_________________________________________________________________
+Loop number: 0
+Respawning...
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+A SuperShip from Team B was rammed!
+
+It is Cruiser, with id: 2's turn!
+A SuperShip from Team B was rammed!
+
+It is Destroyer, with id: 1's turn!
+
+It is Destroyer, with id: 2's turn!
+A SuperShip from Team B was rammed!
+
+It is Frigate, with id: 1's turn!
+
+It is Frigate, with id: 2's turn!
+
+It is Frigate, with id: 3's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+A Cruiser from Team A was rammed!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (6 ,6 )!
+Attacked location: (8, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 7)
+Attacked location: (8, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Ramming target at (5 ,5 )!
+Attacked location: (7, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (8, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+Attacked location: (8, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (8 ,1 )!
+A Frigate from Team A was rammed!
+Attacked location: (10, 3)
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (9, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (7, 1)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (4 ,2 )!
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (5 ,8 )!
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+Attacked location: (7, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (4 ,5 )!
+Attacked location: (4, 7)
+An enemy ship Frigate, with the id 1 from Team A was hit!
+Missed! No enemy ship at target location.
+Attacked location: (6, 5)
+Missed! No enemy ship at target location.
+Attacked location: (6, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (9 ,2 )!
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (10, 4)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+A Battleship from Team A was rammed!
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (2, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (3, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 2)
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (1 ,0 )!
+Attacked location: (1, 2)
+Missed! No enemy ship at target location.
+Attacked location: (2, 2)
+Missed! No enemy ship at target location.
+Attacked location: (3, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (8 ,1 )!
+Attacked location: (8, 1)
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  7 |     B |   SuperShip |    ! |     2 |
+| 10 |     B |   SuperShip |    ! |     2 |
+|  2 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |     Cruiser |    $ |     2 |
+|  2 |     A |     Frigate |    @ |     2 |
+|  1 |     A |     Frigate |    @ |     2 |
+|  1 |     A |  Battleship |    * |     2 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 1
+Respawning...
+SuperShip with id: 7 Respawned at position (0, 0)
+SuperShip with id: 10 Respawned at position (3, 4)
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+A SuperShip from Team B was rammed!
+
+It is Destroyer, with id: 1's turn!
+
+It is Destroyer, with id: 2's turn!
+A SuperShip from Team B was rammed!
+
+It is Frigate, with id: 3's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (6 ,5 )!
+A Destroyer from Team A was rammed!
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (7 ,0 )!
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (3 ,4 )!
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (3, 5)
+An enemy ship Cruiser, with the id 1 from Team A was hit!
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (5 ,3 )!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (4, 10)
+An enemy ship Frigate, with the id 3 from Team A was hit!
+Missed! No enemy ship at target location.
+Attacked location: (6, 10)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (10, 6)
+Missed! No enemy ship at target location.
+Attacked location: (10, 4)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (9, 9)
+Missed! No enemy ship at target location.
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (8, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (4, 1)
+Attacked location: (2, 1)
+Missed! No enemy ship at target location.
+Attacked location: (3, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (2, 3)
+Missed! No enemy ship at target location.
+Attacked location: (1, 2)
+Missed! No enemy ship at target location.
+Attacked location: (3, 1)
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (7 ,0 )!
+Attacked location: (7, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (5 ,7 )!
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Ramming target at (1 ,1 )!
+Attacked location: (2, 3)
+Missed! No enemy ship at target location.
+Attacked location: (2, 1)
+Missed! No enemy ship at target location.
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  2 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |     Cruiser |    $ |     2 |
+|  2 |     A |     Frigate |    @ |     2 |
+|  1 |     A |     Frigate |    @ |     2 |
+|  1 |     A |  Battleship |    * |     2 |
+| 15 |     B |   SuperShip |    ! |     2 |
+|  4 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |   Destroyer |    # |     2 |
+|  1 |     A |     Cruiser |    $ |     2 |
+|  3 |     A |     Frigate |    @ |     2 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 2
+Respawning...
+SuperShip with id: 2 Respawned at position (4, 2)
+Cruiser with id: 2 Respawned at position (1, 3)
+
+It is Battleship, with id: 2's turn!
+
+It is Destroyer, with id: 1's turn!
+
+It is Battleship, with id: 1's turn!
+An enemy ship Battleship, with the id 2 from Team A was hit!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (8, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (10, 2)
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (6, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (4 ,2 )!
+Attacked location: (4, 3)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+Attacked location: (6, 3)
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (7, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (5 ,6 )!
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (7, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (9, 6)
+Missed! No enemy ship at target location.
+Attacked location: (10, 6)
+Missed! No enemy ship at target location.
+Attacked location: (8, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (8 ,0 )!
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (8, 8)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+Attacked location: (9, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Ramming target at (1 ,1 )!
+Attacked location: (3, 3)
+Missed! No enemy ship at target location.
+Attacked location: (2, 1)
+Missed! No enemy ship at target location.
+Attacked location: (3, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+Attacked location: (2, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 7)
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (2, 2)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (1, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (6, 5)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+Attacked location: (6, 3)
+
+It is Cruiser, with id: 2's turn!
+A SuperShip from Team B was rammed!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  2 |     A |     Frigate |    @ |     2 |
+|  1 |     A |     Frigate |    @ |     2 |
+|  1 |     A |  Battleship |    * |     2 |
+| 15 |     B |   SuperShip |    ! |     2 |
+|  4 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |   Destroyer |    # |     2 |
+|  1 |     A |     Cruiser |    $ |     2 |
+|  3 |     A |     Frigate |    @ |     2 |
+|  2 |     A |  Battleship |    * |     2 |
+|  7 |     B |   SuperShip |    ! |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 3
+Respawning...
+Frigate with id: 2 Respawned at position (3, 2)
+Frigate with id: 1 Respawned at position (5, 5)
+
+It is Destroyer, with id: 1's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (8 ,4 )!
+Attacked location: (9, 4)
+Missed! No enemy ship at target location.
+Attacked location: (8, 6)
+Missed! No enemy ship at target location.
+Attacked location: (10, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Ramming target at (5 ,5 )!
+A Frigate from Team A was rammed!
+Attacked location: (7, 6)
+Missed! No enemy ship at target location.
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (7 ,1 )!
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+Attacked location: (5, 4)
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Ramming target at (7 ,1 )!
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (3 ,2 )!
+A Frigate from Team A was rammed!
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (4 ,7 )!
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (4 ,7 )!
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (7 ,1 )!
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (9, 6)
+Missed! No enemy ship at target location.
+Attacked location: (8, 7)
+Missed! No enemy ship at target location.
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Ramming target at (1 ,2 )!
+A Cruiser from Team A was rammed!
+Attacked location: (3, 3)
+Missed! No enemy ship at target location.
+Attacked location: (1, 3)
+Missed! No enemy ship at target location.
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+Attacked location: (2, 3)
+Attacked location: (1, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (6 ,2 )!
+Attacked location: (6, 3)
+Missed! No enemy ship at target location.
+Attacked location: (7, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (3 ,8 )!
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (4, 3)
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (3 ,4 )!
+Attacked location: (5, 4)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  1 |     A |  Battleship |    * |     2 |
+| 15 |     B |   SuperShip |    ! |     2 |
+|  4 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |   Destroyer |    # |     2 |
+|  1 |     A |     Cruiser |    $ |     2 |
+|  3 |     A |     Frigate |    @ |     2 |
+|  2 |     A |  Battleship |    * |     2 |
+|  7 |     B |   SuperShip |    ! |     1 |
+|  1 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Cruiser |    $ |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 4
+Respawning...
+Battleship with id: 1 Respawned at position (3, 3)
+SuperShip with id: 15 Respawned at position (2, 2)
+
+It is Destroyer, with id: 1's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (7 ,5 )!
+Attacked location: (8, 7)
+Missed! No enemy ship at target location.
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (6, 6)
+Missed! No enemy ship at target location.
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (3 ,3 )!
+A Battleship from Team A was rammed!
+Attacked location: (3, 4)
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 3)
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (4 ,3 )!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (6, 5)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (4, 8)
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (7 ,2 )!
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (7, 4)
+Missed! No enemy ship at target location.
+Attacked location: (7, 6)
+Attacked location: (9, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Ramming target at (2 ,3 )!
+Attacked location: (4, 3)
+Missed! No enemy ship at target location.
+Attacked location: (2, 3)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (2 ,2 )!
+Attacked location: (2, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Attacked location: (4, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+Attacked location: (8, 5)
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (5, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (1 ,4 )!
+Attacked location: (1, 4)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (3 ,3 )!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  4 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |   Destroyer |    # |     2 |
+|  1 |     A |     Cruiser |    $ |     2 |
+|  3 |     A |     Frigate |    @ |     2 |
+|  2 |     A |  Battleship |    * |     2 |
+|  7 |     B |   SuperShip |    ! |     1 |
+|  1 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Cruiser |    $ |     1 |
+|  1 |     A |  Battleship |    * |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 5
+Respawning...
+SuperShip with id: 4 Respawned at position (8, 3)
+Destroyer with id: 2 Respawned at position (9, 5)
+
+It is Destroyer, with id: 1's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+Attacked location: (8, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Ramming target at (7 ,6 )!
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+Attacked location: (9, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (6 ,3 )!
+Attacked location: (8, 5)
+Attacked location: (6, 3)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (4 ,2 )!
+Attacked location: (5, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (8, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (3, 3)
+Missed! No enemy ship at target location.
+Attacked location: (5, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (4 ,8 )!
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 10)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (3 ,9 )!
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+Attacked location: (3, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (6 ,3 )!
+Attacked location: (6, 5)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (7, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Ramming target at (6 ,3 )!
+Attacked location: (6, 4)
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (8, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (2, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+Attacked location: (2, 4)
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (1 ,3 )!
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+Attacked location: (1, 4)
+Missed! No enemy ship at target location.
+Attacked location: (2, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (7, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+
+It is Destroyer, with id: 2's turn!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  1 |     A |     Cruiser |    $ |     2 |
+|  3 |     A |     Frigate |    @ |     2 |
+|  2 |     A |  Battleship |    * |     2 |
+|  7 |     B |   SuperShip |    ! |     1 |
+|  1 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Cruiser |    $ |     1 |
+|  1 |     A |  Battleship |    * |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 6
+Respawning...
+Cruiser with id: 1 Respawned at position (7, 2)
+Frigate with id: 3 Respawned at position (7, 5)
+
+It is Destroyer, with id: 1's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (7 ,5 )!
+A Frigate from Team A was rammed!
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (8, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (5 ,2 )!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (7, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (6, 3)
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (8, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (7, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Attacked location: (4, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (5 ,2 )!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+Attacked location: (7, 3)
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 1)
+Missed! No enemy ship at target location.
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Ramming target at (5 ,2 )!
+Attacked location: (7, 2)
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+Attacked location: (7, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (2, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 3)
+Missed! No enemy ship at target location.
+Attacked location: (3, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (7 ,2 )!
+A Cruiser from Team A was rammed!
+Attacked location: (9, 3)
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (4 ,9 )!
+Attacked location: (6, 10)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Attacked location: (4, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+Attacked location: (1, 4)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (5, 4)
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (4, 5)
+Attacked location: (2, 5)
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (10, 4)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Missed! No enemy ship at target location.
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is Destroyer, with id: 2's turn!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  2 |     A |  Battleship |    * |     2 |
+|  7 |     B |   SuperShip |    ! |     1 |
+|  1 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Cruiser |    $ |     1 |
+|  1 |     A |  Battleship |    * |     1 |
+|  3 |     A |     Frigate |    @ |     1 |
+|  1 |     A |     Cruiser |    $ |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 7
+Respawning...
+Battleship with id: 2 Respawned at position (6, 2)
+SuperShip with id: 7 Respawned at position (0, 9)
+
+It is Destroyer, with id: 1's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+Attacked location: (6, 5)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (9, 10)
+Missed! No enemy ship at target location.
+Attacked location: (8, 10)
+Missed! No enemy ship at target location.
+Attacked location: (9, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (4 ,3 )!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (3 ,4 )!
+Attacked location: (3, 4)
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Ramming target at (6 ,1 )!
+Attacked location: (6, 1)
+Missed! No enemy ship at target location.
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (4 ,9 )!
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 10)
+Missed! No enemy ship at target location.
+Attacked location: (4, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (5, 11)
+Missed! No enemy ship at target location.
+Attacked location: (7, 11)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (6 ,1 )!
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (7, 1)
+Missed! No enemy ship at target location.
+Attacked location: (6, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (7 ,2 )!
+Attacked location: (7, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (4, 2)
+Missed! No enemy ship at target location.
+Attacked location: (5, 4)
+Missed! No enemy ship at target location.
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+Attacked location: (3, 3)
+Missed! No enemy ship at target location.
+Attacked location: (1, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (3, 6)
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (7, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (5, 11)
+Missed! No enemy ship at target location.
+Attacked location: (3, 10)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (2 ,5 )!
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (2 ,5 )!
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Ramming target at (9 ,3 )!
+A Destroyer from Team A was rammed!
+Attacked location: (10, 5)
+Missed! No enemy ship at target location.
+Attacked location: (11, 5)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is Battleship, with id: 2's turn!
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  1 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Frigate |    @ |     1 |
+|  2 |     A |     Cruiser |    $ |     1 |
+|  1 |     A |  Battleship |    * |     1 |
+|  3 |     A |     Frigate |    @ |     1 |
+|  1 |     A |     Cruiser |    $ |     1 |
+|  2 |     A |   Destroyer |    # |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 8
+Respawning...
+Frigate with id: 1 Respawned at position (8, 4)
+Frigate with id: 2 Respawned at position (6, 6)
+
+It is Destroyer, with id: 1's turn!
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (6 ,6 )!
+A Frigate from Team A was rammed!
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Attacked location: (8, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (9, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 7)
+Attacked location: (8, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (5, 3)
+Attacked location: (3, 3)
+Missed! No enemy ship at target location.
+Attacked location: (5, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (4, 4)
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+Attacked location: (5, 3)
+Attacked location: (5, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (3 ,5 )!
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (5, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (4 ,8 )!
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (7, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 2)
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Ramming target at (3 ,3 )!
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (5, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (4, 1)
+Missed! No enemy ship at target location.
+Attacked location: (3, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (3 ,5 )!
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (8 ,2 )!
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (4 ,8 )!
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+An enemy ship Destroyer, with the id 1 from Team A was hit!
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Ramming target at (8 ,2 )!
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 2's turn!
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+
+It is Frigate, with id: 1's turn!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  2 |     A |     Cruiser |    $ |     1 |
+|  1 |     A |  Battleship |    * |     1 |
+|  3 |     A |     Frigate |    @ |     1 |
+|  1 |     A |     Cruiser |    $ |     1 |
+|  2 |     A |   Destroyer |    # |     1 |
+|  2 |     A |     Frigate |    @ |     0 |
+|  1 |     A |   Destroyer |    # |     2 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 9
+Respawning...
+Cruiser with id: 2 Respawned at position (0, 0)
+Battleship with id: 1 Respawned at position (0, 2)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (7 ,7 )!
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (8, 10)
+Missed! No enemy ship at target location.
+Attacked location: (9, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (1 ,5 )!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Attacked location: (3, 7)
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Ramming target at (4 ,0 )!
+Attacked location: (4, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (4, 1)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (2 ,6 )!
+Attacked location: (2, 6)
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (3 ,8 )!
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (8 ,2 )!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (1, 2)
+Missed! No enemy ship at target location.
+Attacked location: (1, 3)
+An enemy ship Battleship, with the id 1 from Team A was hit!
+Missed! No enemy ship at target location.
+Attacked location: (2, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (2 ,6 )!
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (9, 5)
+An enemy ship Frigate, with the id 1 from Team A was hit!
+Missed! No enemy ship at target location.
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+Attacked location: (10, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (6, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (2 ,6 )!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (2, 5)
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (11, 2)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 4)
+Missed! No enemy ship at target location.
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is Battleship, with id: 2's turn!
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (2, 10)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 10)
+Missed! No enemy ship at target location.
+
+It is Cruiser, with id: 2's turn!
+A SuperShip from Team B was rammed!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  3 |     A |     Frigate |    @ |     1 |
+|  1 |     A |     Cruiser |    $ |     1 |
+|  2 |     A |   Destroyer |    # |     1 |
+|  2 |     A |     Frigate |    @ |     0 |
+|  1 |     A |   Destroyer |    # |     2 |
+|  1 |     A |  Battleship |    * |     0 |
+|  1 |     A |     Frigate |    @ |     0 |
+| 17 |     B |   SuperShip |    ! |     2 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 10
+Respawning...
+Frigate with id: 3 Respawned at position (9, 8)
+Cruiser with id: 1 Respawned at position (5, 0)
+
+It is Battleship, with id: 1's turn!
+An enemy ship Battleship, with the id 2 from Team A was hit!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (8, 6)
+Missed! No enemy ship at target location.
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (8, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 10)
+Missed! No enemy ship at target location.
+Attacked location: (9, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (3 ,4 )!
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (3, 6)
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Ramming target at (5 ,0 )!
+A Cruiser from Team A was rammed!
+Attacked location: (6, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (5, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (2, 7)
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (4 ,9 )!
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (3 ,6 )!
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Attacked location: (9, 4)
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (7 ,2 )!
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Ramming target at (2 ,5 )!
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (2, 7)
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (7 ,2 )!
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (7, 4)
+Missed! No enemy ship at target location.
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (7, 11)
+Missed! No enemy ship at target location.
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (2, 10)
+Missed! No enemy ship at target location.
+Attacked location: (0, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 11)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is Cruiser, with id: 2's turn!
+
+It is Frigate, with id: 3's turn!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  2 |     A |   Destroyer |    # |     1 |
+|  2 |     A |     Frigate |    @ |     0 |
+|  1 |     A |   Destroyer |    # |     2 |
+|  1 |     A |  Battleship |    * |     0 |
+|  1 |     A |     Frigate |    @ |     0 |
+| 17 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |  Battleship |    * |     1 |
+|  1 |     A |     Cruiser |    $ |     0 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 11
+Respawning...
+Destroyer with id: 2 Respawned at position (8, 3)
+Frigate with id: 2 Respawned at position (5, 2)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 1's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (9, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (9, 11)
+Missed! No enemy ship at target location.
+Attacked location: (8, 9)
+Missed! No enemy ship at target location.
+Attacked location: (8, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 1)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (1 ,5 )!
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+Attacked location: (5, 9)
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (7, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (4, 6)
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (1 ,5 )!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (7, 3)
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (4 ,8 )!
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (1 ,5 )!
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+Attacked location: (2, 6)
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Ramming target at (8 ,3 )!
+A Destroyer from Team A was rammed!
+Attacked location: (10, 4)
+Missed! No enemy ship at target location.
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+Attacked location: (8, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (0, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 10)
+Missed! No enemy ship at target location.
+Attacked location: (2, 10)
+Missed! No enemy ship at target location.
+
+It is Cruiser, with id: 2's turn!
+A Cruiser from Team B was rammed!
+
+It is Frigate, with id: 2's turn!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  1 |     A |   Destroyer |    # |     2 |
+|  1 |     A |  Battleship |    * |     0 |
+|  1 |     A |     Frigate |    @ |     0 |
+| 17 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |  Battleship |    * |     1 |
+|  1 |     A |     Cruiser |    $ |     0 |
+|  2 |     A |   Destroyer |    # |     0 |
+|  1 |     B |     Cruiser |    > |     2 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 12
+Respawning...
+Destroyer with id: 1 Respawned at position (9, 3)
+Battleship with id: 1 Respawned at position (0, 1)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (9, 6)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Attacked location: (7, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (10, 9)
+An enemy ship Frigate, with the id 3 from Team A was hit!
+Missed! No enemy ship at target location.
+Attacked location: (10, 11)
+Missed! No enemy ship at target location.
+Attacked location: (11, 11)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (2 ,4 )!
+Attacked location: (2, 6)
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (4, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 3)
+An enemy ship Frigate, with the id 2 from Team A was hit!
+The enemy ship has no more lives
+Missed! No enemy ship at target location.
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+Attacked location: (4, 11)
+Missed! No enemy ship at target location.
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (7 ,1 )!
+Attacked location: (8, 1)
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (7 ,1 )!
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (4, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (2, 7)
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (8, 1)
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 10)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 7)
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Ramming target at (9 ,3 )!
+A Destroyer from Team A was rammed!
+Attacked location: (11, 4)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 5)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is Cruiser, with id: 2's turn!
+A SuperShip from Team B was rammed!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  1 |     A |     Frigate |    @ |     0 |
+| 17 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |  Battleship |    * |     1 |
+|  1 |     A |     Cruiser |    $ |     0 |
+|  2 |     A |   Destroyer |    # |     0 |
+|  1 |     B |     Cruiser |    > |     2 |
+|  3 |     A |     Frigate |    @ |     0 |
+|  1 |     A |   Destroyer |    # |     1 |
+| 16 |     B |   SuperShip |    ! |     2 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 13
+Respawning...
+Frigate with id: 1 Respawned at position (0, 8)
+SuperShip with id: 17 Respawned at position (2, 1)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (9, 7)
+Missed! No enemy ship at target location.
+Attacked location: (7, 6)
+Missed! No enemy ship at target location.
+Attacked location: (8, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (8, 11)
+Missed! No enemy ship at target location.
+Attacked location: (10, 11)
+Missed! No enemy ship at target location.
+Attacked location: (9, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (2 ,3 )!
+A Cruiser from Team A was rammed!
+Attacked location: (2, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 7)
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 1)
+Missed! No enemy ship at target location.
+Attacked location: (5, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (3 ,8 )!
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (0 ,7 )!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (0, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (8 ,0 )!
+Attacked location: (9, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (8 ,0 )!
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (9, 1)
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (2 ,9 )!
+Attacked location: (2, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (1, 8)
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Attacked location: (11, 4)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Ramming target at (0 ,8 )!
+An enemy ship Frigate, with the id 1 from Team A was rammed!
+The enemy ship has no more lives
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (0, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 10)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+An enemy ship SuperShip, with the id 8 from Team B was hit!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  2 |     A |  Battleship |    * |     1 |
+|  1 |     A |     Cruiser |    $ |     0 |
+|  2 |     A |   Destroyer |    # |     0 |
+|  1 |     B |     Cruiser |    > |     2 |
+|  3 |     A |     Frigate |    @ |     0 |
+|  1 |     A |   Destroyer |    # |     1 |
+| 16 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |     Cruiser |    $ |     0 |
+|  8 |     B |   SuperShip |    ! |     2 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 14
+Respawning...
+Battleship with id: 2 Respawned at position (2, 6)
+Cruiser with id: 1 Respawned at position (3, 3)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+A Battleship from Team A was rammed!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (9, 8)
+Missed! No enemy ship at target location.
+Attacked location: (8, 6)
+Missed! No enemy ship at target location.
+Attacked location: (7, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (9, 10)
+Missed! No enemy ship at target location.
+Attacked location: (10, 9)
+Missed! No enemy ship at target location.
+Attacked location: (8, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (3 ,3 )!
+An enemy ship Cruiser, with the id 1 from Team A was rammed!
+The enemy ship has no more lives
+Attacked location: (4, 5)
+Missed! No enemy ship at target location.
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (1, 9)
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (0, 5)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 10)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (1, 6)
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (9 ,1 )!
+Attacked location: (10, 3)
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (9 ,1 )!
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (10, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (0 ,5 )!
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (9, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 2)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (1, 10)
+Missed! No enemy ship at target location.
+Attacked location: (1, 9)
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (1, 9)
+Attacked location: (0, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (0 ,7 )!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 9)
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (0 ,7 )!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (1, 9)
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Ramming target at (8 ,1 )!
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Ramming target at (1 ,9 )!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+Attacked location: (1, 10)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Ramming target at (3 ,0 )!
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  2 |     A |   Destroyer |    # |     0 |
+|  1 |     B |     Cruiser |    > |     2 |
+|  3 |     A |     Frigate |    @ |     0 |
+|  1 |     A |   Destroyer |    # |     1 |
+| 16 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |     Cruiser |    $ |     0 |
+|  8 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |  Battleship |    * |     0 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 15
+Respawning...
+Destroyer with id: 2 Respawned at position (9, 8)
+Cruiser with id: 1 Respawned at position (0, 9)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (9, 8)
+Missed! No enemy ship at target location.
+Attacked location: (9, 9)
+Attacked location: (8, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Ramming target at (9 ,8 )!
+An enemy ship Destroyer, with the id 2 from Team A was rammed!
+The enemy ship has no more lives
+Attacked location: (10, 8)
+Missed! No enemy ship at target location.
+Attacked location: (9, 8)
+Missed! No enemy ship at target location.
+Attacked location: (9, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (5, 6)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (4, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (10, 1)
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (0, 5)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 4)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (8 ,1 )!
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (10, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (4, 11)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Ramming target at (9 ,2 )!
+Attacked location: (11, 4)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 3)
+Missed! No enemy ship at target location.
+Attacked location: (10, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (3, 10)
+Attacked location: (2, 11)
+Missed! No enemy ship at target location.
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+
+It is Cruiser, with id: 1's turn!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  3 |     A |     Frigate |    @ |     0 |
+|  1 |     A |   Destroyer |    # |     1 |
+| 16 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |     Cruiser |    $ |     0 |
+|  8 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |  Battleship |    * |     0 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 16
+Respawning...
+Frigate with id: 3 Respawned at position (8, 0)
+Destroyer with id: 1 Respawned at position (7, 2)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (7, 7)
+Missed! No enemy ship at target location.
+Attacked location: (8, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (10, 11)
+Missed! No enemy ship at target location.
+Attacked location: (11, 11)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (3, 7)
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (3 ,8 )!
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 10)
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (8 ,0 )!
+An enemy ship Frigate, with the id 3 from Team A was rammed!
+The enemy ship has no more lives
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (9, 5)
+Missed! No enemy ship at target location.
+Attacked location: (11, 5)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+Attacked location: (1, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (11, 2)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (3 ,8 )!
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (1 ,9 )!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+Attacked location: (3, 10)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (1, 10)
+Missed! No enemy ship at target location.
+Attacked location: (0, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (10, 4)
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Ramming target at (0 ,8 )!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (0, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is Battleship, with id: 1's turn!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 1)
+
+It is Cruiser, with id: 1's turn!
+
+It is Destroyer, with id: 1's turn!
+A SuperShip from Team B was rammed!
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+| 16 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |     Cruiser |    $ |     0 |
+|  8 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |  Battleship |    * |     0 |
+|  4 |     B |   SuperShip |    ! |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 17
+Respawning...
+SuperShip with id: 16 Respawned at position (5, 1)
+Cruiser with id: 2 Respawned at position (1, 6)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+An enemy ship Cruiser, with the id 2 from Team A was rammed!
+The enemy ship has no more lives
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (8, 8)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Attacked location: (7, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (8, 11)
+Missed! No enemy ship at target location.
+Attacked location: (10, 9)
+Missed! No enemy ship at target location.
+Attacked location: (9, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (0 ,5 )!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (0 ,5 )!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (4, 10)
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (9 ,1 )!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (11, 2)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (9, 3)
+An enemy ship Destroyer, with the id 1 from Team A was hit!
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Ramming target at (0 ,5 )!
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+Attacked location: (0, 5)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (11, 1)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 2)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (0 ,8 )!
+Attacked location: (0, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 10)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (1, 11)
+Missed! No enemy ship at target location.
+Attacked location: (0, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 9)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (5, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (6, 1)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+
+It is Cruiser, with id: 1's turn!
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Ramming target at (4 ,0 )!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (4, 2)
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  8 |     B |   SuperShip |    ! |     2 |
+|  2 |     A |  Battleship |    * |     0 |
+|  4 |     B |   SuperShip |    ! |     1 |
+|  1 |     A |   Destroyer |    # |     0 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 18
+Respawning...
+SuperShip with id: 8 Respawned at position (2, 9)
+Battleship with id: 2 Respawned at position (9, 9)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (7, 5)
+Missed! No enemy ship at target location.
+Attacked location: (6, 6)
+Missed! No enemy ship at target location.
+Attacked location: (6, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Ramming target at (9 ,9 )!
+An enemy ship Battleship, with the id 2 from Team A was rammed!
+The enemy ship has no more lives
+Attacked location: (11, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 9)
+Missed! No enemy ship at target location.
+Attacked location: (10, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (4, 4)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (0, 4)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (3 ,7 )!
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (10, 1)
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (8 ,1 )!
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (1, 5)
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 6)
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (8 ,1 )!
+Attacked location: (8, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (8, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 10)
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (2, 10)
+Missed! No enemy ship at target location.
+Attacked location: (1, 10)
+Attacked location: (1, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (1, 11)
+Missed! No enemy ship at target location.
+Attacked location: (2, 11)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (7, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is Cruiser, with id: 1's turn!
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (4, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+Attacked location: (5, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+|  4 |     B |   SuperShip |    ! |     1 |
+|  1 |     A |   Destroyer |    # |     0 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 19
+Respawning...
+SuperShip with id: 4 Respawned at position (2, 2)
+Destroyer with id: 1 Respawned at position (9, 8)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+Attacked location: (6, 8)
+Missed! No enemy ship at target location.
+Attacked location: (7, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Ramming target at (9 ,8 )!
+An enemy ship Destroyer, with the id 1 from Team A was rammed!
+The enemy ship has no more lives
+Attacked location: (10, 10)
+Missed! No enemy ship at target location.
+Attacked location: (11, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (1 ,5 )!
+Attacked location: (1, 5)
+Attacked location: (3, 7)
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (1 ,5 )!
+Attacked location: (1, 5)
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (1 ,5 )!
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (2 ,6 )!
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (2 ,6 )!
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Attacked location: (4, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (7, 1)
+Attacked location: (7, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (8, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 1)
+Missed! No enemy ship at target location.
+Attacked location: (9, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (11, 1)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (7, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Attacked location: (2, 5)
+Missed! No enemy ship at target location.
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (1 ,9 )!
+Attacked location: (3, 10)
+Missed! No enemy ship at target location.
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (1, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (1 ,9 )!
+Attacked location: (1, 11)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 11)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+An enemy ship SuperShip, with the id 16 from Team B was hit!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (4, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (6, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (5, 2)
+Missed! No enemy ship at target location.
+
+It is Cruiser, with id: 1's turn!
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 10)
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (3, 4)
+Missed! No enemy ship at target location.
+Attacked location: (2, 4)
+Missed! No enemy ship at target location.
+Attacked location: (1, 2)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: 
+Resurrection Queue:
++----+-------+------------+--------+-------+
+| ID | Team  |    Type    | Symbol | Lives |
++----+-------+------------+--------+-------+
+| 16 |     B |   SuperShip |    ! |     1 |
++----+------+-------------+--------+-------+
+
+_________________________________________________________________
+Loop number: 20
+Respawning...
+SuperShip with id: 16 Respawned at position (3, 6)
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Ramming target at (5 ,7 )!
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (10, 11)
+Missed! No enemy ship at target location.
+Attacked location: (10, 9)
+Missed! No enemy ship at target location.
+Attacked location: (9, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (1, 8)
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Ramming target at (0 ,6 )!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (4, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Ramming target at (8 ,0 )!
+Attacked location: (10, 2)
+Attacked location: (9, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Ramming target at (9 ,1 )!
+Attacked location: (9, 2)
+Missed! No enemy ship at target location.
+Attacked location: (11, 2)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 3)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (1, 7)
+Missed! No enemy ship at target location.
+Attacked location: (1, 5)
+Missed! No enemy ship at target location.
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (11, 2)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 4)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (1 ,6 )!
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (3, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Attacked location: (3, 10)
+Attacked location: (1, 9)
+Missed! No enemy ship at target location.
+Attacked location: (3, 11)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Attacked location: (1, 11)
+Missed! No enemy ship at target location.
+Attacked location: (2, 11)
+Missed! No enemy ship at target location.
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Ramming target at (3 ,8 )!
+Attacked location: (5, 8)
+Missed! No enemy ship at target location.
+Attacked location: (3, 9)
+Missed! No enemy ship at target location.
+Attacked location: (4, 10)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (6, 2)
+Missed! No enemy ship at target location.
+Attacked location: (4, 2)
+Missed! No enemy ship at target location.
+Attacked location: (5, 3)
+Missed! No enemy ship at target location.
+
+It is Cruiser, with id: 1's turn!
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Ramming target at (4 ,9 )!
+Attacked location: (6, 9)
+Attacked location: (5, 11)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (2, 3)
+Missed! No enemy ship at target location.
+Attacked location: (3, 2)
+Missed! No enemy ship at target location.
+Attacked location: (2, 1)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 16's turn!
+Ship completed looking!
+Attacked location: (3, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+Attacked location: (3, 6)
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: Resurrection queue is empty.
+
+_________________________________________________________________
+Loop number: 21
+Respawning...
+
+It is Battleship, with id: 1's turn!
+
+It is Battleship, with id: 2's turn!
+
+It is Cruiser, with id: 2's turn!
+
+It is Cruiser, with id: 3's turn!
+
+It is SuperShip, with id: 1's turn!
+Ship completed looking!
+Attacked location: (8, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+
+It is SuperShip, with id: 3's turn!
+Ship completed looking!
+Attacked location: (9, 10)
+Missed! No enemy ship at target location.
+Attacked location: (11, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (11, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 5's turn!
+Ship completed looking!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 6's turn!
+Ship completed looking!
+Attacked location: (1, 8)
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 9's turn!
+Ship completed looking!
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 8)
+
+It is SuperShip, with id: 11's turn!
+Ship completed looking!
+Ramming target at (0 ,7 )!
+Attacked location: (0, 9)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 8)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 7)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+
+It is SuperShip, with id: 12's turn!
+Ship completed looking!
+Ramming target at (3 ,5 )!
+Attacked location: (4, 7)
+Missed! No enemy ship at target location.
+Attacked location: (5, 5)
+Missed! No enemy ship at target location.
+Attacked location: (3, 7)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 13's turn!
+Ship completed looking!
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 14's turn!
+Ship completed looking!
+Attacked location: (10, 0)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+Attacked location: (9, 2)
+
+It is SuperShip, with id: 18's turn!
+Ship completed looking!
+Attacked location: (0, 6)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 6)
+Missed! No enemy ship at target location.
+Attacked location: (2, 6)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 19's turn!
+Ship completed looking!
+Ramming target at (8 ,1 )!
+Attacked location: (9, 1)
+Missed! No enemy ship at target location.
+Attacked location: (8, 1)
+Missed! No enemy ship at target location.
+Attacked location: (10, 2)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 20's turn!
+Ship completed looking!
+Ramming target at (6 ,7 )!
+Attacked location: (8, 8)
+Missed! No enemy ship at target location.
+Attacked location: (8, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 10's turn!
+Ship completed looking!
+Ramming target at (0 ,7 )!
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (2, 7)
+Missed! No enemy ship at target location.
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 2's turn!
+Ship completed looking!
+Ramming target at (0 ,8 )!
+Attacked location: (0, 10)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 15's turn!
+Ship completed looking!
+Ramming target at (0 ,8 )!
+Attacked location: (2, 8)
+Missed! No enemy ship at target location.
+Attacked location: (2, 9)
+Missed! No enemy ship at target location.
+Attacked location: (1, 8)
+
+It is SuperShip, with id: 7's turn!
+Ship completed looking!
+Attacked location: (6, 10)
+Missed! No enemy ship at target location.
+Attacked location: (5, 10)
+Missed! No enemy ship at target location.
+Attacked location: (4, 9)
+Missed! No enemy ship at target location.
+
+It is Battleship, with id: 1's turn!
+
+It is SuperShip, with id: 17's turn!
+Ship completed looking!
+Attacked location: (4, 3)
+Missed! No enemy ship at target location.
+Attacked location: (6, 3)
+Missed! No enemy ship at target location.
+Attacked location: (6, 4)
+Missed! No enemy ship at target location.
+
+It is Cruiser, with id: 1's turn!
+
+It is SuperShip, with id: 8's turn!
+Ship completed looking!
+Attacked location: (5, 11)
+Missed! No enemy ship at target location.
+Attacked location: (6, 9)
+Missed! No enemy ship at target location.
+Attacked location: (7, 9)
+Missed! No enemy ship at target location.
+
+It is SuperShip, with id: 4's turn!
+Ship completed looking!
+Attacked location: (0, 1)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (0, 3)
+Wasted a shot! The SuperShipshot at a position exceeding the game map!
+Attacked location: (1, 3)
+An enemy ship Battleship, with the id 1 from Team A was hit!
+The enemy ship has no more lives
+Missed! No enemy ship at target location.
+Ships in the resurrection queue: Resurrection queue is empty.
+Team B has Won the Game after a great struggle lasting 21 turns!

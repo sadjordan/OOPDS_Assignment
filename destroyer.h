@@ -19,10 +19,12 @@ bool target_acquired = false;
 public:
     Destroyer() {
         cout << "Destroyer created! " << endl;
+        outputFile << "Destroyer created! " << endl;
     }
 
     void promotion() {
         cout << "Destroyer has been promoted to SuperShip!" << endl;
+        outputFile << "Destroyer has been promoted to SuperShip!" << endl;
 
         // cin.get();
 
@@ -32,6 +34,7 @@ public:
 
         turn_queue->replace(replace_index, promoted_ship);
 
+        promoted_ship->set_id(id);
         promoted_ship->set_x(x);
         promoted_ship->set_y(y);
         promoted_ship->set_team(team);
@@ -58,16 +61,17 @@ public:
         }
 
         if (found_symbol == false && team == 'A') {
-            cout << "No symbol found for SuperShip. Using default symbol." << endl;
+            // cout << "No symbol found for SuperShip. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamA_symbols[1]);
         } else if (found_symbol == false && team == 'B') {
-            cout << "No symbol found for SuperShip. Using default symbol." << endl;
+            // cout << "No symbol found for SuperShip. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamB_symbols[1]);
         }
 
         //promoted_ship->set_symbol('5');
 
         game_map[x][y] = promoted_ship->get_symbol();
+        symbol_map[x][y] = promoted_ship->get_id();
 
         delete this;
     }
@@ -82,6 +86,13 @@ public:
                 look_results[i] = game_map[x + directions[i][0]][y + directions[i][1]];
             }
         }
+
+        cout << "Ship completed looking!" << endl;
+        outputFile << "Ship completed looking!" << endl;
+
+        // for (int i = 0; i < 8; i++) {
+        //     // cout << "Look results " << i << " :" << look_results[i] << endl;
+        // }
     }
 
     void move() override {
@@ -98,7 +109,7 @@ public:
                                 target[1] = y + directions[i][1];
                                 target_acquired = true;
                                 //enemy is rihgt left ontop or below, abstain from moving
-                                cout << "abstaining" << endl;
+                                // cout << "abstaining" << endl;
                                 return;
 
                                 //Okay quick explanation time
@@ -117,7 +128,7 @@ public:
                                 target[1] = y + directions[i][1];
                                 target_acquired = true;
                                 //enemy is rihgt left ontop or below, abstain from moving
-                                cout << "abstaining" << endl;
+                                // cout << "abstaining" << endl;
                                 return;
                             }
                         }
@@ -139,19 +150,23 @@ public:
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     x = new_x;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
                                 } else if (game_map[x][new_y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     y = new_y;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
 
                                     //mega complicated part (this is as short and efficient as I can make
@@ -185,19 +200,23 @@ public:
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     x = new_x;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
                                 } else if (game_map[x][new_y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
                                     game_map[x][y] = '0';
+                                    symbol_map[x][y] = NULL;
                                     y = new_y;
                                     game_map[x][y] = symbol;
+                                    symbol_map[x][y] = id;
                                     target_acquired = true;
-                                    cout << "target acquired" << endl;
+                                    // cout << "target acquired" << endl;
                                     return;
                                 }
                                 // if no valid paths, resort to random movement
@@ -228,8 +247,10 @@ public:
             case 1: // up
                 if (y + 1 < game_settings[2] && game_map[x][y + 1] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     y++;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -238,8 +259,10 @@ public:
             case 2: // down
                 if (y - 1 >= 0 && game_map[x][y - 1] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     y--;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -248,8 +271,10 @@ public:
             case 3: // left
                 if (x - 1 >= 0 && game_map[x - 1][y] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     x--;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
@@ -258,16 +283,18 @@ public:
             case 4: // right
                 if (x + 1 < game_settings[1] && game_map[x + 1][y] == '0') {
                     game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
                     x++;
                     game_map[x][y] = symbol;
+                    symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
                 }
                 break;
-            default:
-                cout << "Technically impossible so if you see this the world must be ending" << endl;
-                break;
+            // default:
+                // cout << "Technically impossible so if you see this the world must be ending" << endl;
+                // break;
             }
         }
     }
@@ -276,9 +303,14 @@ public:
         //moving to destroy/ step/ ram/ whatever
 
         if (target_acquired == true) {
-            game_map[x][y] = '0'; 
+            game_map[x][y] = '0';
+            symbol_map[x][y] = NULL;
             x = target[0];
             y = target[1];
+
+            cout << "Ramming target at (" << x << " ," << y << " )!" << endl;
+            outputFile << "Ramming target at (" << x << " ," << y << " )!" << endl;
+
         } else {
             return; // if theres no target the ship cannot destroy anything
         }
@@ -293,6 +325,7 @@ public:
         }
 
         game_map[x][y] = symbol;
+        symbol_map[x][y] = id;
     }
 
     void shoot() override {
@@ -358,13 +391,14 @@ public:
     }
 
     void action_plan() override {
-        if (kills > 3) {
-            promotion();
-        };
         look();
         move();
         destroy();
         shoot();
+
+        if (kills > 3) {
+            promotion();
+        };
     }
     
 };

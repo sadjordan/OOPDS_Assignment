@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <fstream>
 #include <random>
 #include <iomanip>
 
@@ -9,6 +10,8 @@
 #include "linkedlist.cpp"
 
 using namespace std;
+
+
 
 int* Ship::game_settings = nullptr;
 int Ship::ship_count = 0;
@@ -23,10 +26,13 @@ Linked_List<Ship*>* Ship::turn_queue = nullptr;
 Linked_List<Ship*>* Ship::respawn_queue = nullptr;
 char* Ship::default_teamA_symbols = nullptr;
 char* Ship::default_teamB_symbols = nullptr; 
+int** Ship::symbol_map = nullptr;
+ofstream Ship::outputFile("/Users/jordan/Desktop/Live_Projects/OOPDS_Assignment/output.txt");
 
 void game_loop(Battlefield* setup) {
-    cout << "Another Game Loop" << endl;
-
+    cout << "Respawning..." << endl;
+    Ship::outputFile << "Respawning..." << endl;  
+    
     for (int i = 0; i < 2; i++) {
         if (Ship::respawn_queue->list_size() != 0) {
             Ship::turn_queue->push_back((*Ship::respawn_queue)[0]);
@@ -37,22 +43,71 @@ void game_loop(Battlefield* setup) {
             
             // cout << (*Ship::respawn_queue)[0]->get_x() << endl;
             // cout << (*Ship::respawn_queue)[0]->get_y() << endl;
+            cout << (*Ship::respawn_queue)[0]->get_type() << " with id: " << (*Ship::respawn_queue)[0]->get_id() 
+                 << " Respawned at position (" << (*Ship::respawn_queue)[0]->get_x() << ", " << 
+                 (*Ship::respawn_queue)[0]->get_y() << ")" << endl;
+            Ship::outputFile << (*Ship::respawn_queue)[0]->get_type() << " with id: " << (*Ship::respawn_queue)[0]->get_id() 
+                       << " Respawned at position (" << (*Ship::respawn_queue)[0]->get_x() << ", " << 
+                       (*Ship::respawn_queue)[0]->get_y() << ")" << endl;  
+
             Ship::respawn_queue->pop_front();
-            cout << "Respawned" << endl;
-            cout << Ship::respawn_queue->list_size() << endl;
+            // cout << Ship::respawn_queue->list_size() << endl;
+            // Ship::outputFile << Ship::respawn_queue->list_size() << endl;  
         }
     }
 
     for (int i = 0; i < Ship::turn_queue->list_size(); i++) {
-        cout << "————————————————————————————————————————————————" << endl;
-        cout << "Turn: " << i << endl;
-        cout << (*Ship::turn_queue)[i]->get_type() << endl;
-        cout << "(" << (*Ship::turn_queue)[i]->get_x()+ 1<< ", " << (*Ship::turn_queue)[i]->get_y()+1 << ")" << endl;
+        cout << endl;
+        Ship::outputFile << endl;  
+        
+        cout << "It is " << (*Ship::turn_queue)[i]->get_type() << ", with id: " << 
+            (*Ship::turn_queue)[i]->get_id() << "'s turn!" << endl;
+        Ship::outputFile << "It is " << (*Ship::turn_queue)[i]->get_type() << ", with id: " << 
+            (*Ship::turn_queue)[i]->get_id() << "'s turn!" << endl;  
+        
         (*Ship::turn_queue)[i]->action_plan();
         setup->Print_Map();
     }
 
     Ship::respawn_queue->display();
+    cout << "Ships in the resurrection queue: ";
+    Ship::outputFile << "Ships in the resurrection queue: ";  
+
+    if (!Ship::respawn_queue || Ship::respawn_queue->empty()) {
+        cout << "Resurrection queue is empty." << endl;
+        Ship::outputFile << "Resurrection queue is empty." << endl;  
+        return;
+    }
+
+    cout << "\nResurrection Queue:\n";
+    Ship::outputFile << "\nResurrection Queue:\n";  
+    cout << "+----+-------+------------+--------+-------+" << endl;
+    Ship::outputFile << "+----+-------+------------+--------+-------+" << endl;  
+    cout << "| ID | Team  |    Type    | Symbol | Lives |" << endl;
+    Ship::outputFile << "| ID | Team  |    Type    | Symbol | Lives |" << endl;  
+    cout << "+----+-------+------------+--------+-------+" << endl;
+    Ship::outputFile << "+----+-------+------------+--------+-------+" << endl;  
+
+    for (int i = 0; i < Ship::respawn_queue->list_size(); i++) {
+        Ship* ship = (*Ship::respawn_queue)[i]; // Access the ship at index i
+
+        if (ship) {
+            cout << "| " << setw(2) << ship->get_id()
+                 << " |  " << setw(4) << ship->get_team()
+                 << " | " << setw(11) << ship->get_type()
+                 << " |   " << setw(2) << ship->get_symbol()
+                 << " | " << setw(5) << ship->get_lives() << " |" << endl;
+            Ship::outputFile << "| " << setw(2) << ship->get_id()
+                       << " |  " << setw(4) << ship->get_team()
+                       << " | " << setw(11) << ship->get_type()
+                       << " |   " << setw(2) << ship->get_symbol()
+                       << " | " << setw(5) << ship->get_lives() << " |" << endl;  
+        }
+    }
+
+    cout << "+----+------+-------------+--------+-------+" << endl;
+    Ship::outputFile << "+----+------+-------------+--------+-------+" << endl;  
+
     cin.get();
 }
 
@@ -64,31 +119,25 @@ void game_loop(Battlefield* setup) {
 int main() {
     Battlefield setup;
 
-
-    // int* game_settings = setup.get_game_settings();
-    // int* TeamA = setup.get_TeamA();
-    // int* TeamB = setup.get_TeamB();
-    // char* TeamA_symbols = setup.get_TeamA_symbols();
-    // char* TeamB_symbols = setup.get_TeamB_symbols();
-    // string* TeamA_classes = setup.get_TeamA_classes();
-    // string* TeamB_classes = setup.get_TeamB_classes();
-    // char** game_map = setup.get_game_map();
     Ship::turn_queue = setup.Initial_Ship_Placement();
     Ship::respawn_queue = new Linked_List<Ship*>;
-    cout<<endl;
-    Ship::turn_queue->display();
+    cout << endl;
+    Ship::outputFile << endl;  
+    // Ship::turn_queue->display();
+    // Ship::outputFile << "Turn queue displayed." << endl;  
 
     Ship::game_settings = setup.get_game_settings();
     Ship::game_map = setup.get_game_map();
     Ship::TeamA = setup.get_TeamA();
-    Ship::TeamB = setup.get_TeamA();
+    Ship::TeamB = setup.get_TeamB();
     Ship::TeamA_classes = setup.get_TeamA_classes();
     Ship::TeamB_classes = setup.get_TeamB_classes();
     Ship::TeamA_symbols = setup.get_TeamA_symbols();
     Ship::TeamB_symbols = setup.get_TeamB_symbols();
+    Ship::symbol_map = setup.get_symbol_map();
 
-    Ship::default_teamA_symbols = new char[7]; // {"å", "ß", "ö", "Å", "◊", "Ö", "∑"};
-    Ship::default_teamB_symbols = new char[7]; // {"∆", "∫", "µ", "√", "ç", "Ω", "æ"};
+    Ship::default_teamA_symbols = new char[7];
+    Ship::default_teamB_symbols = new char[7];
     
     {
         string tempA = "QWERTYU";
@@ -100,18 +149,22 @@ int main() {
             Ship::default_teamB_symbols[i] = tempB[i];
         }
     }
-    cout << Ship::turn_queue->list_size() << endl;
+    // cout << Ship::turn_queue->list_size() << endl;
+    // Ship::outputFile << Ship::turn_queue->list_size() << endl;  
 
     cin.get();
 
     cout << Ship::game_map << endl;
+    Ship::outputFile << Ship::game_map << endl;  
 
     for (int i = 0; i < Ship::game_settings[0]; i++) {
-        cout<<endl;
-        cout<< "_________________________________________________________________"<<endl;
+        cout << endl;
+        Ship::outputFile << endl;  
+        cout << "_________________________________________________________________" << endl;
+        Ship::outputFile << "_________________________________________________________________" << endl;  
         cout << "Loop number: " << i << endl;
+        Ship::outputFile << "Loop number: " << i << endl;
         game_loop(&setup);
-
 
         int TeamA_counter = 0;
         int TeamB_counter = 0;
@@ -123,7 +176,6 @@ int main() {
                 TeamB_counter++;
             }
         }
-
         for (int i = 0; i < Ship::respawn_queue->list_size(); i++) {
             if ((*Ship::respawn_queue)[i]->get_team() == 'A') {
                 TeamA_counter++;
@@ -134,14 +186,26 @@ int main() {
 
         if (TeamA_counter == 0) {
             cout << "Team B has Won the Game after a great struggle lasting " << i << " turns!" << endl;
+            Ship::outputFile << "Team B has Won the Game after a great struggle lasting " << i << " turns!" << endl;  
             break;
         } else if (TeamB_counter == 0) {
             cout << "Team A has Won the Game after a bloody war lasting " << i << " turns!" << endl;
+            Ship::outputFile << "Team A has Won the Game after a bloody war lasting " << i << " turns!" << endl;  
             break;
         }
 
         if (i == Ship::game_settings[0] - 1) {
             cout << "It's a tie!" << endl;
+            Ship::outputFile << "It's a tie!" << endl;
         }
     }
+
+    for (int i = 0; i < Ship::turn_queue->list_size(); i++) {
+        delete (*Ship::turn_queue)[i];
+    }
+    for (int i = 0; i < Ship::respawn_queue->list_size(); i++) {
+        delete (*Ship::respawn_queue)[i];
+    }
+
+    Ship::cleanup();
 }

@@ -14,11 +14,13 @@ private:
 public:
     Frigate() {
         cout << "Frigate created! " << endl;
+        outputFile << "Frigate created!" << endl;
     }
 
     void promotion() {
         cout << "Frigate has been promoted to Corvette!" << endl;
-
+        outputFile << "Frigate has been promoted to Corvette!" << endl;
+        
         // cin.get();
 
         Ship* promoted_ship = new Corvette();
@@ -27,6 +29,7 @@ public:
 
         turn_queue->replace(replace_index, promoted_ship);
 
+        promoted_ship->set_id(id);
         promoted_ship->set_x(x);
         promoted_ship->set_y(y);
         promoted_ship->set_team(team);
@@ -53,16 +56,17 @@ public:
         }
 
         if (found_symbol == false && team == 'A') {
-            cout << "No symbol found for Corvette. Using default symbol." << endl;
+            // cout << "No symbol found for Corvette. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamA_symbols[4]);
         } else if (found_symbol == false && team == 'B') {
-            cout << "No symbol found for Corvette. Using default symbol." << endl;
+            // cout << "No symbol found for Corvette. Using default symbol." << endl;
             promoted_ship->set_symbol(default_teamB_symbols[4]);
         }
 
         //promoted_ship->set_symbol('5');
 
         game_map[x][y] = promoted_ship->get_symbol();
+        symbol_map[x][y] = promoted_ship->get_id();
 
         delete this;
     }
@@ -87,12 +91,14 @@ public:
         cycle++;
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
-        cout << TeamA_symbols[0] << endl;
-        cout << TeamB_symbols[0] << endl;
-        cout << endl;
+        outputFile << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
+        // cout << TeamA_symbols[0] << endl;
+        // cout << TeamB_symbols[0] << endl;
+        // cout << endl;
 
         if (target_x < 0 || target_x >= game_settings[1] || target_y < 0 || target_y >= game_settings[2]) {
             cout << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
+            outputFile << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
             return;
         }
 
@@ -100,11 +106,11 @@ public:
             if (team == 'A') {
                 for (int i = 0; i < TeamB[0]; i++) {
                     if (TeamB_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamB_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamB_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
 
                         //add promotion logic here?
@@ -115,11 +121,11 @@ public:
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
                     if (TeamA_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamA_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamA_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
                         break;
                     }
@@ -129,6 +135,7 @@ public:
 
         if (game_map[target_x][target_y] == '0' || game_map[target_x][target_y] == '1') {
             cout << "Missed! No enemy ship at target location." << endl;
+            outputFile << "Missed! No enemy ship at target location." << endl;
         }
     }
 
