@@ -284,25 +284,43 @@ public:
 
     ~Battlefield() {
         cout << "Destroying Battlefield" << endl;
+        *outputFile << "Destroying Battlefield" << endl;
 
         TeamA = nullptr;
         cout << "Set TeamA to nullptr" << endl;
+        *outputFile << "Set TeamA to nullptr" << endl;
+
         TeamB = nullptr;
         cout << "Set TeamB to nullptr" << endl;
+        *outputFile << "Set TeamB to nullptr" << endl;
+
         TeamA_symbols = nullptr;
         cout << "Set TeamA_symbols to nullptr" << endl;
+        *outputFile << "Set TeamA_symbols to nullptr" << endl;
+
         TeamB_symbols = nullptr;
         cout << "Set TeamB_symbols to nullptr" << endl;
+        *outputFile << "Set TeamB_symbols to nullptr" << endl;
+
         TeamA_classes = nullptr;
         cout << "Set TeamA_classes to nullptr" << endl;
+        *outputFile << "Set TeamA_classes to nullptr" << endl;
+
         TeamB_classes = nullptr;
         cout << "Set TeamB_classes to nullptr" << endl;
+        *outputFile << "Set TeamB_classes to nullptr" << endl;
+
         game_settings = nullptr;
         cout << "Set game_settings to nullptr" << endl;
+        *outputFile << "Set game_settings to nullptr" << endl;
+
         game_map = nullptr;
         cout << "Set game_map to nullptr" << endl;
+        *outputFile << "Set game_map to nullptr" << endl;
+
         symbol_map = nullptr;
         cout << "Set symbol_map to nullptr" << endl;
+        *outputFile << "Set symbol_map to nullptr" << endl;
     }
 
     Linked_List<Ship*>* Initial_Ship_Placement() {
