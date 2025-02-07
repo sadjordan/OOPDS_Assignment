@@ -7,7 +7,7 @@
 #include <iomanip>
 
 #include "battlefield.h"
-#include "linkedlist.cpp"
+#include "linkedlist.h"
 
 using namespace std;
 
@@ -29,7 +29,8 @@ ofstream Ship::outputFile("/Users/jordan/Desktop/Live_Projects/OOPDS_Assignment/
 
 void game_loop(Battlefield* setup) {
     cout << "Respawning..." << endl;
-    Ship::outputFile << "Respawning..." << endl;  
+    Ship::outputFile << "Respawning..." << endl;
+    Ship::outputFile << Ship::respawn_queue->list_size() << endl;
     
     for (int i = 0; i < 2; i++) {
         if (Ship::respawn_queue->list_size() != 0) {
@@ -71,7 +72,7 @@ void game_loop(Battlefield* setup) {
         setup->Print_Map();
     }
 
-    Ship::respawn_queue->display();
+    // Ship::respawn_queue->display();
     cout << "Ships in the resurrection queue: ";
     Ship::outputFile << "Ships in the resurrection queue: ";  
 
