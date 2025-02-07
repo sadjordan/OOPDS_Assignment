@@ -116,6 +116,9 @@ public:
                         //add promotion logic here?
                         //remember to change the ship symbol on the map
                         break;
+                    } else {
+                        cout << "Order cancelled! Almost shot at a friendly ship!" << endl;
+                        outputFile << "Order cancelled! Almost shot at a friendly ship!" << endl;
                     }
                 }
             } else {
@@ -128,6 +131,9 @@ public:
                         // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
                         break;
+                    } else {
+                        cout << "Order cancelled! Almost shot at a friendly ship!" << endl;
+                        outputFile << "Order cancelled! Almost shot at a friendly ship!" << endl;
                     }
                 }
             }

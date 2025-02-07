@@ -108,6 +108,9 @@ public:
                                 target[0] = x + directions[i][0];
                                 target[1] = y + directions[i][1];
                                 target_acquired = true;
+
+                                cout << "Abstaining from moving" << endl;
+                                outputFile << "Abstaining from moving" << endl;
                                 //enemy is rihgt left ontop or below, abstain from moving
                                 // cout << "abstaining" << endl;
                                 return;
@@ -127,6 +130,8 @@ public:
                                 target[0] = x + directions[i][0];
                                 target[1] = y + directions[i][1];
                                 target_acquired = true;
+                                cout << "Abstaining from moving" << endl;
+                                outputFile << "Abstaining from moving" << endl;
                                 //enemy is rihgt left ontop or below, abstain from moving
                                 // cout << "abstaining" << endl;
                                 return;
@@ -149,22 +154,30 @@ public:
                                 if (game_map[new_x][y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
+                                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                                     game_map[x][y] = '0';
                                     symbol_map[x][y] = NULL;
                                     x = new_x;
                                     game_map[x][y] = symbol;
                                     symbol_map[x][y] = id;
+                                    cout << "(" << x << ", " << y << ")" << endl;;
+                                    outputFile << "(" << x << ", " << y << ")" << endl;;
                                     target_acquired = true;
                                     // cout << "target acquired" << endl;
                                     return;
                                 } else if (game_map[x][new_y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
+                                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                                     game_map[x][y] = '0';
                                     symbol_map[x][y] = NULL;
                                     y = new_y;
                                     game_map[x][y] = symbol;
                                     symbol_map[x][y] = id;
+                                    cout << "(" << x << ", " << y << ")" << endl;;
+                                    outputFile << "(" << x << ", " << y << ")" << endl;;
                                     target_acquired = true;
                                     // cout << "target acquired" << endl;
                                     return;
@@ -199,22 +212,30 @@ public:
                                 if (game_map[new_x][y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
+                                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                                     game_map[x][y] = '0';
                                     symbol_map[x][y] = NULL;
                                     x = new_x;
                                     game_map[x][y] = symbol;
                                     symbol_map[x][y] = id;
+                                    cout << "(" << x << ", " << y << ")" << endl;;
+                                    outputFile << "(" << x << ", " << y << ")" << endl;;
                                     target_acquired = true;
                                     // cout << "target acquired" << endl;
                                     return;
                                 } else if (game_map[x][new_y] == '0') {
                                     target[0] = x + directions[i][0];
                                     target[1] = y + directions[i][1];
+                                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                                     game_map[x][y] = '0';
                                     symbol_map[x][y] = NULL;
                                     y = new_y;
                                     game_map[x][y] = symbol;
                                     symbol_map[x][y] = id;
+                                    cout << "(" << x << ", " << y << ")" << endl;;
+                                    outputFile << "(" << x << ", " << y << ")" << endl;;
                                     target_acquired = true;
                                     // cout << "target acquired" << endl;
                                     return;
@@ -244,11 +265,15 @@ public:
             anumber = movement_decider(gen);
 
             switch (anumber) {
-            case 1: // up
+            case 1:
                 if (y + 1 < game_settings[2] && game_map[x][y + 1] == '0') {
                     game_map[x][y] = '0';
                     symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     y++;
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
@@ -256,11 +281,15 @@ public:
                     counter++;
                 }
                 break;
-            case 2: // down
+            case 2:
                 if (y - 1 >= 0 && game_map[x][y - 1] == '0') {
                     game_map[x][y] = '0';
                     symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     y--;
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
@@ -268,11 +297,15 @@ public:
                     counter++;
                 }
                 break;
-            case 3: // left
+            case 3:
                 if (x - 1 >= 0 && game_map[x - 1][y] == '0') {
                     game_map[x][y] = '0';
                     symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     x--;
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
@@ -280,11 +313,15 @@ public:
                     counter++;
                 }
                 break;
-            case 4: // right
+            case 4:
                 if (x + 1 < game_settings[1] && game_map[x + 1][y] == '0') {
                     game_map[x][y] = '0';
                     symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     x++;
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
@@ -345,12 +382,14 @@ public:
         int target_y = y + random_y;
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
-        cout << TeamA_symbols[0] << endl;
-        cout << TeamB_symbols[0] << endl;
-        cout << endl;
+        outputFile << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
+        // cout << TeamA_symbols[0] << endl;
+        // cout << TeamB_symbols[0] << endl;
+        // cout << endl;
 
         if (target_x < 0 || target_x >= game_settings[1] || target_y < 0 || target_y >= game_settings[2]) {
             cout << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
+            outputFile << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
             return;
         }
 
@@ -358,11 +397,11 @@ public:
             if (team == 'A') {
                 for (int i = 0; i < TeamB[0]; i++) {
                     if (TeamB_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamB_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamB_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
 
                         //add promotion logic here?
@@ -377,7 +416,7 @@ public:
                         cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
                         break;
                     }

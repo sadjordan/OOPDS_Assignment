@@ -11,8 +11,6 @@
 
 using namespace std;
 
-
-
 int* Ship::game_settings = nullptr;
 int Ship::ship_count = 0;
 char** Ship::game_map = nullptr;
@@ -43,6 +41,8 @@ void game_loop(Battlefield* setup) {
             
             // cout << (*Ship::respawn_queue)[0]->get_x() << endl;
             // cout << (*Ship::respawn_queue)[0]->get_y() << endl;
+            cout << "A team " << (*Ship::respawn_queue)[0]->get_team();
+            Ship::outputFile << "A team " << (*Ship::respawn_queue)[0]->get_team() << " ";
             cout << (*Ship::respawn_queue)[0]->get_type() << " with id: " << (*Ship::respawn_queue)[0]->get_id() 
                  << " Respawned at position (" << (*Ship::respawn_queue)[0]->get_x() << ", " << 
                  (*Ship::respawn_queue)[0]->get_y() << ")" << endl;
@@ -60,10 +60,12 @@ void game_loop(Battlefield* setup) {
         cout << endl;
         Ship::outputFile << endl;  
         
-        cout << "It is " << (*Ship::turn_queue)[i]->get_type() << ", with id: " << 
+        cout << "It is " << (*Ship::turn_queue)[i]->get_type() << " from team " <<
+            (*Ship::turn_queue)[i]->get_team() << ", with id: " << 
             (*Ship::turn_queue)[i]->get_id() << "'s turn!" << endl;
-        Ship::outputFile << "It is " << (*Ship::turn_queue)[i]->get_type() << ", with id: " << 
-            (*Ship::turn_queue)[i]->get_id() << "'s turn!" << endl;  
+        Ship::outputFile << "It is " << (*Ship::turn_queue)[i]->get_type() << " from team " <<
+            (*Ship::turn_queue)[i]->get_team() << ", with id: " << 
+            (*Ship::turn_queue)[i]->get_id() << "'s turn!" << endl;
         
         (*Ship::turn_queue)[i]->action_plan();
         setup->Print_Map();
@@ -111,13 +113,8 @@ void game_loop(Battlefield* setup) {
     cin.get();
 }
 
-// game loop order
-// 1. action plans according to the turn order linked list
-// 2. resurrection (this might happen first but we can change that later)
-// 3. iterate turn by 1
-
 int main() {
-    Battlefield setup;
+    Battlefield setup(Ship::outputFile);
 
     Ship::turn_queue = setup.Initial_Ship_Placement();
     Ship::respawn_queue = new Linked_List<Ship*>;
@@ -199,6 +196,8 @@ int main() {
             Ship::outputFile << "It's a tie!" << endl;
         }
     }
+
+    cin.get();
 
     for (int i = 0; i < Ship::turn_queue->list_size(); i++) {
         delete (*Ship::turn_queue)[i];

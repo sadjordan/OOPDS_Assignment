@@ -29,56 +29,60 @@ private:
     int no_ships;
     int* game_settings;
     int** symbol_map;
+    ofstream* outputFile;
 
 public:
     void Print_Map() {
         cout << "     "; // col headers
+        *outputFile << "     ";
         for (int j = 1; j <= game_settings[2]; j++) {
             cout << setw(7) << j; // Apply setw(4) for column numbers
+            *outputFile << setw(7) << j;
         }
         cout << endl;
-
+        *outputFile << endl;
 
         for (int i = 0; i < game_settings[1]; i++) {
             cout << "       ";
+            *outputFile << "       ";
             for (int j = 0; j < game_settings[2]; j++) {
                 cout << "+------"; // Row separators
+                *outputFile << "+------";
             }
             cout << "+" << endl;
+            *outputFile << "+" << endl;
 
             cout << setw(5) << i + 1 << "  "; // Row number
+            *outputFile << setw(5) << i + 1 << "  ";
             for (int j = 0; j < game_settings[2]; j++) {
                 cout << "|" << setw(3) << game_map[i][j] << setw(1);
-                if (symbol_map[i][j] > 0) { cout << setw(2) << symbol_map[i][j];
-                } else { cout << "  "; }
+                *outputFile << "|" << setw(3) << game_map[i][j] << setw(1);
+                if (symbol_map[i][j] > 0) {
+                    cout << setw(2) << symbol_map[i][j];
+                    *outputFile << setw(2) << symbol_map[i][j];
+                } else {
+                    cout << "  ";
+                    *outputFile << "  ";
+                }
                 cout << " ";
+                *outputFile << " ";
             }
             cout << "|" << endl;
+            *outputFile << "|" << endl;
         }
-
-
-        // for (int i = 0; i < game_settings[1]; i++) {
-        //     cout << "     ";
-        //     for (int j = 0; j < game_settings[2]; j++) {
-        //         cout << "+----"; // Row separators
-        //     }
-        //     cout << "+" << endl;
-
-        //     cout << setw(4) << i + 1 << " "; // Row number
-        //     for (int j = 0; j < game_settings[2]; j++) {
-        //         cout << "| " << setw(2) << game_map[i][j] << " "; // Cell content with setw(2)
-        //     }
-        //     cout << "|" << endl;
-        // }
 
         cout << "       "; // final row stuff
+        *outputFile << "       ";
         for (int j = 0; j < game_settings[2]; j++) {
             cout << "+------";
+            *outputFile << "+------";
         }
         cout << "+" << endl;
+        *outputFile << "+" << endl;
     }
 
-    Battlefield() {
+    Battlefield(ofstream& outfile) {
+        outputFile = &outfile;
         ifstream file("/Users/jordan/Desktop/Live_Projects/OOPDS_Assignment/game.txt");
 
         game_settings = new int[3];
@@ -351,35 +355,35 @@ public:
                 Ship* temp;
 
                 if (TeamA_classes[i - 1] == "Battleship") {
-                    cout << "Detected Battleship" << endl;
+                    // cout << "Detected Battleship" << endl;
                     temp = new Battleship();
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Cruiser") {
-                    cout << "Detected Cruiser" << endl;
+                    // cout << "Detected Cruiser" << endl;
                     temp = new Cruiser();
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Destroyer") {
-                    cout << "Detected Destroyer" << endl;
+                    // cout << "Detected Destroyer" << endl;
                     temp = new Destroyer();
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Frigate") {
-                    cout << "Detected Frigate" << endl;
+                    // cout << "Detected Frigate" << endl;
                     temp = new Frigate();
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Corvette") {
-                    cout << "Detected Corvette" << endl;
+                    // cout << "Detected Corvette" << endl;
                     temp = new Corvette();
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "Amphibious") {
-                    cout << "Detected Amphibious" << endl;
+                    // cout << "Detected Amphibious" << endl;
                     temp = new Amphibious();
                     turn_queue->push_back(temp);
                 } else if (TeamA_classes[i - 1] == "SuperShip") {
-                    cout << "Detected SuperShip" << endl;
+                    // cout << "Detected SuperShip" << endl;
                     temp = new SuperShip();
                     turn_queue->push_back(temp);
                 }
-                cout << "id: " << id_counter << endl;
+                // cout << "id: " << id_counter << endl;
 
                 // cin.get();
 
@@ -399,6 +403,7 @@ public:
                 
                 //symbols_placed[i]++;
                 cout << "Placed " << TeamA_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
+                *outputFile << "Placed " << TeamA_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
 
                 Print_Map();
                 ship_counter++;
@@ -419,31 +424,31 @@ public:
                 Ship* temp;
 
                 if (TeamB_classes[i - 1] == "Battleship") {
-                    cout << "Detected Battleship" << endl;
+                    // cout << "Detected Battleship" << endl;
                     temp = new Battleship();
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Cruiser") {
-                    cout << "Detected Cruiser" << endl;
+                    // cout << "Detected Cruiser" << endl;
                     temp = new Cruiser();
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Destroyer") {
-                    cout << "Detected Destroyer" << endl;
+                    // cout << "Detected Destroyer" << endl;
                     temp = new Destroyer();
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Frigate") {
-                    cout << "Detected Frigate" << endl;
+                    // cout << "Detected Frigate" << endl;
                     temp = new Frigate();
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Corvette") {
-                    cout << "Detected Corvette" << endl;
+                    // cout << "Detected Corvette" << endl;
                     temp = new Corvette();
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "Amphibious") {
-                    cout << "Detected Amphibious" << endl;
+                    // cout << "Detected Amphibious" << endl;
                     temp = new Amphibious();
                     turn_queue->push_back(temp);
                 } else if (TeamB_classes[i - 1] == "SuperShip") {
-                    cout << "Detected SuperShip" << endl;
+                    // cout << "Detected SuperShip" << endl;
                     temp = new SuperShip();
                     turn_queue->push_back(temp);
                 }
@@ -458,6 +463,8 @@ public:
                 game_map[x][y] = TeamB_symbols[i - 1];
 
                 id_counter++;
+                cout << "Placed " << TeamA_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
+                *outputFile << "Placed " << TeamA_symbols[i - 1] << " at (" << x + 1 << ", " << y + 1 << ")" << endl;
 
                 temp->display_info();
                 // Ships[ship_counter].id = ship_counter + 1;

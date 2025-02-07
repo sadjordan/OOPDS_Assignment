@@ -76,7 +76,7 @@ public:
         mt19937 gen(rd());
 
         // cout << "Move ship id: " << ship_id - 1 << endl;
-        cout << type << endl;
+        // cout << type << endl;
 
         uniform_int_distribution<> movement_decider(1, 4);
         int anumber;
@@ -88,80 +88,92 @@ public:
 
         while (!valid_move && counter < 12) {
             anumber = movement_decider(gen);
+            // cout << "Test 1" << endl;
+            // cout << "x: " << x << endl;
+            // cout << "y: " << y << endl;
+            // cout << game_map << endl;
+            // cout << game_map[x][y + 1] << endl;
 
             switch (anumber) {
-            case 1: // Up
+            case 1:
                 if (y + 1 < game_settings[2] && game_map[x][y + 1] == '0') {
-                    cout << "(" << x + 1 << ", " << y + 1 << ")" << endl;
-                    cout << "Up" << endl;
-                    game_map[x][y] = ship_is_on;
+                    game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     y++;
-                    ship_is_on = game_map[x][y];
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Up, out of bounds. Retrying..." << endl;
+                    // cout << "Invalid move Up, out of bounds. Retrying..." << endl;
                 }
                 break;
-            case 2: // Down
+            case 2:
                 if (y - 1 >= 0 && game_map[x][y - 1] == '0') {
-                    cout << "(" << x + 1 << ", " << y + 1 << ")" << endl;
-                    cout << "Down" << endl;
-                    game_map[x][y] = ship_is_on;
+                    game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     y--;
-                    ship_is_on = game_map[x][y];
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Down, out of bounds. Retrying..." << endl;
+                    // cout << "Invalid move Down, out of bounds. Retrying..." << endl;
                 }
                 break;
-            case 3: // Left
+            case 3:
                 if (x - 1 >= 0 && game_map[x - 1][y] == '0') {
-                    cout << "(" << x + 1 << ", " << y + 1 << ")" << endl;
-                    cout << "Left" << endl;
-                    game_map[x][y] = ship_is_on;
+                    game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     x--;
-                    ship_is_on = game_map[x][y];
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Left, out of bounds. Retrying..." << endl;
                 }
                 break;
-            case 4: // Right
+            case 4:
                 if (x + 1 < game_settings[1] && game_map[x + 1][y] == '0') {
-                    cout << "(" << x + 1 << ", " << y + 1 << ")" << endl;
-                    cout << "Right" << endl;
-                    game_map[x][y] = ship_is_on;
+                    game_map[x][y] = '0';
+                    symbol_map[x][y] = NULL;
+                    cout << "The " << type << " moved from (" << x << ", " << y << ") --> ";
+                    outputFile << "The " << type << " moved from (" << x << ", " << y << ") --> ";
                     x++;
-                    ship_is_on = game_map[x][y];
+                    cout << "(" << x << ", " << y << ")" << endl;;
+                    outputFile << "(" << x << ", " << y << ")" << endl;;
                     game_map[x][y] = symbol;
                     symbol_map[x][y] = id;
                     valid_move = true;
                 } else {
                     counter++;
-                    cout << "Invalid move Right, out of bounds. Retrying..." << endl;
+                    // cout << "Invalid move Right, out of bounds. Retrying..." << endl;
                 }
                 break;
             default:
-                cout << "Technically impossible so if you see this the world must be ending" << endl;
+                // cout << "Technically impossible so if you see this the world must be ending" << endl;
                 break;
             }
         }
 
-        if (x != old_x || y != old_y) {
-            cout << "Movement successful!" << endl;
-        }
-        cout << "(" << x + 1 << ", " << y + 1 << ")" << endl;
+        // if (x != old_x || y != old_y) {
+        //     cout << "Movement successful!" << endl;
+        // }
+        // cout << "(" << x + 1 << ", " << y + 1 << ")" << endl;
 
-        cout << "Move end" << endl;
+        // cout << "Move end" << endl;
     }
 
     void shoot() override {
@@ -181,24 +193,26 @@ public:
         int target_y = y + random_y;
 
         cout << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
-        cout << TeamA_symbols[0] << endl;
-        cout << TeamB_symbols[0] << endl;
-        cout << endl;
+        outputFile << "Attacked location: (" << target_x + 1 << ", " << target_y + 1 << ")" << endl;
+        // cout << TeamA_symbols[0] << endl;
+        // cout << TeamB_symbols[0] << endl;
+        // cout << endl;
 
         if (target_x < 0 || target_x >= game_settings[1] || target_y < 0 || target_y >= game_settings[2]) {
             cout << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
+            outputFile << "Wasted a shot! The Ship shot at a position exceeding the game map!" << endl;
             return;
         }
 
-        if (game_map[target_x][target_y] != '0') {
+        if (game_map[target_x][target_y] != '0' && game_map[target_x][target_y] != '1') {
             if (team == 'A') {
                 for (int i = 0; i < TeamB[0]; i++) {
                     if (TeamB_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamB_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamB_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
 
                         //add promotion logic here?
@@ -209,11 +223,11 @@ public:
             } else {
                 for (int i = 0; i < TeamA[0]; i++) {
                     if (TeamA_symbols[i] == game_map[target_x][target_y]) {
-                        cout << TeamA_symbols[i] << endl;
-                        cout << game_map[target_x][target_y] << endl; 
+                        // cout << TeamA_symbols[i] << endl;
+                        // cout << game_map[target_x][target_y] << endl; 
 
                         kills++;
-                        cout << "Kill incremented" << endl;
+                        // cout << "Kill incremented" << endl;
                         kill(target_x, target_y);
                         break;
                     }
@@ -223,6 +237,7 @@ public:
 
         if (game_map[target_x][target_y] == '0' || game_map[target_x][target_y] == '1') {
             cout << "Missed! No enemy ship at target location." << endl;
+            outputFile << "Missed! No enemy ship at target location." << endl;
         }
     }
 
