@@ -28,6 +28,7 @@ void RamShip::ram(Ship* to_be_killed) {
     // cout << "Pass 2" << endl;
 
     game_map[x][y] = symbol;
+    symbol_map[x][y] = id;
     // cout << "Pass 3" << endl;
 
     cout << "A " << to_be_killed->get_type() << " from Team " << to_be_killed->get_team() << " was rammed!" << endl;

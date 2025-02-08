@@ -60,7 +60,6 @@ void Ship::cleanup() {
         cout << "Deleted respawn_queue" << endl;
         outputFile << "Deleted respawn_queue" << endl;
     }
-
     game_settings = nullptr;
     cout << "Set game_settings to nullptr" << endl;
     outputFile << "Set game_settings to nullptr" << endl;

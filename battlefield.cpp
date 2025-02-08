@@ -227,7 +227,6 @@ Battlefield::Battlefield(ofstream& outfile) {
     while(getline(file, line)) {
         //cout << counter << endl;
 
-
         istringstream iss(line);
         int value;
         int internal_counter = 0;
