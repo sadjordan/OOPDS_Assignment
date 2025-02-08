@@ -1,22 +1,19 @@
-iterations 100
-width 11
-height 10
-Team A 4
-Battleship * 10
+iterations 50
+width 8
+height 8
+Team A 3
+Battleship * 3
 Cruiser $ 2
 Destroyer # 2
-Frigate @ 3
 Team B 3
-Battleship < 10
-Cruiser > 3
-SuperShip ! 1
-0 0 0 0 0 0 0 0 0 0 1
-0 0 0 0 0 0 0 1 1 0 1
-0 0 0 0 0 0 0 1 1 0 1
-0 0 0 0 0 0 0 0 0 0 1
-0 0 0 0 1 0 0 0 0 0 1
-0 0 0 0 1 0 0 0 0 0 1
-0 0 0 0 1 0 0 0 0 0 1
-0 0 0 0 0 0 0 0 0 0 1
-0 0 0 0 0 1 1 1 0 0 1
-0 0 0 0 0 0 0 1 0 0 1
+Frigate @ 3
+Corvette < 2
+Amphibious > 1
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0

@@ -150,7 +150,7 @@ void Ship::display_info() const {
     cout << "Team: " << team << endl;
     cout << "Type: " << type << endl;
     cout << "Symbol: " << symbol << endl;
-    cout << "Position: (" << x << ", " << y << ")" << endl;
+    cout << "Position: (" << x+1 << ", " << y+1 << ")" << endl;
     cout << "Status: " << status << endl;
     cout << "Lives: " << lives << endl;
     cout << "Kills: " << kills << endl;
@@ -159,7 +159,7 @@ void Ship::display_info() const {
     outputFile << "Team: " << team << endl;
     outputFile << "Type: " << type << endl;
     outputFile << "Symbol: " << symbol << endl;
-    outputFile << "Position: (" << x << ", " << y << ")" << endl;
+    outputFile << "Position: (" << x+1 << ", " << y+1 << ")" << endl;
     outputFile << "Status: " << status << endl;
     outputFile << "Lives: " << lives << endl;
     outputFile << "Kills: " << kills << endl;

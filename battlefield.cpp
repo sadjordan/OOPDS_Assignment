@@ -53,7 +53,7 @@ void Battlefield::Print_Map() {
 
 Battlefield::Battlefield(ofstream& outfile) {
     outputFile = &outfile;
-    ifstream file("/Users/jordan/Desktop/Live_Projects/OOPDS_Assignment/game.txt");
+    ifstream file("game.txt");
 
     game_settings = new int[3];
     int size_a, size_b;

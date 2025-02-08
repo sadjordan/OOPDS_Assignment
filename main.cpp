@@ -25,12 +25,12 @@ Linked_List<Ship*>* Ship::respawn_queue = nullptr;
 char* Ship::default_teamA_symbols = nullptr;
 char* Ship::default_teamB_symbols = nullptr; 
 int** Ship::symbol_map = nullptr;
-ofstream Ship::outputFile("/Users/jordan/Desktop/Live_Projects/OOPDS_Assignment/output.txt");
+ofstream Ship::outputFile("output.txt");
 
 void game_loop(Battlefield* setup) {
     cout << "Respawning..." << endl;
     Ship::outputFile << "Respawning..." << endl;
-    Ship::outputFile << Ship::respawn_queue->list_size() << endl;
+    // Ship::outputFile << Ship::respawn_queue->list_size() << endl;
     
     for (int i = 0; i < 2; i++) {
         if (Ship::respawn_queue->list_size() != 0) {
@@ -111,7 +111,7 @@ void game_loop(Battlefield* setup) {
     cout << "+----+------+-------------+--------+-------+" << endl;
     Ship::outputFile << "+----+------+-------------+--------+-------+" << endl;  
 
-    cin.get();
+    // cin.get();
 }
 
 int main() {
@@ -152,16 +152,16 @@ int main() {
 
     cin.get();
 
-    cout << Ship::game_map << endl;
-    Ship::outputFile << Ship::game_map << endl;  
+    // cout << Ship::game_map << endl;
+    // Ship::outputFile << Ship::game_map << endl;  
 
     for (int i = 0; i < Ship::game_settings[0]; i++) {
         cout << endl;
         Ship::outputFile << endl;  
         cout << "_________________________________________________________________" << endl;
         Ship::outputFile << "_________________________________________________________________" << endl;  
-        cout << "Loop number: " << i << endl;
-        Ship::outputFile << "Loop number: " << i << endl;
+        cout << "Turn number: " << i << endl;
+        Ship::outputFile << "Turn number: " << i << endl;
         game_loop(&setup);
 
         int TeamA_counter = 0;
@@ -196,6 +196,8 @@ int main() {
             cout << "It's a tie!" << endl;
             Ship::outputFile << "It's a tie!" << endl;
         }
+
+        cin.get();
     }
 
     cin.get();
