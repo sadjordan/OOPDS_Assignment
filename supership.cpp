@@ -1,3 +1,15 @@
+/***|***|****|
+Program: supership.cpp
+Course: Object Oriented Programming and Data Structures
+Trimester: 2430
+Name: Jordan Ling, Muhammad Izaan Khan Bin Mubarak, Selvasaachinn A/L Selvarasan, MONISH A/L MOORTHY 
+ID: 241UC24151, 241UC2415K, 1211108941, 1211111608
+Lecture Section: TC2L
+Tutorial Section: TT5L
+Email: jordan.ling.shen@student.mmu.edu.my, Muhammad.izaan.khan@student.mmu.edu.my,
+        1211108941@student.mmu.edu.my, 1211111608@student.mmu.edu.my
+Phone: 014-2286351, 016-7573174, 011-10872234, 011-54240624
+***|***|****/
 #include "supership.h"
 using namespace std;
 
@@ -90,8 +102,8 @@ void SuperShip::move() {
                                 x = new_x;
                                 game_map[x][y] = symbol;
                                 symbol_map[x][y] = id;
-                                cout << "(" << x << ", " << y << ")" << endl;;
-                                outputFile << "(" << x << ", " << y << ")" << endl;;
+                                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                                 target_acquired = true;
                                 // cout << "target acquired" << endl;
                                 return;
@@ -105,8 +117,8 @@ void SuperShip::move() {
                                 y = new_y;
                                 game_map[x][y] = symbol;
                                 symbol_map[x][y] = id;
-                                cout << "(" << x << ", " << y << ")" << endl;;
-                                outputFile << "(" << x << ", " << y << ")" << endl;;
+                                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                                 target_acquired = true;
                                 // cout << "target acquired" << endl;
                                 return;
@@ -148,8 +160,8 @@ void SuperShip::move() {
                                 x = new_x;
                                 game_map[x][y] = symbol;
                                 symbol_map[x][y] = id;
-                                cout << "(" << x << ", " << y << ")" << endl;;
-                                outputFile << "(" << x << ", " << y << ")" << endl;;
+                                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                                 target_acquired = true;
                                 // cout << "target acquired" << endl;
                                 return;
@@ -163,8 +175,8 @@ void SuperShip::move() {
                                 y = new_y;
                                 game_map[x][y] = symbol;
                                 symbol_map[x][y] = id;
-                                cout << "(" << x << ", " << y << ")" << endl;;
-                                outputFile << "(" << x << ", " << y << ")" << endl;;
+                                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                                 target_acquired = true;
                                 // cout << "target acquired" << endl;
                                 return;
@@ -201,8 +213,8 @@ void SuperShip::move() {
                 cout << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 outputFile << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 y++;
-                cout << "(" << x << ", " << y << ")" << endl;;
-                outputFile << "(" << x << ", " << y << ")" << endl;;
+                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                 game_map[x][y] = symbol;
                 symbol_map[x][y] = id;
                 valid_move = true;
@@ -217,8 +229,8 @@ void SuperShip::move() {
                 cout << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 outputFile << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 y--;
-                cout << "(" << x << ", " << y << ")" << endl;;
-                outputFile << "(" << x << ", " << y << ")" << endl;;
+                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                 game_map[x][y] = symbol;
                 symbol_map[x][y] = id;
                 valid_move = true;
@@ -233,8 +245,8 @@ void SuperShip::move() {
                 cout << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 outputFile << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 x--;
-                cout << "(" << x << ", " << y << ")" << endl;;
-                outputFile << "(" << x << ", " << y << ")" << endl;;
+                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                 game_map[x][y] = symbol;
                 symbol_map[x][y] = id;
                 valid_move = true;
@@ -249,8 +261,8 @@ void SuperShip::move() {
                 cout << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 outputFile << "The " << type << " moved from (" << x+1 << ", " << y+1 << ") --> ";
                 x++;
-                cout << "(" << x << ", " << y << ")" << endl;;
-                outputFile << "(" << x << ", " << y << ")" << endl;;
+                cout << "(" << x+1 << ", " << y+1 << ")" << endl;
+                outputFile << "(" << x+1 << ", " << y+1 << ")" << endl;
                 game_map[x][y] = symbol;
                 symbol_map[x][y] = id;
                 valid_move = true;

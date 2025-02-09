@@ -1,3 +1,15 @@
+/***|***|****|
+Program: main.cpp
+Course: Object Oriented Programming and Data Structures
+Trimester: 2430
+Name: Jordan Ling, Muhammad Izaan Khan Bin Mubarak, Selvasaachinn A/L Selvarasan, MONISH A/L MOORTHY 
+ID: 241UC24151, 241UC2415K, 1211108941, 1211111608
+Lecture Section: TC2L
+Tutorial Section: TT5L
+Email: jordan.ling.shen@student.mmu.edu.my, Muhammad.izaan.khan@student.mmu.edu.my,
+        1211108941@student.mmu.edu.my, 1211111608@student.mmu.edu.my
+Phone: 014-2286351, 016-7573174, 011-10872234, 011-54240624
+***|***|****/
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -45,17 +57,19 @@ void game_loop(Battlefield* setup) {
             cout << "A team " << (*Ship::respawn_queue)[0]->get_team();
             Ship::outputFile << "A team " << (*Ship::respawn_queue)[0]->get_team() << " ";
             cout << (*Ship::respawn_queue)[0]->get_type() << " with id: " << (*Ship::respawn_queue)[0]->get_id() 
-                 << " Respawned at position (" << (*Ship::respawn_queue)[0]->get_x() << ", " << 
-                 (*Ship::respawn_queue)[0]->get_y() << ")" << endl;
+                 << " Respawned at position (" << (*Ship::respawn_queue)[0]->get_x() + 1 << ", " << 
+                 (*Ship::respawn_queue)[0]->get_y() + 1 << ")" << endl;
             Ship::outputFile << (*Ship::respawn_queue)[0]->get_type() << " with id: " << (*Ship::respawn_queue)[0]->get_id() 
-                       << " Respawned at position (" << (*Ship::respawn_queue)[0]->get_x() << ", " << 
-                       (*Ship::respawn_queue)[0]->get_y() << ")" << endl;  
+                       << " Respawned at position (" << (*Ship::respawn_queue)[0]->get_x() + 1<< ", " << 
+                       (*Ship::respawn_queue)[0]->get_y() + 1<< ")" << endl;  
 
             Ship::respawn_queue->pop_front();
             // cout << Ship::respawn_queue->list_size() << endl;
             // Ship::outputFile << Ship::respawn_queue->list_size() << endl;  
         }
     }
+
+    setup->Print_Map();
 
     for (int i = 0; i < Ship::turn_queue->list_size(); i++) {
         cout << endl;
@@ -69,8 +83,10 @@ void game_loop(Battlefield* setup) {
             (*Ship::turn_queue)[i]->get_id() << "'s turn!" << endl;
         
         (*Ship::turn_queue)[i]->action_plan();
-        setup->Print_Map();
+        // setup->Print_Map();
     }
+    cout << endl;
+    Ship::outputFile << endl;
 
     // Ship::respawn_queue->display();
     cout << "Ships in the resurrection queue: ";
@@ -163,6 +179,7 @@ int main() {
         cout << "Turn number: " << i << endl;
         Ship::outputFile << "Turn number: " << i << endl;
         game_loop(&setup);
+        setup.Print_Map();
 
         int TeamA_counter = 0;
         int TeamB_counter = 0;
